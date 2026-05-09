@@ -1,0 +1,34 @@
+name: サイト更新 & GitHub Pages デプロイ
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'training_log_2026.csv'
+      - 'scripts/build_site.py'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python 環境セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: サイト & data.json 生成
+        run: python scripts/build_site.py
+
+      - name: GitHub Pages にデプロイ
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          force_orphan: true

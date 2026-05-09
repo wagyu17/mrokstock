@@ -1,0 +1,215 @@
+{
+  "main": {
+    "id": "bf17b0916b3c3072",
+    "type": "split",
+    "children": [
+      {
+        "id": "78de6a3a742deb89",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb32b23474986c0a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "分析ログ/トレーニング振り返り.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "トレーニング振り返り"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e870239512a81929",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d626042b068d8db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8100d218d4a95acf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "dd769fa136f0b40c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "80eafeb8feae847d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "837d779b513b0709",
+    "type": "split",
+    "children": [
+      {
+        "id": "e84ed061f00bfd3b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b741055240647950",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "トレーニング理論/02_ダブルスレッショルドと周期化.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "02_ダブルスレッショルドと周期化へのバックリンク"
+            }
+          },
+          {
+            "id": "ed48e749f718d4a0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "トレーニング理論/02_ダブルスレッショルドと周期化.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "02_ダブルスレッショルドと周期化からのアウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "9db0d42ee294ff3b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "240bde0b92f6b81b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "すべてのプロパティ"
+            }
+          },
+          {
+            "id": "5c4f302372cfd269",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "トレーニング理論/02_ダブルスレッショルドと周期化.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "02_ダブルスレッショルドと周期化のアウトライン"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "bases:新規ベースを作成": false
+    }
+  },
+  "active": "bb32b23474986c0a",
+  "lastOpenFiles": [
+    "claude_file/5_10_training_plan.md",
+    "更新用トレーニングログ/Activities (46).csv",
+    "更新用トレーニングログ/activity_17206872885.csv",
+    "更新用トレーニングログ/activity_17125952313.csv",
+    "更新用トレーニングログ/activity_22402286087 (1).csv",
+    "更新用トレーニングログ/activity_22399841039.csv",
+    "固定データ/Gemini_Gem指示.md",
+    "更新用トレーニングログ/activity_22463103746.csv",
+    "更新用トレーニングログ/activity_22474415392.csv",
+    "更新用トレーニングログ/activity_22482448276.csv",
+    "更新用トレーニングログ/activity_22482627600.csv",
+    "更新用トレーニングログ/activity_22482758766.csv",
+    "key.md",
+    "claude_file/分析セッション.md",
+    "claude_file/分析セッション2_2026-04-17.md",
+    "現状分析_2026-04-11.md",
+    "トレーニング理論/02_ダブルスレッショルドと周期化.md",
+    "トレーニング理論/DR_身体の適応.md",
+    "トレーニング理論/DR_10000m_ピーキング.md",
+    "CLAUDE.md",
+    "固定データ/トレーニング計画_2026.md",
+    "トレーニング理論/DR_トレーニング効果の発現タイムライン.md",
+    "トレーニング理論/DR_prompt_トレーニング効果の発現タイムライン.md",
+    "分析ログ/トレーニング振り返り.md",
+    "トレーニング理論/DR_ミトコンドリア.md",
+    "トレーニング理論/01_パフォーマンス三要素.md"
+  ]
+}

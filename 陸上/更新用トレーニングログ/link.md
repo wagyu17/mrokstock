@@ -1,0 +1,1 @@
+https://connect.garmin.com/app/activity/

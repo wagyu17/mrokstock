@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>陸上 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+     background:#F0F4F8;color:#1E293B;padding-bottom:64px;max-width:480px;margin:0 auto}
+/* ── HEADER ── */
+.hdr{background:linear-gradient(135deg,#1E40AF,#2563EB);color:#fff;
+     padding:12px 16px 10px;position:sticky;top:0;z-index:100;
+     display:flex;align-items:center;justify-content:space-between}
+.hdr-title{font-size:16px;font-weight:700;letter-spacing:.5px}
+.hdr-sub{font-size:10px;opacity:.7}
+/* ── BOTTOM NAV ── */
+.bnav{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;
+      background:#fff;border-top:1px solid #E2E8F0;display:flex;z-index:100}
+.nb{flex:1;display:flex;flex-direction:column;align-items:center;padding:6px 0 4px;
+    font-size:9px;color:#94A3B8;border:none;background:none;cursor:pointer;transition:.15s}
+.nb .ni{font-size:22px;margin-bottom:1px}
+.nb.active{color:#2563EB}
+.nb.active .ni{transform:scale(1.1)}
+/* ── TABS ── */
+.tab{display:none;padding:12px 12px 20px;animation:fi .2s ease}
+.tab.active{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+/* ── CARDS ── */
+.card{background:#fff;border-radius:12px;padding:14px;margin-bottom:10px;
+      box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.card-title{font-size:11px;font-weight:600;color:#64748B;text-transform:uppercase;
+            letter-spacing:.5px;margin-bottom:10px}
+/* ── COUNTDOWN ── */
+.cd-card{background:linear-gradient(135deg,#1E40AF,#3B82F6);color:#fff;
+         border-radius:14px;padding:16px;margin-bottom:10px;text-align:center;
+         box-shadow:0 4px 12px rgba(59,130,246,.35)}
+.cd-num{font-size:64px;font-weight:800;line-height:1}
+.cd-label{font-size:12px;opacity:.85;margin-top:2px}
+.cd-race{font-size:14px;font-weight:600;margin-top:8px;
+         background:rgba(255,255,255,.15);border-radius:8px;padding:4px 12px;display:inline-block}
+/* ── STATS ROW ── */
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.stat{background:#fff;border-radius:10px;padding:10px 8px;text-align:center;
+      box-shadow:0 1px 3px rgba(0,0,0,.07)}
+.stat-num{font-size:22px;font-weight:700;color:#1E40AF}
+.stat-lbl{font-size:10px;color:#64748B;margin-top:2px}
+/* ── TODAY PLAN ── */
+.today-card{background:#EFF6FF;border:1.5px solid #BFDBFE;border-radius:12px;padding:12px;margin-bottom:10px}
+.today-title{font-size:11px;font-weight:700;color:#1E40AF;margin-bottom:6px}
+.today-text{font-size:13px;color:#1E293B;line-height:1.5}
+/* ── RECENT ── */
+.rec-row{display:flex;align-items:center;gap:10px;padding:10px 0;
+         border-bottom:1px solid #F1F5F9}
+.rec-row:last-child{border-bottom:none}
+.rec-icon{font-size:24px;width:36px;text-align:center;flex-shrink:0}
+.rec-info{flex:1;min-width:0}
+.rec-title{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rec-sub{font-size:11px;color:#64748B;margin-top:2px}
+/* ── ACTIVITY LIST ── */
+.filter-bar{display:flex;gap:6px;margin-bottom:10px;overflow-x:auto;padding-bottom:2px}
+.fb{border:1.5px solid #E2E8F0;border-radius:20px;padding:5px 12px;font-size:12px;
+    font-weight:500;background:#fff;color:#64748B;cursor:pointer;white-space:nowrap}
+.fb.active{background:#2563EB;color:#fff;border-color:#2563EB}
+.act-item{background:#fff;border-radius:10px;padding:12px;margin-bottom:8px;
+          box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.act-top{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.act-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;
+          justify-content:center;font-size:16px;flex-shrink:0}
+.act-top-r{display:flex;align-items:center;gap:6px}
+.act-date{font-size:12px;font-weight:600;color:#64748B}
+.act-title{font-size:13px;font-weight:500;margin-bottom:6px;
+           white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.act-pills{display:flex;flex-wrap:wrap;gap:4px}
+/* ── BADGES / PILLS ── */
+.badge{font-size:10px;font-weight:600;border-radius:4px;padding:2px 6px}
+.pill{font-size:11px;border-radius:20px;padding:3px 8px;background:#F1F5F9;color:#475569}
+/* ── CHARTS ── */
+.chart-wrap{position:relative;height:200px;margin-top:4px}
+/* ── PLAN ── */
+.goals-table,.sched-table,.pb-table,.zone-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px}
+.goals-table td,.sched-table td,.pb-table td,.zone-table td{padding:7px 6px;border-bottom:1px solid #F1F5F9;vertical-align:top}
+.goal-tag{font-size:10px;font-weight:700;border-radius:4px;padding:2px 6px;
+          background:#EFF6FF;color:#1E40AF;white-space:nowrap}
+.goal-content{font-size:12px;font-weight:500}
+.goal-date{font-size:11px;color:#64748B}
+.sched-d{width:28px;font-weight:700;color:#374151;white-space:nowrap}
+.sched-p{color:#374151;line-height:1.4}
+.sched-today td{background:#EFF6FF}
+.sched-today .sched-d{color:#2563EB}
+.pb-ev{font-weight:600;white-space:nowrap}
+.pb-mk{font-weight:700;color:#1E40AF;white-space:nowrap}
+.pb-dt,.pb-nt{color:#64748B;font-size:11px}
+.zg-sh{border-radius:4px;padding:3px 6px;font-size:11px;font-weight:700;text-align:center;white-space:nowrap}
+.zg-nm{font-size:11px;color:#374151;padding-left:8px}
+/* ── PHASE BANNER ── */
+.phase-banner{background:linear-gradient(135deg,#7C3AED,#A78BFA);color:#fff;
+              border-radius:10px;padding:12px;margin-bottom:10px}
+.phase-name{font-size:15px;font-weight:700}
+.phase-sub{font-size:11px;opacity:.85;margin-top:3px}
+.phase-goal{font-size:12px;background:rgba(255,255,255,.2);border-radius:6px;
+            padding:4px 10px;display:inline-block;margin-top:8px}
+/* ── GENERATED ── */
+.gen-note{text-align:center;font-size:10px;color:#94A3B8;padding:8px;margin-top:4px}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div>
+    <div class="hdr-title">🏃 陸上 2026</div>
+    <div class="hdr-sub">Phase 1 &mdash; 標準記録突破へ</div>
+  </div>
+  <div style="text-align:right">
+    <div style="font-size:11px;opacity:.8">更新</div>
+    <div style="font-size:10px;opacity:.6">2026-05-04 23:12</div>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══ HOME ═══ -->
+<div id="tab-home" class="tab active">
+
+  <div class="cd-card">
+    <div class="cd-num">6</div>
+    <div class="cd-label">日後</div>
+    <div class="cd-race">🏁 5月10日 東海大ナイター 10000m</div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-num">40854.4</div>
+      <div class="stat-lbl">7日間 km</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">21</div>
+      <div class="stat-lbl">7日間 活動数</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">133</div>
+      <div class="stat-lbl">7日 平均HR</div>
+    </div>
+  </div>
+
+  <div class="today-card">
+    <div class="today-title">📅 月曜日 今日の予定</div>
+    <div class="today-text">バイク/エリプティカル 45〜60min (HR &lt;130) + 完全休養</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">直近の活動</div>
+    <div class="rec-row"><span class="rec-icon" style="color:#3B82F6">🏃</span><div class="rec-info"><div class="rec-title">目黒区 ラン</div><div class="rec-sub">5/4(月) · 1117.0km · 5'34"</div></div><span class="pill" style="background:#AEF0D4;color:#2D6A4F">114bpm</span></div>
+<div class="rec-row"><span class="rec-icon" style="color:#3B82F6">🏃</span><div class="rec-info"><div class="rec-title">目黒区 ラン</div><div class="rec-sub">5/4(月) · 1067.0km · 4'50"</div></div><span class="pill" style="background:#BDE0FB;color:#1D3557">134bpm</span></div>
+<div class="rec-row"><span class="rec-icon" style="color:#3B82F6">🏃</span><div class="rec-info"><div class="rec-title">渋谷区 ラン</div><div class="rec-sub">5/4(月) · 5627.0km · 4'52"</div></div><span class="pill" style="background:#AEF0D4;color:#2D6A4F">127bpm</span></div>
+  </div>
+
+</div>
+
+<!-- ═══ LOG ═══ -->
+<div id="tab-log" class="tab">
+  <div class="filter-bar">
+    <button class="fb active" onclick="filterActs('all',this)">全て</button>
+    <button class="fb" onclick="filterActs('run',this)">ランのみ</button>
+    <button class="fb" onclick="filterActs('other',this)">クロストレ</button>
+  </div>
+  <div class="act-item" data-isrun="1" data-idx="0"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">5/4(月)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">目黒区 ラン</div><div class="act-pills"><span class="pill">📏 1117.0km</span><span class="pill">⏱ 6:13</span><span class="pill">🏃 5'34"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 114bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="1"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">5/4(月)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">目黒区 ラン</div><div class="act-pills"><span class="pill">📏 1067.0km</span><span class="pill">⏱ 5:10</span><span class="pill">🏃 4'50"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 134bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="2"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">5/4(月)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 5627.0km</span><span class="pill">⏱ 27:24</span><span class="pill">🏃 4'52"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 127bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="3"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">5/3(日)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 9969.0km</span><span class="pill">⏱ 51:16</span><span class="pill">🏃 5'08"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 132bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="4"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">5/2(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 1388.0km</span><span class="pill">⏱ 9:27</span><span class="pill">🏃 6'48"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 121bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="5"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">5/2(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">渋谷区 トラックラン</div><div class="act-pills"><span class="pill">📏 0.1km</span><span class="pill">⏱ 0:14</span><span class="pill">🏃 2'21"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 99bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="6"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">5/2(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">渋谷区 トラックラン</div><div class="act-pills"><span class="pill">📏 7.0km</span><span class="pill">⏱ 24:09</span><span class="pill">🏃 3'27"</span><span class="pill" style="background:#FFCBA4;color:#9B3B00">❤️ 165bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="7"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">5/2(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">渋谷区 トラックラン</div><div class="act-pills"><span class="pill">📏 0.16km</span><span class="pill">⏱ 0:23</span><span class="pill">🏃 2'28"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 118bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="8"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">5/2(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">渋谷区 トラックラン</div><div class="act-pills"><span class="pill">📏 0.16km</span><span class="pill">⏱ 0:24</span><span class="pill">🏃 2'33"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 116bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="9"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">5/2(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">渋谷区 トラックラン</div><div class="act-pills"><span class="pill">📏 0.14km</span><span class="pill">⏱ 0:22</span><span class="pill">🏃 2'39"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 154bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="10"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">5/2(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 2017.0km</span><span class="pill">⏱ 8:51</span><span class="pill">🏃 4'23"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 140bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="11"><div class="act-top"><span class="act-icon" style="background:#9CA3AF18;color:#9CA3AF">⚡</span><div class="act-top-r"><span class="act-date">4/30(木)</span><span class="badge" style="background:#9CA3AF20;color:#9CA3AF">エリプティ</span></div></div><div class="act-title">Xトレーナー</div><div class="act-pills"><span class="pill">📏 —</span><span class="pill">⏱ 50:00</span><span class="pill">🏃 --</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 125bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="12"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/29(水)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">松戸市 トラックラン</div><div class="act-pills"><span class="pill">📏 12.0km</span><span class="pill">⏱ 44:48</span><span class="pill">🏃 3'44"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 155bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="13"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/29(水)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">松戸市 トラックラン</div><div class="act-pills"><span class="pill">📏 0.87km</span><span class="pill">⏱ 4:10</span><span class="pill">🏃 4'48"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 130bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="14"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/29(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">松戸市 ラン</div><div class="act-pills"><span class="pill">📏 2728.0km</span><span class="pill">⏱ 13:27</span><span class="pill">🏃 4'55"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 130bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="15"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/29(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 ラン</div><div class="act-pills"><span class="pill">📏 1597.0km</span><span class="pill">⏱ 8:12</span><span class="pill">🏃 5'08"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 133bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="16"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/29(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 - 1×3×(1000m/200mJog)[–]</div><div class="act-pills"><span class="pill">📏 3421.0km</span><span class="pill">⏱ 12:59</span><span class="pill">🏃 3'47"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 159bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="17"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/29(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 ラン</div><div class="act-pills"><span class="pill">📏 318.0km</span><span class="pill">⏱ 1:14</span><span class="pill">🏃 3'55"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 144bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="18"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/29(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 ラン</div><div class="act-pills"><span class="pill">📏 1481.0km</span><span class="pill">⏱ 7:34</span><span class="pill">🏃 5'07"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 132bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="19"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/28(火)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 ラン</div><div class="act-pills"><span class="pill">📏 92.0km</span><span class="pill">⏱ 0:14</span><span class="pill">🏃 2'33"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 116bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="20"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/28(火)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 ラン</div><div class="act-pills"><span class="pill">📏 10012.0km</span><span class="pill">⏱ 49:38</span><span class="pill">🏃 4'57"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 136bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="21"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/25(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 2185.0km</span><span class="pill">⏱ 15:00</span><span class="pill">🏃 6'52"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 124bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="22"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/25(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">渋谷区 トラックラン</div><div class="act-pills"><span class="pill">📏 1.01km</span><span class="pill">⏱ 2:57</span><span class="pill">🏃 2'56"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 156bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="23"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/25(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">渋谷区 トラックラン</div><div class="act-pills"><span class="pill">📏 2.0km</span><span class="pill">⏱ 6:30</span><span class="pill">🏃 3'15"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 162bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="24"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/25(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">渋谷区 トラックラン</div><div class="act-pills"><span class="pill">📏 3.01km</span><span class="pill">⏱ 10:00</span><span class="pill">🏃 3'19"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 163bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="25"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/25(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">渋谷区 トラックラン</div><div class="act-pills"><span class="pill">📏 0.84km</span><span class="pill">⏱ 4:55</span><span class="pill">🏃 5'51"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 122bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="26"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/25(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 2748.0km</span><span class="pill">⏱ 12:07</span><span class="pill">🏃 4'24"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 140bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="27"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/24(金)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 768.0km</span><span class="pill">⏱ 4:40</span><span class="pill">🏃 6'05"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 122bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="28"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/24(金)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">目黒区 ラン</div><div class="act-pills"><span class="pill">📏 1241.0km</span><span class="pill">⏱ 6:56</span><span class="pill">🏃 5'35"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 141bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="29"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/24(金)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 6370.0km</span><span class="pill">⏱ 30:38</span><span class="pill">🏃 4'48"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 134bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="30"><div class="act-top"><span class="act-icon" style="background:#9CA3AF18;color:#9CA3AF">⚡</span><div class="act-top-r"><span class="act-date">4/23(木)</span><span class="badge" style="background:#9CA3AF20;color:#9CA3AF">エリプティ</span></div></div><div class="act-title">Xトレーナー</div><div class="act-pills"><span class="pill">📏 —</span><span class="pill">⏱ 45:00</span><span class="pill">🏃 --</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 120bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="31"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/22(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 ラン</div><div class="act-pills"><span class="pill">📏 2128.0km</span><span class="pill">⏱ 12:21</span><span class="pill">🏃 5'48"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 128bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="32"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/22(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 ラン</div><div class="act-pills"><span class="pill">📏 7568.0km</span><span class="pill">⏱ 27:45</span><span class="pill">🏃 3'40"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 159bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="33"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/22(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 ラン</div><div class="act-pills"><span class="pill">📏 2136.0km</span><span class="pill">⏱ 9:33</span><span class="pill">🏃 4'28"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 128bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="34"><div class="act-top"><span class="act-icon" style="background:#8B5CF618;color:#8B5CF6">⚡</span><div class="act-top-r"><span class="act-date">4/22(水)</span><span class="badge" style="background:#8B5CF620;color:#8B5CF6">TM</span></div></div><div class="act-title">トレッドミル</div><div class="act-pills"><span class="pill">📏 4000.0km</span><span class="pill">⏱ 15:00</span><span class="pill">🏃 3'45"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 156bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="35"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/21(火)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 10551.0km</span><span class="pill">⏱ 55:34</span><span class="pill">🏃 5'16"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 131bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="36"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/21(火)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 10551.0km</span><span class="pill">⏱ 55:34</span><span class="pill">🏃 5'16"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 131bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="37"><div class="act-top"><span class="act-icon" style="background:#9CA3AF18;color:#9CA3AF">⚡</span><div class="act-top-r"><span class="act-date">4/20(月)</span><span class="badge" style="background:#9CA3AF20;color:#9CA3AF">エリプティ</span></div></div><div class="act-title">Xトレーナー</div><div class="act-pills"><span class="pill">📏 —</span><span class="pill">⏱ 50:21</span><span class="pill">🏃 --</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 120bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="38"><div class="act-top"><span class="act-icon" style="background:#9CA3AF18;color:#9CA3AF">⚡</span><div class="act-top-r"><span class="act-date">4/20(月)</span><span class="badge" style="background:#9CA3AF20;color:#9CA3AF">サイクリン</span></div></div><div class="act-title">渋谷区 バイク</div><div class="act-pills"><span class="pill">📏 3968.0km</span><span class="pill">⏱ 22:51</span><span class="pill">🏃 5'45"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 85bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="39"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/20(月)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 8305.0km</span><span class="pill">⏱ 41:45</span><span class="pill">🏃 5'01"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 137bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="40"><div class="act-top"><span class="act-icon" style="background:#9CA3AF18;color:#9CA3AF">⚡</span><div class="act-top-r"><span class="act-date">4/20(月)</span><span class="badge" style="background:#9CA3AF20;color:#9CA3AF">サイクリン</span></div></div><div class="act-title">渋谷区 バイク</div><div class="act-pills"><span class="pill">📏 3788.0km</span><span class="pill">⏱ 15:24</span><span class="pill">🏃 4'03"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 91bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="41"><div class="act-top"><span class="act-icon" style="background:#9CA3AF18;color:#9CA3AF">⚡</span><div class="act-top-r"><span class="act-date">4/20(月)</span><span class="badge" style="background:#9CA3AF20;color:#9CA3AF">エリプティ</span></div></div><div class="act-title">Xトレーナー</div><div class="act-pills"><span class="pill">📏 —</span><span class="pill">⏱ 50:21</span><span class="pill">🏃 --</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 120bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="42"><div class="act-top"><span class="act-icon" style="background:#9CA3AF18;color:#9CA3AF">⚡</span><div class="act-top-r"><span class="act-date">4/20(月)</span><span class="badge" style="background:#9CA3AF20;color:#9CA3AF">サイクリン</span></div></div><div class="act-title">渋谷区 バイク</div><div class="act-pills"><span class="pill">📏 3968.0km</span><span class="pill">⏱ 22:51</span><span class="pill">🏃 5'45"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 85bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="43"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/20(月)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 8305.0km</span><span class="pill">⏱ 41:45</span><span class="pill">🏃 5'01"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 137bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="44"><div class="act-top"><span class="act-icon" style="background:#9CA3AF18;color:#9CA3AF">⚡</span><div class="act-top-r"><span class="act-date">4/20(月)</span><span class="badge" style="background:#9CA3AF20;color:#9CA3AF">サイクリン</span></div></div><div class="act-title">渋谷区 バイク</div><div class="act-pills"><span class="pill">📏 3788.0km</span><span class="pill">⏱ 15:24</span><span class="pill">🏃 4'03"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 91bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="45"><div class="act-top"><span class="act-icon" style="background:#8B5CF618;color:#8B5CF6">⚡</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#8B5CF620;color:#8B5CF6">TM</span></div></div><div class="act-title">トレッドミル</div><div class="act-pills"><span class="pill">📏 5738.0km</span><span class="pill">⏱ 25:31</span><span class="pill">🏃 4'26"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 151bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="46"><div class="act-top"><span class="act-icon" style="background:#8B5CF618;color:#8B5CF6">⚡</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#8B5CF620;color:#8B5CF6">TM</span></div></div><div class="act-title">トレッドミル</div><div class="act-pills"><span class="pill">📏 1633.0km</span><span class="pill">⏱ 10:28</span><span class="pill">🏃 6'25"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 125bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="47"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">浦和区 トラックラン</div><div class="act-pills"><span class="pill">📏 3.4km</span><span class="pill">⏱ 12:45</span><span class="pill">🏃 3'45"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 161bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="48"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">浦和区 トラックラン</div><div class="act-pills"><span class="pill">📏 4.6km</span><span class="pill">⏱ 16:36</span><span class="pill">🏃 3'36"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 162bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="49"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">浦和区 トラックラン</div><div class="act-pills"><span class="pill">📏 0.1km</span><span class="pill">⏱ 0:13</span><span class="pill">🏃 2'11"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 134bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="50"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">浦和区 トラックラン</div><div class="act-pills"><span class="pill">📏 1.0km</span><span class="pill">⏱ 3:44</span><span class="pill">🏃 3'44"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 148bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="51"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">浦和区 ラン</div><div class="act-pills"><span class="pill">📏 1976.0km</span><span class="pill">⏱ 9:42</span><span class="pill">🏃 4'54"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 135bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="52"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">浦和区 ラン</div><div class="act-pills"><span class="pill">📏 1174.0km</span><span class="pill">⏱ 5:53</span><span class="pill">🏃 5'01"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 139bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="53"><div class="act-top"><span class="act-icon" style="background:#8B5CF618;color:#8B5CF6">⚡</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#8B5CF620;color:#8B5CF6">TM</span></div></div><div class="act-title">トレッドミル</div><div class="act-pills"><span class="pill">📏 5738.0km</span><span class="pill">⏱ 25:31</span><span class="pill">🏃 4'26"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 151bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="54"><div class="act-top"><span class="act-icon" style="background:#8B5CF618;color:#8B5CF6">⚡</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#8B5CF620;color:#8B5CF6">TM</span></div></div><div class="act-title">トレッドミル</div><div class="act-pills"><span class="pill">📏 1633.0km</span><span class="pill">⏱ 10:28</span><span class="pill">🏃 6'25"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 125bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="55"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">浦和区 トラックラン</div><div class="act-pills"><span class="pill">📏 3.4km</span><span class="pill">⏱ 12:45</span><span class="pill">🏃 3'45"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 161bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="56"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">浦和区 トラックラン</div><div class="act-pills"><span class="pill">📏 4.6km</span><span class="pill">⏱ 16:36</span><span class="pill">🏃 3'36"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 162bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="57"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">浦和区 トラックラン</div><div class="act-pills"><span class="pill">📏 0.1km</span><span class="pill">⏱ 0:13</span><span class="pill">🏃 2'11"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 134bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="58"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">浦和区 トラックラン</div><div class="act-pills"><span class="pill">📏 1.0km</span><span class="pill">⏱ 3:44</span><span class="pill">🏃 3'44"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 148bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="59"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">浦和区 ラン</div><div class="act-pills"><span class="pill">📏 1976.0km</span><span class="pill">⏱ 9:42</span><span class="pill">🏃 4'54"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 135bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="60"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/18(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">浦和区 ラン</div><div class="act-pills"><span class="pill">📏 1174.0km</span><span class="pill">⏱ 5:53</span><span class="pill">🏃 5'01"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 139bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="61"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/17(金)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 14001.0km</span><span class="pill">⏱ 1:18:15</span><span class="pill">🏃 5'35"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 132bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="62"><div class="act-top"><span class="act-icon" style="background:#9CA3AF18;color:#9CA3AF">⚡</span><div class="act-top-r"><span class="act-date">4/16(木)</span><span class="badge" style="background:#9CA3AF20;color:#9CA3AF">エリプティ</span></div></div><div class="act-title">Xトレーナー</div><div class="act-pills"><span class="pill">📏 —</span><span class="pill">⏱ 1:10:20</span><span class="pill">🏃 --</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 117bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="63"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/15(水)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">1 × 1 × 10000m (@3'40&quot; )</div><div class="act-pills"><span class="pill">📏 10.0km</span><span class="pill">⏱ 37:05</span><span class="pill">🏃 3'42"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 163bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="64"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/15(水)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">松戸市 トラックラン</div><div class="act-pills"><span class="pill">📏 0.94km</span><span class="pill">⏱ 4:48</span><span class="pill">🏃 5'06"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 143bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="65"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/15(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">松戸市 ラン</div><div class="act-pills"><span class="pill">📏 2211.0km</span><span class="pill">⏱ 11:08</span><span class="pill">🏃 5'02"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 139bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="66"><div class="act-top"><span class="act-icon" style="background:#8B5CF618;color:#8B5CF6">⚡</span><div class="act-top-r"><span class="act-date">4/15(水)</span><span class="badge" style="background:#8B5CF620;color:#8B5CF6">TM</span></div></div><div class="act-title">1×(3 - 1)×1000m (3′35″ - 3′45″ ) [30&quot;]@TM (1.5%)</div><div class="act-pills"><span class="pill">📏 3837.0km</span><span class="pill">⏱ 16:20</span><span class="pill">🏃 4'15"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 161bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="67"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/15(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 ラン</div><div class="act-pills"><span class="pill">📏 2062.0km</span><span class="pill">⏱ 9:56</span><span class="pill">🏃 4'49"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 143bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="68"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/14(火)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 13255.0km</span><span class="pill">⏱ 1:17:59</span><span class="pill">🏃 5'53"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 128bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="69"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/12(日)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">東松山市 ラン</div><div class="act-pills"><span class="pill">📏 9919.0km</span><span class="pill">⏱ 51:53</span><span class="pill">🏃 5'13"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 128bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="70"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/11(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">1×10×(1′High/30″Low)[–]</div><div class="act-pills"><span class="pill">📏 3.52km</span><span class="pill">⏱ 14:59</span><span class="pill">🏃 4'15"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 160bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="71"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/11(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">​1 × 9 × 400m (80s, 84s) [R: 200m Jog 50s]</div><div class="act-pills"><span class="pill">📏 5.68km</span><span class="pill">⏱ 25:42</span><span class="pill">🏃 4'31"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 154bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="72"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/11(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">浦和区 トラックラン</div><div class="act-pills"><span class="pill">📏 0.1km</span><span class="pill">⏱ 0:13</span><span class="pill">🏃 2'11"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 131bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="73"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/11(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">浦和区 - 1×40×(1′High/30″Low)[–]</div><div class="act-pills"><span class="pill">📏 0.7km</span><span class="pill">⏱ 2:32</span><span class="pill">🏃 3'37"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 148bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="74"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/11(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">浦和区 ラン</div><div class="act-pills"><span class="pill">📏 1239.0km</span><span class="pill">⏱ 5:38</span><span class="pill">🏃 4'33"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 142bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="75"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/11(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">浦和区 ラン</div><div class="act-pills"><span class="pill">📏 990.0km</span><span class="pill">⏱ 5:28</span><span class="pill">🏃 5'31"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 132bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="76"><div class="act-top"><span class="act-icon" style="background:#9CA3AF18;color:#9CA3AF">⚡</span><div class="act-top-r"><span class="act-date">4/10(金)</span><span class="badge" style="background:#9CA3AF20;color:#9CA3AF">エリプティ</span></div></div><div class="act-title">Xトレーナー</div><div class="act-pills"><span class="pill">📏 —</span><span class="pill">⏱ 1:00:01</span><span class="pill">🏃 --</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 124bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="77"><div class="act-top"><span class="act-icon" style="background:#9CA3AF18;color:#9CA3AF">⚡</span><div class="act-top-r"><span class="act-date">4/9(木)</span><span class="badge" style="background:#9CA3AF20;color:#9CA3AF">エリプティ</span></div></div><div class="act-title">Xトレーナー</div><div class="act-pills"><span class="pill">📏 —</span><span class="pill">⏱ 25:00</span><span class="pill">🏃 --</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 109bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="78"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/8(水)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">松戸市 トラックラン</div><div class="act-pills"><span class="pill">📏 10.01km</span><span class="pill">⏱ 37:08</span><span class="pill">🏃 3'43"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 157bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="79"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/8(水)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">松戸市 トラックラン</div><div class="act-pills"><span class="pill">📏 0.61km</span><span class="pill">⏱ 3:10</span><span class="pill">🏃 5'12"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 133bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="80"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/8(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">松戸市 ラン</div><div class="act-pills"><span class="pill">📏 2.62km</span><span class="pill">⏱ 13:01</span><span class="pill">🏃 4'58"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 125bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="81"><div class="act-top"><span class="act-icon" style="background:#8B5CF618;color:#8B5CF6">⚡</span><div class="act-top-r"><span class="act-date">4/8(水)</span><span class="badge" style="background:#8B5CF620;color:#8B5CF6">TM</span></div></div><div class="act-title">1000ｍインターバル</div><div class="act-pills"><span class="pill">📏 3.97km</span><span class="pill">⏱ 18:00</span><span class="pill">🏃 4'32"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 152bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="82"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/8(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 ラン</div><div class="act-pills"><span class="pill">📏 0.15km</span><span class="pill">⏱ 0:21</span><span class="pill">🏃 2'26"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 148bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="83"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/8(水)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">葛飾区 ラン</div><div class="act-pills"><span class="pill">📏 2.04km</span><span class="pill">⏱ 10:16</span><span class="pill">🏃 5'02"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 135bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="84"><div class="act-top"><span class="act-icon" style="background:#10B98118;color:#10B981">🚴</span><div class="act-top-r"><span class="act-date">4/7(火)</span><span class="badge" style="background:#10B98120;color:#10B981">X-TRN</span></div></div><div class="act-title">Xトレーナー</div><div class="act-pills"><span class="pill">📏 —</span><span class="pill">⏱ 50:06</span><span class="pill">🏃 --</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 122bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="85"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/7(火)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 10.65km</span><span class="pill">⏱ 1:01:36</span><span class="pill">🏃 5'47"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 127bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="86"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/6(月)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 13.19km</span><span class="pill">⏱ 1:13:27</span><span class="pill">🏃 5'34"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 134bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="87"><div class="act-top"><span class="act-icon" style="background:#8B5CF618;color:#8B5CF6">⚡</span><div class="act-top-r"><span class="act-date">4/4(土)</span><span class="badge" style="background:#8B5CF620;color:#8B5CF6">TM</span></div></div><div class="act-title">1×5×1000m (3′29″) [1']@TM (1.5%)</div><div class="act-pills"><span class="pill">📏 5.0km</span><span class="pill">⏱ 22:30</span><span class="pill">🏃 4'30"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 150bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="88"><div class="act-top"><span class="act-icon" style="background:#8B5CF618;color:#8B5CF6">⚡</span><div class="act-top-r"><span class="act-date">4/4(土)</span><span class="badge" style="background:#8B5CF620;color:#8B5CF6">TM</span></div></div><div class="act-title">トレッドミル</div><div class="act-pills"><span class="pill">📏 0.9km</span><span class="pill">⏱ 6:49</span><span class="pill">🏃 7'36"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 129bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="89"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/4(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">松戸市 ラン</div><div class="act-pills"><span class="pill">📏 1.39km</span><span class="pill">⏱ 8:28</span><span class="pill">🏃 6'05"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 123bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="90"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/4(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">1×1×2000m (6′50″)</div><div class="act-pills"><span class="pill">📏 2.0km</span><span class="pill">⏱ 6:49</span><span class="pill">🏃 3'24"</span><span class="pill" style="background:#FFCBA4;color:#9B3B00">❤️ 165bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="91"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/4(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">1×3×2000m (6′50″) [400m Jog]</div><div class="act-pills"><span class="pill">📏 6.81km</span><span class="pill">⏱ 24:27</span><span class="pill">🏃 3'35"</span><span class="pill" style="background:#FFF3B0;color:#7B5C00">❤️ 164bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="92"><div class="act-top"><span class="act-icon" style="background:#6366F118;color:#6366F1">🏟</span><div class="act-top-r"><span class="act-date">4/4(土)</span><span class="badge" style="background:#6366F120;color:#6366F1">トラック</span></div></div><div class="act-title">松戸市 トラックラン</div><div class="act-pills"><span class="pill">📏 0.65km</span><span class="pill">⏱ 3:43</span><span class="pill">🏃 5'43"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 124bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="93"><div class="act-top"><span class="act-icon" style="background:#F59E0B18;color:#F59E0B">🏋</span><div class="act-top-r"><span class="act-date">4/4(土)</span><span class="badge" style="background:#F59E0B20;color:#F59E0B">筋トレ</span></div></div><div class="act-title">青トレ</div><div class="act-pills"><span class="pill">📏 —</span><span class="pill">⏱ 12:16</span><span class="pill">🏃 --</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 114bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="94"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/4(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">松戸市 ラン</div><div class="act-pills"><span class="pill">📏 1.39km</span><span class="pill">⏱ 6:40</span><span class="pill">🏃 4'48"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 137bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="95"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/4(土)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">松戸市 ラン</div><div class="act-pills"><span class="pill">📏 1.53km</span><span class="pill">⏱ 7:26</span><span class="pill">🏃 4'51"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 134bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="96"><div class="act-top"><span class="act-icon" style="background:#8B5CF618;color:#8B5CF6">⚡</span><div class="act-top-r"><span class="act-date">4/3(金)</span><span class="badge" style="background:#8B5CF620;color:#8B5CF6">TM</span></div></div><div class="act-title">トレッドミル</div><div class="act-pills"><span class="pill">📏 3.76km</span><span class="pill">⏱ 20:01</span><span class="pill">🏃 5'19"</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 137bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="97"><div class="act-top"><span class="act-icon" style="background:#10B98118;color:#10B981">🚴</span><div class="act-top-r"><span class="act-date">4/3(金)</span><span class="badge" style="background:#10B98120;color:#10B981">X-TRN</span></div></div><div class="act-title">Xトレーナー</div><div class="act-pills"><span class="pill">📏 —</span><span class="pill">⏱ 30:06</span><span class="pill">🏃 --</span><span class="pill" style="background:#BDE0FB;color:#1D3557">❤️ 128bpm</span></div></div>
+<div class="act-item" data-isrun="1" data-idx="98"><div class="act-top"><span class="act-icon" style="background:#3B82F618;color:#3B82F6">🏃</span><div class="act-top-r"><span class="act-date">4/3(金)</span><span class="badge" style="background:#3B82F620;color:#3B82F6">ラン</span></div></div><div class="act-title">渋谷区 ラン</div><div class="act-pills"><span class="pill">📏 3.9km</span><span class="pill">⏱ 21:50</span><span class="pill">🏃 5'36"</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 123bpm</span></div></div>
+<div class="act-item" data-isrun="0" data-idx="99"><div class="act-top"><span class="act-icon" style="background:#6B728018;color:#6B7280">🧘</span><div class="act-top-r"><span class="act-date">4/3(金)</span><span class="badge" style="background:#6B728020;color:#6B7280">瞑想</span></div></div><div class="act-title">瞑想</div><div class="act-pills"><span class="pill">📏 —</span><span class="pill">⏱ 31:50</span><span class="pill">🏃 --</span><span class="pill" style="background:#AEF0D4;color:#2D6A4F">❤️ 57bpm</span></div></div>
+  <div class="gen-note">最新100件を表示</div>
+</div>
+
+<!-- ═══ CHARTS ═══ -->
+<div id="tab-charts" class="tab">
+  <div class="card">
+    <div class="card-title">週別走行距離 (km)</div>
+    <div class="chart-wrap"><canvas id="chart-weekly"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="card-title">HRゾーン分布 (累計・分)</div>
+    <div class="chart-wrap"><canvas id="chart-zone"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="card-title">週次距離推移（全期間）</div>
+    <div class="chart-wrap"><canvas id="chart-trend"></canvas></div>
+  </div>
+</div>
+
+<!-- ═══ PLAN ═══ -->
+<div id="tab-plan" class="tab">
+
+  <div class="phase-banner">
+    <div class="phase-name">Phase 1 &mdash; 標準記録突破へのピーキング</div>
+    <div class="phase-sub">4月13日 〜 5月10日（4週間）</div>
+    <div class="phase-goal">🎯 目標タイム: 33分50秒（必須: 34分00秒切り）</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">シーズン目標</div>
+    <table class="goals-table">
+      <tr>
+        <td><span class="goal-tag">絶対</span></td>
+        <td class="goal-content">10000m 34:00切り（予選会標準突破）</td>
+        <td class="goal-date">5月10日</td>
+      </tr>
+      <tr>
+        <td><span class="goal-tag">主</span></td>
+        <td class="goal-content">10000m 32:30以内（3:15/km）</td>
+        <td class="goal-date">9月後半</td>
+      </tr>
+      <tr>
+        <td><span class="goal-tag">最終</span></td>
+        <td class="goal-content">箱根駅伝予選会 出走</td>
+        <td class="goal-date">10月</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Phase 1 週間スケジュール</div>
+    <table class="sched-table">
+      <tr class="sched-today"><td class="sched-d">月</td><td class="sched-p">バイク/エリプティカル 45〜60min (HR <130) + 完全休養</td></tr><tr class=""><td class="sched-d">火</td><td class="sched-p">イージージョグ 40〜50min (HR 140-145) + 筋トレ</td></tr><tr class=""><td class="sched-d">水</td><td class="sched-p">【LT①】4〜5×2000m (3:35〜3:40) → 【LT②】20×400m (3:20)</td></tr><tr class=""><td class="sched-d">木</td><td class="sched-p">バイク 45min (HR 130-140) + イージージョグ 30min</td></tr><tr class=""><td class="sched-d">金</td><td class="sched-p">イージージョグ 40min (HR 140-145) + スプリント</td></tr><tr class=""><td class="sched-d">土</td><td class="sched-p">【LT③】6〜8×1000m (3:30) → 【LT④】10〜12×500m (3:20)</td></tr><tr class=""><td class="sched-d">日</td><td class="sched-p">ロングラン 15〜20km (4:15〜4:30/km) 代々木クロカン</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">自己ベスト</div>
+    <table class="pb-table">
+      <tr style="font-size:10px;color:#64748B">
+        <th style="text-align:left">種目</th><th style="text-align:left">記録</th>
+        <th style="text-align:left">日付</th><th style="text-align:left">備考</th>
+      </tr>
+      <tr><td class="pb-ev">800m</td><td class="pb-mk">1'55"40</td><td class="pb-dt">2025/10</td><td class="pb-nt">大学歴代5位</td></tr><tr><td class="pb-ev">10000m</td><td class="pb-mk">34'02"</td><td class="pb-dt">2024/10</td><td class="pb-nt">標準まであと2秒</td></tr><tr><td class="pb-ev">ハーフ</td><td class="pb-mk">75'48"</td><td class="pb-dt">2025/03</td><td class="pb-nt"></td></tr><tr><td class="pb-ev">3000m</td><td class="pb-mk">9'28"</td><td class="pb-dt">—</td><td class="pb-nt">現状値</td></tr><tr><td class="pb-ev">5000m</td><td class="pb-mk">16'00"</td><td class="pb-dt">—</td><td class="pb-nt">現状値</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">HRゾーン基準（HRMax 187bpm）</div>
+    <table class="zone-table">
+      <tr><td class="zg-sh" style="background:#AEF0D4;color:#2D6A4F">Z1</td><td class="zg-nm">Zone1 (< 127)</td></tr><tr><td class="zg-sh" style="background:#BDE0FB;color:#1D3557">Z2</td><td class="zg-nm">Zone2 (128-149)</td></tr><tr><td class="zg-sh" style="background:#FFF3B0;color:#7B5C00">Z3</td><td class="zg-nm">Zone3 LT1 (150-164)</td></tr><tr><td class="zg-sh" style="background:#FFCBA4;color:#9B3B00">Z4</td><td class="zg-nm">Zone4 LT2 (165-174)</td></tr><tr><td class="zg-sh" style="background:#FFADAD;color:#7D0000">Z5</td><td class="zg-nm">Zone5 VO2max (175+)</td></tr>
+    </table>
+  </div>
+
+</div>
+
+</main>
+
+<nav class="bnav">
+  <button class="nb active" id="nb-home" onclick="switchTab('home')">
+    <span class="ni">🏠</span>ホーム
+  </button>
+  <button class="nb" id="nb-log" onclick="switchTab('log')">
+    <span class="ni">📋</span>ログ
+  </button>
+  <button class="nb" id="nb-charts" onclick="switchTab('charts')">
+    <span class="ni">📊</span>グラフ
+  </button>
+  <button class="nb" id="nb-plan" onclick="switchTab('plan')">
+    <span class="ni">📅</span>計画
+  </button>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+const D = {"wl": ["3/16", "3/23", "3/30", "4/6", "4/13", "4/20", "4/27", "5/4"], "wd": [52.5, 0.0, 58.1, 12201.2, 56437.1, 66862.9, 33043.4, 7811.0], "awl": ["12/22", "12/29", "1/5", "1/12", "1/19", "1/26", "2/2", "2/9", "2/16", "2/23", "3/2", "3/9", "3/16", "3/23", "3/30", "4/6", "4/13", "4/20", "4/27", "5/4"], "awd": [45.6, 67.1, 60.3, 39.2, 3.0, 12.5, 18.2, 14.0, 15.4, 26.8, 17.3, 45.5, 52.5, 0.0, 58.1, 12201.2, 56437.1, 66862.9, 33043.4, 7811.0], "zl": ["Z1", "Z2", "Z3", "Z4", "Z5"], "zv": [935, 2397, 645, 31, 0], "zbg": ["#AEF0D4", "#BDE0FB", "#FFF3B0", "#FFCBA4", "#FFADAD"]};
+let chartsReady = false;
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  document.querySelectorAll('.nb').forEach(el => el.classList.remove('active'));
+  document.getElementById('nb-' + name).classList.add('active');
+  if (name === 'charts' && !chartsReady) buildCharts();
+}
+
+function filterActs(type, btn) {
+  document.querySelectorAll('.fb').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.act-item').forEach(el => {
+    const ir = el.dataset.isrun;
+    let show = true;
+    if (type === 'run')   show = ir === '1';
+    if (type === 'other') show = ir === '0';
+    el.style.display = show ? '' : 'none';
+  });
+}
+
+function buildCharts() {
+  chartsReady = true;
+  Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, sans-serif';
+  Chart.defaults.font.size = 11;
+
+  new Chart(document.getElementById('chart-weekly'), {
+    type: 'bar',
+    data: {
+      labels: D.wl,
+      datasets: [{ label: '走行距離 (km)', data: D.wd,
+        backgroundColor: '#3B82F6', borderRadius: 6 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true, title: { display: true, text: 'km' } } }
+    }
+  });
+
+  new Chart(document.getElementById('chart-zone'), {
+    type: 'doughnut',
+    data: {
+      labels: D.zl,
+      datasets: [{ data: D.zv, backgroundColor: D.zbg, borderWidth: 1 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'right', labels: { font: { size: 10 }, boxWidth: 12 } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw}分` } }
+      }
+    }
+  });
+
+  new Chart(document.getElementById('chart-trend'), {
+    type: 'line',
+    data: {
+      labels: D.awl,
+      datasets: [{ label: '週間距離 (km)', data: D.awd,
+        borderColor: '#6366F1', backgroundColor: '#6366F120',
+        borderWidth: 2, pointRadius: 3, fill: true, tension: 0.3 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true } }
+    }
+  });
+}
+</script>
+</body>
+</html>

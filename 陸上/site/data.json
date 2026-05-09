@@ -1,0 +1,407 @@
+{
+  "generated_at": "2026-05-04 23:12",
+  "stats_7d": {
+    "km": 40854.4,
+    "sessions": 21,
+    "avg_hr": 133
+  },
+  "race_countdown": {
+    "name": "東海大ナイター 10000m",
+    "date": "2026-05-10",
+    "days_remaining": 6
+  },
+  "recent_activities": [
+    {
+      "date": "2026-05-04",
+      "type": "ラン",
+      "title": "目黒区 ラン",
+      "dist_km": 1117.0,
+      "duration": "6:13",
+      "avg_hr": 114,
+      "max_hr": 131,
+      "pace": "5'34\"",
+      "hr_zone": "Z1"
+    },
+    {
+      "date": "2026-05-04",
+      "type": "ラン",
+      "title": "目黒区 ラン",
+      "dist_km": 1067.0,
+      "duration": "5:10",
+      "avg_hr": 134,
+      "max_hr": 156,
+      "pace": "4'50\"",
+      "hr_zone": "Z2"
+    },
+    {
+      "date": "2026-05-04",
+      "type": "ラン",
+      "title": "渋谷区 ラン",
+      "dist_km": 5627.0,
+      "duration": "27:24",
+      "avg_hr": 127,
+      "max_hr": 144,
+      "pace": "4'52\"",
+      "hr_zone": "Z1"
+    },
+    {
+      "date": "2026-05-03",
+      "type": "ラン",
+      "title": "渋谷区 ラン",
+      "dist_km": 9969.0,
+      "duration": "51:16",
+      "avg_hr": 132,
+      "max_hr": 153,
+      "pace": "5'08\"",
+      "hr_zone": "Z2"
+    },
+    {
+      "date": "2026-05-02",
+      "type": "ラン",
+      "title": "渋谷区 ラン",
+      "dist_km": 1388.0,
+      "duration": "9:27",
+      "avg_hr": 121,
+      "max_hr": 130,
+      "pace": "6'48\"",
+      "hr_zone": "Z1"
+    },
+    {
+      "date": "2026-05-02",
+      "type": "トラックラン",
+      "title": "渋谷区 トラックラン",
+      "dist_km": 0.1,
+      "duration": "0:14",
+      "avg_hr": 99,
+      "max_hr": 111,
+      "pace": "2'21\"",
+      "hr_zone": "Z1"
+    },
+    {
+      "date": "2026-05-02",
+      "type": "トラックラン",
+      "title": "渋谷区 トラックラン",
+      "dist_km": 7.0,
+      "duration": "24:09",
+      "avg_hr": 165,
+      "max_hr": 179,
+      "pace": "3'27\"",
+      "hr_zone": "Z4"
+    },
+    {
+      "date": "2026-05-02",
+      "type": "トラックラン",
+      "title": "渋谷区 トラックラン",
+      "dist_km": 0.16,
+      "duration": "0:23",
+      "avg_hr": 118,
+      "max_hr": 129,
+      "pace": "2'28\"",
+      "hr_zone": "Z1"
+    },
+    {
+      "date": "2026-05-02",
+      "type": "トラックラン",
+      "title": "渋谷区 トラックラン",
+      "dist_km": 0.16,
+      "duration": "0:24",
+      "avg_hr": 116,
+      "max_hr": 134,
+      "pace": "2'33\"",
+      "hr_zone": "Z1"
+    },
+    {
+      "date": "2026-05-02",
+      "type": "トラックラン",
+      "title": "渋谷区 トラックラン",
+      "dist_km": 0.14,
+      "duration": "0:22",
+      "avg_hr": 154,
+      "max_hr": 155,
+      "pace": "2'39\"",
+      "hr_zone": "Z3"
+    },
+    {
+      "date": "2026-05-02",
+      "type": "ラン",
+      "title": "渋谷区 ラン",
+      "dist_km": 2017.0,
+      "duration": "8:51",
+      "avg_hr": 140,
+      "max_hr": 159,
+      "pace": "4'23\"",
+      "hr_zone": "Z2"
+    },
+    {
+      "date": "2026-04-30",
+      "type": "エリプティカル",
+      "title": "Xトレーナー",
+      "dist_km": 0.0,
+      "duration": "50:00",
+      "avg_hr": 125,
+      "max_hr": 135,
+      "pace": "--",
+      "hr_zone": "Z1"
+    },
+    {
+      "date": "2026-04-29",
+      "type": "トラックラン",
+      "title": "松戸市 トラックラン",
+      "dist_km": 12.0,
+      "duration": "44:48",
+      "avg_hr": 155,
+      "max_hr": 163,
+      "pace": "3'44\"",
+      "hr_zone": "Z3"
+    },
+    {
+      "date": "2026-04-29",
+      "type": "トラックラン",
+      "title": "松戸市 トラックラン",
+      "dist_km": 0.87,
+      "duration": "4:10",
+      "avg_hr": 130,
+      "max_hr": 151,
+      "pace": "4'48\"",
+      "hr_zone": "Z2"
+    },
+    {
+      "date": "2026-04-29",
+      "type": "ラン",
+      "title": "松戸市 ラン",
+      "dist_km": 2728.0,
+      "duration": "13:27",
+      "avg_hr": 130,
+      "max_hr": 145,
+      "pace": "4'55\"",
+      "hr_zone": "Z2"
+    },
+    {
+      "date": "2026-04-29",
+      "type": "ラン",
+      "title": "葛飾区 ラン",
+      "dist_km": 1597.0,
+      "duration": "8:12",
+      "avg_hr": 133,
+      "max_hr": 146,
+      "pace": "5'08\"",
+      "hr_zone": "Z2"
+    },
+    {
+      "date": "2026-04-29",
+      "type": "ラン",
+      "title": "葛飾区 - 1×3×(1000m/200mJog)[–]",
+      "dist_km": 3421.0,
+      "duration": "12:59",
+      "avg_hr": 159,
+      "max_hr": 167,
+      "pace": "3'47\"",
+      "hr_zone": "Z3"
+    },
+    {
+      "date": "2026-04-29",
+      "type": "ラン",
+      "title": "葛飾区 ラン",
+      "dist_km": 318.0,
+      "duration": "1:14",
+      "avg_hr": 144,
+      "max_hr": 157,
+      "pace": "3'55\"",
+      "hr_zone": "Z2"
+    },
+    {
+      "date": "2026-04-29",
+      "type": "ラン",
+      "title": "葛飾区 ラン",
+      "dist_km": 1481.0,
+      "duration": "7:34",
+      "avg_hr": 132,
+      "max_hr": 147,
+      "pace": "5'07\"",
+      "hr_zone": "Z2"
+    },
+    {
+      "date": "2026-04-28",
+      "type": "ラン",
+      "title": "葛飾区 ラン",
+      "dist_km": 92.0,
+      "duration": "0:14",
+      "avg_hr": 116,
+      "max_hr": 137,
+      "pace": "2'33\"",
+      "hr_zone": "Z1"
+    },
+    {
+      "date": "2026-04-28",
+      "type": "ラン",
+      "title": "葛飾区 ラン",
+      "dist_km": 10012.0,
+      "duration": "49:38",
+      "avg_hr": 136,
+      "max_hr": 149,
+      "pace": "4'57\"",
+      "hr_zone": "Z2"
+    },
+    {
+      "date": "2026-04-25",
+      "type": "ラン",
+      "title": "渋谷区 ラン",
+      "dist_km": 2185.0,
+      "duration": "15:00",
+      "avg_hr": 124,
+      "max_hr": 132,
+      "pace": "6'52\"",
+      "hr_zone": "Z1"
+    },
+    {
+      "date": "2026-04-25",
+      "type": "トラックラン",
+      "title": "渋谷区 トラックラン",
+      "dist_km": 1.01,
+      "duration": "2:57",
+      "avg_hr": 156,
+      "max_hr": 167,
+      "pace": "2'56\"",
+      "hr_zone": "Z3"
+    },
+    {
+      "date": "2026-04-25",
+      "type": "トラックラン",
+      "title": "渋谷区 トラックラン",
+      "dist_km": 2.0,
+      "duration": "6:30",
+      "avg_hr": 162,
+      "max_hr": 170,
+      "pace": "3'15\"",
+      "hr_zone": "Z3"
+    },
+    {
+      "date": "2026-04-25",
+      "type": "トラックラン",
+      "title": "渋谷区 トラックラン",
+      "dist_km": 3.01,
+      "duration": "10:00",
+      "avg_hr": 163,
+      "max_hr": 170,
+      "pace": "3'19\"",
+      "hr_zone": "Z3"
+    },
+    {
+      "date": "2026-04-25",
+      "type": "トラックラン",
+      "title": "渋谷区 トラックラン",
+      "dist_km": 0.84,
+      "duration": "4:55",
+      "avg_hr": 122,
+      "max_hr": 155,
+      "pace": "5'51\"",
+      "hr_zone": "Z1"
+    },
+    {
+      "date": "2026-04-25",
+      "type": "ラン",
+      "title": "渋谷区 ラン",
+      "dist_km": 2748.0,
+      "duration": "12:07",
+      "avg_hr": 140,
+      "max_hr": 166,
+      "pace": "4'24\"",
+      "hr_zone": "Z2"
+    },
+    {
+      "date": "2026-04-24",
+      "type": "ラン",
+      "title": "渋谷区 ラン",
+      "dist_km": 768.0,
+      "duration": "4:40",
+      "avg_hr": 122,
+      "max_hr": 137,
+      "pace": "6'05\"",
+      "hr_zone": "Z1"
+    },
+    {
+      "date": "2026-04-24",
+      "type": "ラン",
+      "title": "目黒区 ラン",
+      "dist_km": 1241.0,
+      "duration": "6:56",
+      "avg_hr": 141,
+      "max_hr": 165,
+      "pace": "5'35\"",
+      "hr_zone": "Z2"
+    },
+    {
+      "date": "2026-04-24",
+      "type": "ラン",
+      "title": "渋谷区 ラン",
+      "dist_km": 6370.0,
+      "duration": "30:38",
+      "avg_hr": 134,
+      "max_hr": 159,
+      "pace": "4'48\"",
+      "hr_zone": "Z2"
+    }
+  ],
+  "weekly_summary": [
+    {
+      "week_start": "2026-02-16",
+      "km": 15.4,
+      "sessions": 15
+    },
+    {
+      "week_start": "2026-02-23",
+      "km": 26.8,
+      "sessions": 13
+    },
+    {
+      "week_start": "2026-03-02",
+      "km": 17.3,
+      "sessions": 23
+    },
+    {
+      "week_start": "2026-03-09",
+      "km": 45.5,
+      "sessions": 18
+    },
+    {
+      "week_start": "2026-03-16",
+      "km": 52.5,
+      "sessions": 15
+    },
+    {
+      "week_start": "2026-03-23",
+      "km": 0.0,
+      "sessions": 6
+    },
+    {
+      "week_start": "2026-03-30",
+      "km": 58.1,
+      "sessions": 25
+    },
+    {
+      "week_start": "2026-04-06",
+      "km": 12201.2,
+      "sessions": 18
+    },
+    {
+      "week_start": "2026-04-13",
+      "km": 56437.1,
+      "sessions": 24
+    },
+    {
+      "week_start": "2026-04-20",
+      "km": 66862.9,
+      "sessions": 24
+    },
+    {
+      "week_start": "2026-04-27",
+      "km": 33043.4,
+      "sessions": 18
+    },
+    {
+      "week_start": "2026-05-04",
+      "km": 7811.0,
+      "sessions": 3
+    }
+  ]
+}

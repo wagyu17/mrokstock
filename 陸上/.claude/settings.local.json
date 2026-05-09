@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3)",
+      "Bash(python3 convert_log.py)",
+      "Bash(python3 build_excel.py)",
+      "Bash(python3:*)",
+      "Bash(python import_laps.py)",
+      "Bash(python update_plan.py)",
+      "Bash(mkdir -p scripts アーカイブ)",
+      "Bash(mv update_excel.py import_laps.py update_plan.py build_excel.py scripts/)",
+      "Bash(mv analyze_excel.py convert_log.py extract_recent.py hr_zone_analysis.py training_chart.py アーカイブ/)",
+      "Bash(mv analyze_output.txt recent_analysis.txt training_chart.png hr_zone_analysis.orig.xlsx training_report_2026.md training_log_formatted.md トレーニングログ_全記録.md トレーニングログ記載例.md アーカイブ/)",
+      "Bash(python scripts\\\\update_plan.py)",
+      "Bash(python \"scripts/update_plan.py\")",
+      "WebFetch(domain:note.com)",
+      "Bash(curl -s \"https://note.com/api/v3/notes/n2dc3a7fa4223\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d['data']['name']\\); print\\(d['data'].get\\('body',''\\)[:3000]\\)\")",
+      "Bash(curl -s \"https://note.com/api/v3/notes/nbe4317c79e7d\")",
+      "Bash(curl -s \"https://note.com/api/v3/notes/n6256834b4bec\")",
+      "Bash(python scripts/build_site.py)",
+      "Bash(python -c ':*)",
+      "Bash(python)",
+      "Bash(python scripts\\\\update_fitness.py)",
+      "Bash(python scripts/update_fitness.py)",
+      "Bash(python *)",
+      "Bash(pip show *)",
+      "Bash(pip install *)",
+      "Bash(gh --version)",
+      "Bash(PYTHONIOENCODING=utf-8 python)",
+      "Bash(git *)"
+    ]
+  }
+}
