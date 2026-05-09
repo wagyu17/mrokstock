@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.instagram.com)",
+      "WebSearch",
+      "WebFetch(domain:shiftb.dev)",
+      "Bash(mkdir -p \"C:/Users/tomot/Desktop/management/.claude/skills/verify-claude\")",
+      "Bash(mkdir -p \"C:/Users/tomot/Desktop/management/.claude/skills/add-to-draft\")",
+      "Bash(mkdir -p \"C:/Users/tomot/Desktop/management/.claude/skills/claude-lookup\")",
+      "WebFetch(domain:plus.onecareer.jp)",
+      "WebFetch(domain:talentsquare.co.jp)",
+      "WebFetch(domain:outside.no-limit.careers)",
+      "WebFetch(domain:abuild-c.com)",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:www.poiintter.com)",
+      "WebFetch(domain:www.accecon.site)",
+      "WebFetch(domain:note.com)",
+      "WebFetch(domain:kanataw.com)",
+      "WebFetch(domain:newsroom.accenture.com)",
+      "WebFetch(domain:investor.accenture.com)",
+      "WebFetch(domain:www.accenture.com)",
+      "WebFetch(domain:www.stocktitan.net)",
+      "WebFetch(domain:www.ciodive.com)",
+      "WebFetch(domain:insiderph.com)",
+      "WebFetch(domain:www.bwpeople.in)",
+      "WebFetch(domain:consul.global)",
+      "WebFetch(domain:www.peoplematters.in)"
+    ]
+  }
+}
