@@ -1,0 +1,6 @@
+[mcp_servers.my-brain]
+args = ["C:/Users/tomot/Desktop/My_Brain/mcp_server.py"]
+command = "python"
+
+[mcp_servers.notion]
+url = "https://mcp.notion.com/mcp"

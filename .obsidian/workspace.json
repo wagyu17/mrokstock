@@ -1,0 +1,239 @@
+{
+  "main": {
+    "id": "0c93da717a65ad96",
+    "type": "split",
+    "children": [
+      {
+        "id": "6554110f7ec485de",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d7c0293d241a5827",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notion/ALL/Schedule/今日のTo Do/日付.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "日付"
+            }
+          },
+          {
+            "id": "3b513b3a2b533452",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notion/ALL/就活/database/マイページ.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "マイページ"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c37cdc978d02e29f",
+    "type": "split",
+    "children": [
+      {
+        "id": "86a66bae84432227",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "28e085dc8ee4ebc5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "44b8d8b8d0bd856f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "06dce71df34d57fa",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b8d9f1e57af192bf",
+    "type": "split",
+    "children": [
+      {
+        "id": "80f0876a4c56b76b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "86a5cf69740f176c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "HOME.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "HOMEへのバックリンク"
+            }
+          },
+          {
+            "id": "18c1bff07aa91636",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ようこそ.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "ようこそからのアウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "57a915ba0b0b2731",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "80c75f06fb76e446",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "すべてのプロパティ"
+            }
+          },
+          {
+            "id": "59a7c1bc6624129e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Notion/ALL/Schedule/今日のTo Do/日付.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "日付のアウトライン"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false,
+      "bases:新規ベースを作成": false
+    }
+  },
+  "active": "d7c0293d241a5827",
+  "lastOpenFiles": [
+    "Notion/ALL/Schedule/今日のTo Do/2026_03_28.md",
+    "HOME.md",
+    "Notion/ALL/就活/database/自己分析/database/考え/database/untitled.md",
+    "Notion/ALL/就活/database/自己分析/database/ビジョンぬ/今後など/🐱/untitled.md",
+    "desktop.ini",
+    "Notion/ALL/アルバイト/その他/バイトスケジュール/database/午前.md",
+    "Notion/ALL/アルバイト/その他/自己PR文.md",
+    "Notion/ALL/アルバイト/その他/Tech Teacher 資料/資料/マインクラフト　コマンド大全.md",
+    "Notion/ALL/アルバイト/その他/Tech Teacher 資料/資料/他の教師の指導内容.md",
+    "Notion/ALL/アルバイト/その他/Tech Teacher 資料/資料/体験授業終了報告.md",
+    "Training/Monthly/2026-03_バイク_monthly.md",
+    "Training/Monthly/2026-02_バイク_monthly.md",
+    "Training/Monthly/2026-01_バイク_monthly.md",
+    "Training/Monthly/2025-12_バイク_monthly.md",
+    "Training/Monthly/2025-11_バイク_monthly.md",
+    "Training/Monthly/2025-10_バイク_monthly.md",
+    "Training/Monthly/2026-03_筋トレ_monthly.md",
+    "Training/Monthly/2026-02_筋トレ_monthly.md",
+    "Training/Monthly/2026-01_筋トレ_monthly.md",
+    "Training/Monthly/2025-12_筋トレ_monthly.md",
+    "Training/Monthly/2025-11_筋トレ_monthly.md",
+    "Training/Monthly/2025-10_筋トレ_monthly.md",
+    "Training/Monthly/2025-08_筋トレ_monthly.md",
+    "Training/Monthly/2025-07_筋トレ_monthly.md",
+    "Training/Monthly/2025-06_筋トレ_monthly.md",
+    "Training/Monthly/2025-05_筋トレ_monthly.md",
+    "Training/Monthly/2025-01_筋トレ_monthly.md",
+    "Training/Logs/2025/11",
+    "Training/Session_Data/21302179567_ACTIVITY.fit",
+    "Training/Session_Data/21095025503_ACTIVITY.fit",
+    "Training/Monthly_Data/Bike_Data.csv",
+    "Training/Monthly_Data/Training_Data.csv",
+    "Training/Also_Data",
+    "Training/Logs/2025/12",
+    "Training/Logs/2025",
+    "Training/Monthly"
+  ]
+}

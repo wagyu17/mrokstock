@@ -1,0 +1,9 @@
+{
+  "promptDelete": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Daily",
+  "attachmentFolderPath": "Attachments",
+  "templates": {
+    "folder": "Templates"
+  }
+}
