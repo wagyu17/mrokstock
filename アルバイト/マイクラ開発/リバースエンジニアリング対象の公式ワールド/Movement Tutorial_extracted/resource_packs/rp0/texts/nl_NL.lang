@@ -1,0 +1,60 @@
+﻿##
+## Movement Tutorial
+## Copyright 2020 ReWrite Media, Inc.
+##
+
+pack.name=Bewegingstutorial	###
+pack.description=Benodigde hulpmiddelen voor bewegingstutorial	###
+
+##	Blackboard
+##	{"rawtext":[{"translate":"blackboard.intro.0"},{"text":"\n"},{"translate":"blackboard.intro.1"},{"text":"\n"},{"translate":"blackboard.intro.2"},{"text":"\n"},{"translate":"blackboard.intro.3"},{"text":"\n"},{"translate":"blackboard.intro.4"},{"text":"\n"},{"translate":"blackboard.intro.5"},{"text":"\n"},{"translate":"blackboard.intro.6"},{"text":"\n"},{"translate":"blackboard.intro.7"},{"text":"\n"},{"translate":"blackboard.intro.8"},{"text":"\n"},{"translate":"blackboard.intro.9"},{"text":"\n"},{"translate":"blackboard.intro.10"},{"text":"\n"},{"translate":"blackboard.intro.11"},{"text":"\n"},{"translate":"blackboard.intro.12"},{"text":"\n"},{"translate":"blackboard.intro.13"},{"text":"\n"},{"translate":"blackboard.intro.14"}]}
+blackboard.intro.0=§r	###
+blackboard.intro.1=                         Welkom bij de	###
+blackboard.intro.2=                  Minecraft: Education Edition	###
+blackboard.intro.3=                        Bewegingstutorial	###
+blackboard.intro.4=§r	###
+blackboard.intro.5=Deze tutorial leert je hoe je door Minecraft navigeert. Instructies verschijnen onderaan het scherm, boven je 'snelbalk', en vertellen je wat je moet doen.	###
+blackboard.intro.6=§r	###
+blackboard.intro.7=Gebruik je muis om naar het gouden blok hierboven te kijken. Nadat dat blok in ijzer is veranderd, verschijnt er nog een. Kijk naar alle gouden blokken om het hek van het park te openen.	###
+blackboard.intro.8=§r	###
+blackboard.intro.9=§r	###
+blackboard.intro.10=§r	###
+blackboard.intro.11=§r	###
+blackboard.intro.12=§r	###
+blackboard.intro.13=§r	###
+
+##	Lesson Complete Poster
+##	{"rawtext":[{"translate":"lesson.complete.poster.0"},{"text":"\n"},{"translate":"lesson.complete.poster.1"},{"text":"\n"},{"translate":"lesson.complete.poster.2"}]}
+lesson.complete.poster.0=Om de les af te sluiten, druk je op de ESC-toets op je toetsenbord en selecteer je 'Opslaan en afsluiten'.	###
+lesson.complete.poster.1=§r	###
+lesson.complete.poster.2=Je kunt ook de stad verkennen om meer te oefenen.	###
+
+##  Instructions
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"instruction.prefix"},{"translate":"instruction.color"},{"text":"\n"},{"translate":"act.0.instruction.actionbar.0"}]}
+act.0.instruction.actionbar.0=Plaats je cursor op de gouden blokken.	###
+act.0.instruction.actionbar.1=Draai je om voor het blok achter je.	###
+act.0.instruction.actionbar.2=Draai je om om het park in te gaan.	###
+
+act.1.instruction.actionbar.0=Druk op W om naar voren te lopen.	### Keyboard instructions, 'W' 'A' 'S' 'D' are inputs in this context
+act.1.instruction.actionbar.1=Gebruik A en D om naar links en rechts te bewegen.	###
+act.1.instruction.actionbar.2=Ga naar de fontein.	###
+act.1.instruction.actionbar.3=Gebruik je muis om een ​​hoek om te draaien.	###
+act.1.instruction.actionbar.4=Combineer WASD en muis voor nauwkeurige besturing.	###
+act.1.instruction.actionbar.5=Druk op W + SPATIEBLAK om naar voren te springen.	###
+act.1.instruction.actionbar.6=Druk op W + SPATIEBLAK om naar voren te springen.	###
+act.1.instruction.actionbar.7=Ga verder om het park te verlaten.	###
+
+instruction.color=§6	###
+instruction.prefix=§l§eHint§r	###
+
+lesson.title.complete=Les voltooid!	###
+lesson.title.reset=Opnieuw instellen voltooid.	###
+
+lesson.complete.actionbar.0=Bonus: gebruik CTRL + W om door de stad te sprinten.	###
+
+## Reset sign
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"reset.sign.0"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.1"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.2"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.3"}]}
+reset.sign.0=Stap op de	###
+reset.sign.1=drukplaat	###
+reset.sign.2=om de	###
+reset.sign.3=tutorial opnieuw te voltooien.	###

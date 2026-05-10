@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "rwm:utility",
+			"geometry": {
+				"default": "geometry.blank"
+			},
+			"materials": {
+				"default": "entity"
+			},
+			"render_controllers": [
+				"controller.render.generic"
+			],
+			"textures": {
+				"default": "textures/entity/blank"
+			}
+		}
+	}
+}

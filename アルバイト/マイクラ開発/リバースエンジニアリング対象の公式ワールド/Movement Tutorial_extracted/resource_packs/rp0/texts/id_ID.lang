@@ -1,0 +1,60 @@
+﻿##
+## Movement Tutorial
+## Copyright 2020 ReWrite Media, Inc.
+##
+
+pack.name=Panduan Gerakan	###
+pack.description=Sumber daya yang diperlukan untuk Tutorial Gerakan	###
+
+##	Blackboard
+##	{"rawtext":[{"translate":"blackboard.intro.0"},{"text":"\n"},{"translate":"blackboard.intro.1"},{"text":"\n"},{"translate":"blackboard.intro.2"},{"text":"\n"},{"translate":"blackboard.intro.3"},{"text":"\n"},{"translate":"blackboard.intro.4"},{"text":"\n"},{"translate":"blackboard.intro.5"},{"text":"\n"},{"translate":"blackboard.intro.6"},{"text":"\n"},{"translate":"blackboard.intro.7"},{"text":"\n"},{"translate":"blackboard.intro.8"},{"text":"\n"},{"translate":"blackboard.intro.9"},{"text":"\n"},{"translate":"blackboard.intro.10"},{"text":"\n"},{"translate":"blackboard.intro.11"},{"text":"\n"},{"translate":"blackboard.intro.12"},{"text":"\n"},{"translate":"blackboard.intro.13"},{"text":"\n"},{"translate":"blackboard.intro.14"}]}
+blackboard.intro.0=§r	###
+blackboard.intro.1=                         Selamat datang di	###
+blackboard.intro.2=                  Minecraft: Education Edition	###
+blackboard.intro.3=                        Tutorial Gerakan	###
+blackboard.intro.4=§r	###
+blackboard.intro.5=Tutorial ini akan mengajarkan cara menjelajah di Minecraft! Petunjuk tentang apa yang harus dilakukan akan muncul di bagian bawah layar, di atas ”hotbar”.	###
+blackboard.intro.6=§r	###
+blackboard.intro.7=Pakai mouse untuk melihat blok emas di atas. Setelah blok itu berubah jadi besi, blok lainnya akan muncul. Lihat semua blok emas untuk membuka gerbang taman.	###
+blackboard.intro.8=§r	###
+blackboard.intro.9=§r	###
+blackboard.intro.10=§r	###
+blackboard.intro.11=§r	###
+blackboard.intro.12=§r	###
+blackboard.intro.13=§r	###
+
+##	Lesson Complete Poster
+##	{"rawtext":[{"translate":"lesson.complete.poster.0"},{"text":"\n"},{"translate":"lesson.complete.poster.1"},{"text":"\n"},{"translate":"lesson.complete.poster.2"}]}
+lesson.complete.poster.0=Untuk keluar dari pelajaran, tekan tombol ESC di papan tik dan pilih “Simpan & Keluar”.	###
+lesson.complete.poster.1=§r	###
+lesson.complete.poster.2=Kamu juga bisa menjelajahi kota untuk berlatih lebih lanjut.	###
+
+##  Instructions
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"instruction.prefix"},{"translate":"instruction.color"},{"text":"\n"},{"translate":"act.0.instruction.actionbar.0"}]}
+act.0.instruction.actionbar.0=Arahkan kursor ke blok emas.	###
+act.0.instruction.actionbar.1=Berbaliklah menuju yang ada di belakangmu.	###
+act.0.instruction.actionbar.2=Berbalik untuk memasuki taman.	###
+
+act.1.instruction.actionbar.0=Tekan W untuk berjalan maju.	### Keyboard instructions, 'W' 'A' 'S' 'D' are inputs in this context
+act.1.instruction.actionbar.1=Tekan A dan D untuk bergerak ke kiri dan ke kanan.	###
+act.1.instruction.actionbar.2=Terus maju ke air mancur.	###
+act.1.instruction.actionbar.3=Pakai mouse untuk belok di tikungan	###
+act.1.instruction.actionbar.4=Gabungkan WASD dan mouse untuk mengontrol dengan cermat.	###
+act.1.instruction.actionbar.5=Tekan W + SPASI untuk lompat ke depan.	###
+act.1.instruction.actionbar.6=Tekan W + SPASI untuk lompat ke depan.	###
+act.1.instruction.actionbar.7=Lanjutkan untuk keluar dari taman.	###
+
+instruction.color=§6	###
+instruction.prefix=§l§ePetunjuk§r	###
+
+lesson.title.complete=Pelajaran Selesai!	###
+lesson.title.reset=Pengaturan Ulang Selesai.	###
+
+lesson.complete.actionbar.0=Bonus: Pakai CTRL + W untuk lari berkeliling kota.	###
+
+## Reset sign
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"reset.sign.0"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.1"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.2"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.3"}]}
+reset.sign.0=Jalan ke	###
+reset.sign.1=pelat tekan	###
+reset.sign.2=untuk mencoba	###
+reset.sign.3=tutorial ini lagi.	###

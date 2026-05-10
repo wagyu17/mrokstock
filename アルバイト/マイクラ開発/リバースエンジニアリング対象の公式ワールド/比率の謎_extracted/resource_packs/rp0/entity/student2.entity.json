@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "blockbuilders:student2",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/student2"
+			},
+			"geometry": {
+				"default": "geometry.student2"
+			},
+			"render_controllers": ["controller.render.default"],
+			"enable_attachables": true,
+			"hide_armor": false
+		}
+	}
+}

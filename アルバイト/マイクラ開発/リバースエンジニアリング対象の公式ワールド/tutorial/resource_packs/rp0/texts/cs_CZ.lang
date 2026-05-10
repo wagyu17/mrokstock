@@ -1,0 +1,60 @@
+﻿##
+## Movement Tutorial
+## Copyright 2020 ReWrite Media, Inc.
+##
+
+pack.name=Výukový kurz pohybu	###
+pack.description=Zdroje potřebné pro Výuku pohybu	###
+
+##	Blackboard
+##	{"rawtext":[{"translate":"blackboard.intro.0"},{"text":"\n"},{"translate":"blackboard.intro.1"},{"text":"\n"},{"translate":"blackboard.intro.2"},{"text":"\n"},{"translate":"blackboard.intro.3"},{"text":"\n"},{"translate":"blackboard.intro.4"},{"text":"\n"},{"translate":"blackboard.intro.5"},{"text":"\n"},{"translate":"blackboard.intro.6"},{"text":"\n"},{"translate":"blackboard.intro.7"},{"text":"\n"},{"translate":"blackboard.intro.8"},{"text":"\n"},{"translate":"blackboard.intro.9"},{"text":"\n"},{"translate":"blackboard.intro.10"},{"text":"\n"},{"translate":"blackboard.intro.11"},{"text":"\n"},{"translate":"blackboard.intro.12"},{"text":"\n"},{"translate":"blackboard.intro.13"},{"text":"\n"},{"translate":"blackboard.intro.14"}]}
+blackboard.intro.0=§r	###
+blackboard.intro.1=                         Vítejte v	###
+blackboard.intro.2=                  Minecraft: Education Edition	###
+blackboard.intro.3=                        Výukový kurz pohybu	###
+blackboard.intro.4=§r	###
+blackboard.intro.5=Tento kurz vás naučí, jak se pohybovat v Minecraftu! Instrukce se budou objevovat ve spodní části obrazovky nad vaší „lištou předmětů“ a navedou vás k tomu, co udělat jako další.	###
+blackboard.intro.6=§r	###
+blackboard.intro.7=Pomocí myši se podívejte na zlatý blok nahoře. Jakmile se blok změní na železný, objeví se další. Podívejte se na všechny zlaté bloky a otevřete tak bránu parku.	###
+blackboard.intro.8=§r	###
+blackboard.intro.9=§r	###
+blackboard.intro.10=§r	###
+blackboard.intro.11=§r	###
+blackboard.intro.12=§r	###
+blackboard.intro.13=§r	###
+
+##	Lesson Complete Poster
+##	{"rawtext":[{"translate":"lesson.complete.poster.0"},{"text":"\n"},{"translate":"lesson.complete.poster.1"},{"text":"\n"},{"translate":"lesson.complete.poster.2"}]}
+lesson.complete.poster.0=Pokud chcete lekci ukončit, stiskněte na klávesnici klávesu ESC a vyberte „Uložit & odejít“	###
+lesson.complete.poster.1=§r	###
+lesson.complete.poster.2=Můžete se také procvičit prozkoumáváním města.	###
+
+##  Instructions
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"instruction.prefix"},{"translate":"instruction.color"},{"text":"\n"},{"translate":"act.0.instruction.actionbar.0"}]}
+act.0.instruction.actionbar.0=Najeďte kurzorem na zlaté bloky.	###
+act.0.instruction.actionbar.1=Otočte se na ten za vámi.	###
+act.0.instruction.actionbar.2=Znovu se otočte a vstupte do parku.	###
+
+act.1.instruction.actionbar.0=Stisknutím W jděte dopředu.	### Keyboard instructions, 'W' 'A' 'S' 'D' are inputs in this context
+act.1.instruction.actionbar.1=Pomocí A a D se posunete doleva a doprava.	###
+act.1.instruction.actionbar.2=Pokračujte dál k fontáně.	###
+act.1.instruction.actionbar.3=Použijte myš, abyste se mohli na rohu otočit.	###
+act.1.instruction.actionbar.4=Pro přesné ovládání kombinujte WASD a myš.	###
+act.1.instruction.actionbar.5=Stiskněte W + MEZERNÍK a skočte dopředu.	###
+act.1.instruction.actionbar.6=Stiskněte W + MEZERNÍK a skočte dopředu.	###
+act.1.instruction.actionbar.7=Pokračujte a odejděte z parku.	###
+
+instruction.color=§6	###
+instruction.prefix=§l§eNápověda§r	###
+
+lesson.title.complete=Lekce byla dokončena!	###
+lesson.title.reset=Resetování dokončeno.	###
+
+lesson.complete.actionbar.0=Bonus: Pomocí CTRL + W sprintujte po městě.	###
+
+## Reset sign
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"reset.sign.0"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.1"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.2"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.3"}]}
+reset.sign.0=Jděte dál k	###
+reset.sign.1=nášlapné desce	###
+reset.sign.2=a zkuste	###
+reset.sign.3=si tento kurz znovu.	###

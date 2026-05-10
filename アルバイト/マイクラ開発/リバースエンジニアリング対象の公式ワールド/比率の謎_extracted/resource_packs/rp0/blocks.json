@@ -1,0 +1,101 @@
+{
+	"symbol_colon": {
+		"sound": "stone"
+	},
+	"symbol_decimalpoint": {
+		"sound": "stone"
+	},
+	"symbol_equals": {
+		"sound": "stone"
+	},
+	"symbol_subtract": {
+		"sound": "stone"
+	},
+	"symbol_divide": {
+		"sound": "stone"
+	},
+	"symbol_times": {
+		"sound": "stone"
+	},
+	"symbol_plus": {
+		"sound": "stone"
+	},
+	"number_0": {
+		"sound": "stone"
+	},
+	"number_9": {
+		"sound": "stone"
+	},
+	"number_8": {
+		"sound": "stone"
+	},
+	"number_7": {
+		"sound": "stone"
+	},
+	"number_6": {
+		"sound": "stone"
+	},
+	"number_5": {
+		"sound": "stone"
+	},
+	"number_4": {
+		"sound": "stone"
+	},
+	"number_3": {
+		"sound": "stone"
+	},
+	"number_2": {
+		"sound": "stone"
+	},
+	"number_1": {
+		"sound": "stone"
+	},
+	"number_20": {
+		"sound": "stone"
+	},
+	"number_19": {
+		"sound": "stone"
+	},
+	"number_18": {
+		"sound": "stone"
+	},
+	"number_17": {
+		"sound": "stone"
+	},
+	"number_16": {
+		"sound": "stone"
+	},
+	"number_15": {
+		"sound": "stone"
+	},
+	"number_14": {
+		"sound": "stone"
+	},
+	"number_13": {
+		"sound": "stone"
+	},
+	"number_12": {
+		"sound": "stone"
+	},
+	"number_11": {
+		"sound": "stone"
+	},
+	"number_10": {
+		"sound": "stone"
+	},
+	"number_24": {
+		"sound": "stone"
+	},
+	"number_23": {
+		"sound": "stone"
+	},
+	"number_22": {
+		"sound": "stone"
+	},
+	"number_21": {
+		"sound": "stone"
+	},
+	"number_big_one": {
+		"sound": "stone"
+	}
+}

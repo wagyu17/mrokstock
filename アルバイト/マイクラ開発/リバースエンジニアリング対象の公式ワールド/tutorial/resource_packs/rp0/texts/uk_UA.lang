@@ -1,0 +1,60 @@
+﻿##
+## Movement Tutorial
+## Copyright 2020 ReWrite Media, Inc.
+##
+
+pack.name=Посібник з пересування	###
+pack.description=Ресурси, необхідні для посібника з пересування	###
+
+##	Blackboard
+##	{"rawtext":[{"translate":"blackboard.intro.0"},{"text":"\n"},{"translate":"blackboard.intro.1"},{"text":"\n"},{"translate":"blackboard.intro.2"},{"text":"\n"},{"translate":"blackboard.intro.3"},{"text":"\n"},{"translate":"blackboard.intro.4"},{"text":"\n"},{"translate":"blackboard.intro.5"},{"text":"\n"},{"translate":"blackboard.intro.6"},{"text":"\n"},{"translate":"blackboard.intro.7"},{"text":"\n"},{"translate":"blackboard.intro.8"},{"text":"\n"},{"translate":"blackboard.intro.9"},{"text":"\n"},{"translate":"blackboard.intro.10"},{"text":"\n"},{"translate":"blackboard.intro.11"},{"text":"\n"},{"translate":"blackboard.intro.12"},{"text":"\n"},{"translate":"blackboard.intro.13"},{"text":"\n"},{"translate":"blackboard.intro.14"}]}
+blackboard.intro.0=§r	###
+blackboard.intro.1=                         Ласкаво просимо до	###
+blackboard.intro.2=                  Minecraft: Education Edition	###
+blackboard.intro.3=                        Посібник із пересування	###
+blackboard.intro.4=§r	###
+blackboard.intro.5=Пропонуємо вашій увазі посібник із навігації в Minecraft. Інструкції щодо наступних дій з’являться в нижній частині екрана над панеллю швидкого доступу.	###
+blackboard.intro.6=§r	###
+blackboard.intro.7=Використовуйте мишу, щоб подивитися на золотий блок вгорі. Після того як цей блок перетвориться на залізо, з’явиться інший. Подивіться на всі золоті блоки, щоб відкрити ворота парку.	###
+blackboard.intro.8=§r	###
+blackboard.intro.9=§r	###
+blackboard.intro.10=§r	###
+blackboard.intro.11=§r	###
+blackboard.intro.12=§r	###
+blackboard.intro.13=§r	###
+
+##	Lesson Complete Poster
+##	{"rawtext":[{"translate":"lesson.complete.poster.0"},{"text":"\n"},{"translate":"lesson.complete.poster.1"},{"text":"\n"},{"translate":"lesson.complete.poster.2"}]}
+lesson.complete.poster.0=Щоб вийти з уроку, натисніть клавішу ESC на клавіатурі й виберіть «Зберегти та вийти».	###
+lesson.complete.poster.1=§r	###
+lesson.complete.poster.2=Ви також можете дослідити місто для додаткової практики.	###
+
+##  Instructions
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"instruction.prefix"},{"translate":"instruction.color"},{"text":"\n"},{"translate":"act.0.instruction.actionbar.0"}]}
+act.0.instruction.actionbar.0=Наведіть курсор на золоті блоки.	###
+act.0.instruction.actionbar.1=Поверніться до блоку позаду вас.	###
+act.0.instruction.actionbar.2=Оберніться назад, щоб увійти в парк.	###
+
+act.1.instruction.actionbar.0=Натисніть W, щоб іти вперед.	### Keyboard instructions, 'W' 'A' 'S' 'D' are inputs in this context
+act.1.instruction.actionbar.1=Використовуйте клавіші A і D, щоб переміщуватися вліво та вправо.	###
+act.1.instruction.actionbar.2=Продовжуйте рухатися вперед до фонтану.	###
+act.1.instruction.actionbar.3=Використовуйте мишу, щоб обходити кути.	###
+act.1.instruction.actionbar.4=Поєднуйте клавіші WASD і мишу для точного керування.	###
+act.1.instruction.actionbar.5=Натисніть W + ПРОБІЛ, щоб стрибнути вперед.	###
+act.1.instruction.actionbar.6=Натисніть W + ПРОБІЛ, щоб стрибнути вперед.	###
+act.1.instruction.actionbar.7=Вийдіть із парку.	###
+
+instruction.color=§6	###
+instruction.prefix=§l§eПідказка§r	###
+
+lesson.title.complete=Урок завершено!	###
+lesson.title.reset=Скидання виконано.	###
+
+lesson.complete.actionbar.0=Бонус: використовуйте CTRL + W, щоб бігати містом.	###
+
+## Reset sign
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"reset.sign.0"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.1"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.2"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.3"}]}
+reset.sign.0=Станьте на	###
+reset.sign.1=притискну пластину,	###
+reset.sign.2=щоб пройти	###
+reset.sign.3=посібник іще раз.	###

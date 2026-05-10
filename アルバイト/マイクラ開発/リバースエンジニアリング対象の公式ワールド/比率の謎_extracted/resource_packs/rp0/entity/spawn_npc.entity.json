@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "blockbuilders:spawn_npc",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/spawn_npc"
+			},
+			"geometry": {
+				"default": "geometry.spawn_npc"
+			},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

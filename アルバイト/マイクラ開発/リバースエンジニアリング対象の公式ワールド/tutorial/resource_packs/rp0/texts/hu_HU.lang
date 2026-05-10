@@ -1,0 +1,60 @@
+﻿##
+## Movement Tutorial
+## Copyright 2020 ReWrite Media, Inc.
+##
+
+pack.name=Mozgás oktatóanyag	###
+pack.description=A Mozgási oktatóanyaghoz szükséges források	###
+
+##	Blackboard
+##	{"rawtext":[{"translate":"blackboard.intro.0"},{"text":"\n"},{"translate":"blackboard.intro.1"},{"text":"\n"},{"translate":"blackboard.intro.2"},{"text":"\n"},{"translate":"blackboard.intro.3"},{"text":"\n"},{"translate":"blackboard.intro.4"},{"text":"\n"},{"translate":"blackboard.intro.5"},{"text":"\n"},{"translate":"blackboard.intro.6"},{"text":"\n"},{"translate":"blackboard.intro.7"},{"text":"\n"},{"translate":"blackboard.intro.8"},{"text":"\n"},{"translate":"blackboard.intro.9"},{"text":"\n"},{"translate":"blackboard.intro.10"},{"text":"\n"},{"translate":"blackboard.intro.11"},{"text":"\n"},{"translate":"blackboard.intro.12"},{"text":"\n"},{"translate":"blackboard.intro.13"},{"text":"\n"},{"translate":"blackboard.intro.14"}]}
+blackboard.intro.0=§r	###
+blackboard.intro.1=                         Üdvözöl a	###
+blackboard.intro.2=                  Minecraft: Education Edition	###
+blackboard.intro.3=                        mozgási oktatóanyaga	###
+blackboard.intro.4=§r	###
+blackboard.intro.5=Ez az oktatóanyag bemutatja, hogyan navigálhatsz a Minecraftban. Az utasítások a képernyő alján jelennek meg a „gyorssáv” fölött, és segítenek abban, hogy mit kell éppen tenned.	###
+blackboard.intro.6=§r	###
+blackboard.intro.7=Az egér használatával nézz rá a fenti aranyblokkra. Miután az vasblokká változik, megjelenik egy másik. Nézz rá az összes aranyblokkra, hogy kinyisd a park kapuját.	###
+blackboard.intro.8=§r	###
+blackboard.intro.9=§r	###
+blackboard.intro.10=§r	###
+blackboard.intro.11=§r	###
+blackboard.intro.12=§r	###
+blackboard.intro.13=§r	###
+
+##	Lesson Complete Poster
+##	{"rawtext":[{"translate":"lesson.complete.poster.0"},{"text":"\n"},{"translate":"lesson.complete.poster.1"},{"text":"\n"},{"translate":"lesson.complete.poster.2"}]}
+lesson.complete.poster.0=A leckéből való kilépéshez nyomd meg az ESC billentyűt a billentyűzeten, majd válaszd a „Mentés és kilépés” lehetőséget.	###
+lesson.complete.poster.1=§r	###
+lesson.complete.poster.2=Ha tovább szeretnél gyakorolni, fedezd fel a várost.	###
+
+##  Instructions
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"instruction.prefix"},{"translate":"instruction.color"},{"text":"\n"},{"translate":"act.0.instruction.actionbar.0"}]}
+act.0.instruction.actionbar.0=Mutass a kurzorral az aranyblokkokra.	###
+act.0.instruction.actionbar.1=Fordulj meg, és nézz rá a mögötted lévőre.	###
+act.0.instruction.actionbar.2=Fordulj vissza és lépj be a parkba.	###
+
+act.1.instruction.actionbar.0=Az előre mozgáshoz nyomd le a W billentyűt.	### Keyboard instructions, 'W' 'A' 'S' 'D' are inputs in this context
+act.1.instruction.actionbar.1=A balra és jobbra mozgáshoz nyomd le az A és D billentyűt.	###
+act.1.instruction.actionbar.2=Menj tovább a szökőkúthoz.	###
+act.1.instruction.actionbar.3=Az egér használatával fordulj be a sarkon.	###
+act.1.instruction.actionbar.4=A pontos vezérléshez használd együtt a WASD billentyűket és az egeret.	###
+act.1.instruction.actionbar.5=Az előreugráshoz nyomd le a W és a SZÓKÖZ billentyűt.	###
+act.1.instruction.actionbar.6=Az előreugráshoz nyomd le a W és a SZÓKÖZ billentyűt.	###
+act.1.instruction.actionbar.7=A folytatáshoz menj ki a parkból.	###
+
+instruction.color=§6	###
+instruction.prefix=§l§eTipp§r	###
+
+lesson.title.complete=Lecke teljesítve!	###
+lesson.title.reset=Visszaállítás kész.	###
+
+lesson.complete.actionbar.0=Bónusz: a CTRL és W billentyű lenyomásával futhatsz a városban.	###
+
+## Reset sign
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"reset.sign.0"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.1"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.2"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.3"}]}
+reset.sign.0=Sétálj a	###
+reset.sign.1=nyomólapra,	###
+reset.sign.2=hogy újból megpróbálkozz	###
+reset.sign.3=az oktatóanyaggal.	###

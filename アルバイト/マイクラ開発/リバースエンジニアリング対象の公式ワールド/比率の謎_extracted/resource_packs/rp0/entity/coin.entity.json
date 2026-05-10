@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "blockbuilders:coin",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/coin"
+			},
+			"geometry": {
+				"default": "geometry.coin"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#650c44",
+				"overlay_color": "#365aa6"
+			}
+		}
+	}
+}

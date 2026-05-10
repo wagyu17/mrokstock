@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "blockbuilders:titlescreen",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/titlescreen"
+			},
+			"geometry": {
+				"default": "geometry.titlescreen"
+			},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

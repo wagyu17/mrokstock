@@ -1,0 +1,10 @@
+{
+	"materials": {
+		"version": "1.0.0",
+		"transparent:entity_alphatest": {},
+    	"translucent:entity_emissive_alpha": {
+      		"+states": [ "Blending", "DisableCulling" ]
+    	},
+    	"color_changer:entity_change_color": {}
+	}
+}

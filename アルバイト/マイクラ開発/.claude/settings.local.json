@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where python *)",
+      "Bash(where wkhtmltopdf *)",
+      "Bash(python -c \"import reportlab; print\\(reportlab.__version__\\)\")",
+      "Bash(python -c \"import fpdf; print\\(fpdf.__version__\\)\")",
+      "Bash(python -c \"from weasyprint import __version__; print\\(__version__\\)\")",
+      "Bash(python generate_completion_plan_pdf.py)",
+      "Bash(python -c ' *)",
+      "Bash(python *)",
+      "Bash(start \"\" \"C:/Users/tomot/Desktop/マイクラ開発/完成計画書_クライアント確認用_20260421.pdf\")",
+      "Bash(start \"\" \"C:/Users/tomot/Desktop/マイクラ開発/完成計画書_クライアント確認用_20260421.pptx\")",
+      "Bash(start *)",
+      "Bash(awk NR>=290 && NR<=432 *)",
+      "Bash(python -m http.server 8765)",
+      "Bash(echo \"pid=$!\")",
+      "Bash(curl -s -o /tmp/idx.html -w \"%{http_code}\\\\n\" http://127.0.0.1:8765/index.html)",
+      "Bash(curl -s http://127.0.0.1:8765/script.js)",
+      "Bash(node -c)",
+      "Bash(node -e \"require\\('fs'\\).readFileSync\\('C:/Users/tomot/Desktop/マイクラ開発/website/script.js','utf8'\\)\")",
+      "Bash(node --check 'C:\\\\Users\\\\tomot\\\\Desktop\\\\マイクラ開発\\\\website\\\\script.js')",
+      "Bash(echo \"exit=$?\")",
+      "Bash(kill 780)",
+      "Bash(python -m http.server 8766)",
+      "Bash(curl -s -o /dev/null -w \"index=%{http_code} script=\" http://127.0.0.1:8766/index.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} style=\" http://127.0.0.1:8766/script.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://127.0.0.1:8766/style.css)",
+      "Bash(kill %1)",
+      "Bash(node --check \"C:/Users/tomot/Desktop/マイクラ開発/website/script.js\")"
+    ]
+  }
+}

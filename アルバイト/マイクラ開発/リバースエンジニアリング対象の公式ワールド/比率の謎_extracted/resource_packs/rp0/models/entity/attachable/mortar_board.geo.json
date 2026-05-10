@@ -1,0 +1,31 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.mortar_board",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root_item",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "helmet",
+					"parent": "root_item",
+					"pivot": [0, 2, 0],
+					"binding": "'head'",
+					"cubes": [
+						{"origin": [-4, 2, -4], "size": [8, 8, 8], "inflate": 1, "uv": [0, 16]},
+						{"origin": [-5, 10, -1], "size": [15, 1, 15], "pivot": [9, 10, 0], "rotation": [0, -45, 0], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

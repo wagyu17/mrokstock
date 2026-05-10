@@ -1,0 +1,108 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"symbol_colon": {
+			"textures": "textures/blocks/symbol_colon.png"
+		},
+		"symbol_decimalpoint": {
+			"textures": "textures/blocks/symbol_decimalpoint.png"
+		},
+		"symbol_equals": {
+			"textures": "textures/blocks/symbol_equals.png"
+		},
+		"symbol_subtract": {
+			"textures": "textures/blocks/symbol_subtract.png"
+		},
+		"symbol_divide": {
+			"textures": "textures/blocks/symbol_divide.png"
+		},
+		"symbol_times": {
+			"textures": "textures/blocks/symbol_times.png"
+		},
+		"symbol_plus": {
+			"textures": "textures/blocks/symbol_plus.png"
+		},
+		"number_0": {
+			"textures": "textures/blocks/number_0.png"
+		},
+		"number_9": {
+			"textures": "textures/blocks/number_9.png"
+		},
+		"number_8": {
+			"textures": "textures/blocks/number_8.png"
+		},
+		"number_7": {
+			"textures": "textures/blocks/number_7.png"
+		},
+		"number_6": {
+			"textures": "textures/blocks/number_6.png"
+		},
+		"number_5": {
+			"textures": "textures/blocks/number_5.png"
+		},
+		"number_4": {
+			"textures": "textures/blocks/number_4.png"
+		},
+		"number_3": {
+			"textures": "textures/blocks/number_3.png"
+		},
+		"number_2": {
+			"textures": "textures/blocks/number_2.png"
+		},
+		"number_1": {
+			"textures": "textures/blocks/number_1.png"
+		},
+		"number_20": {
+			"textures": "textures/blocks/number_20.png"
+		},
+		"number_19": {
+			"textures": "textures/blocks/number_19.png"
+		},
+		"number_18": {
+			"textures": "textures/blocks/number_18.png"
+		},
+		"number_17": {
+			"textures": "textures/blocks/number_17.png"
+		},
+		"number_16": {
+			"textures": "textures/blocks/number_16.png"
+		},
+		"number_15": {
+			"textures": "textures/blocks/number_15.png"
+		},
+		"number_14": {
+			"textures": "textures/blocks/number_14.png"
+		},
+		"number_13": {
+			"textures": "textures/blocks/number_13.png"
+		},
+		"number_12": {
+			"textures": "textures/blocks/number_12.png"
+		},
+		"number_11": {
+			"textures": "textures/blocks/number_11.png"
+		},
+		"number_10": {
+			"textures": "textures/blocks/number_10.png"
+		},
+		"number_24": {
+			"textures": "textures/blocks/number_24.png"
+		},
+		"number_23": {
+			"textures": "textures/blocks/number_23.png"
+		},
+		"number_22": {
+			"textures": "textures/blocks/number_22.png"
+		},
+		"number_21": {
+			"textures": "textures/blocks/number_21.png"
+		},
+		"number_big_one": {
+			"textures": "textures/blocks/number_big_one.png"
+		}		
+		}
+		
+}

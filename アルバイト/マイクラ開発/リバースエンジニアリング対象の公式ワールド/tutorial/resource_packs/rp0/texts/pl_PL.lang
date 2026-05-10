@@ -1,0 +1,60 @@
+﻿##
+## Movement Tutorial
+## Copyright 2020 ReWrite Media, Inc.
+##
+
+pack.name=Samouczek poruszania się	###
+pack.description=Samouczek dotyczący zasobów potrzebnych do ruchu	###
+
+##	Blackboard
+##	{"rawtext":[{"translate":"blackboard.intro.0"},{"text":"\n"},{"translate":"blackboard.intro.1"},{"text":"\n"},{"translate":"blackboard.intro.2"},{"text":"\n"},{"translate":"blackboard.intro.3"},{"text":"\n"},{"translate":"blackboard.intro.4"},{"text":"\n"},{"translate":"blackboard.intro.5"},{"text":"\n"},{"translate":"blackboard.intro.6"},{"text":"\n"},{"translate":"blackboard.intro.7"},{"text":"\n"},{"translate":"blackboard.intro.8"},{"text":"\n"},{"translate":"blackboard.intro.9"},{"text":"\n"},{"translate":"blackboard.intro.10"},{"text":"\n"},{"translate":"blackboard.intro.11"},{"text":"\n"},{"translate":"blackboard.intro.12"},{"text":"\n"},{"translate":"blackboard.intro.13"},{"text":"\n"},{"translate":"blackboard.intro.14"}]}
+blackboard.intro.0=§r	###
+blackboard.intro.1=                         Witamy w	###
+blackboard.intro.2=                  Minecraft: Education Edition	###
+blackboard.intro.3=                        Samouczku dotyczącym poruszania się	###
+blackboard.intro.4=§r	###
+blackboard.intro.5=W tym samouczku poznasz techniki poruszania się w Minecrafcie. Instrukcje pojawią się w dolnej części ekranu nad twoim „paskiem narzędzi” i będą ci podpowiadać, co robić.	###
+blackboard.intro.6=§r	###
+blackboard.intro.7=Użyj myszy, aby spojrzeć na złoty blok powyżej. Gdy ten blok zamieni się w żelazo, pojawi się kolejny. Spójrz na wszystkie złote bloki, aby otworzyć bramę parku.	###
+blackboard.intro.8=§r	###
+blackboard.intro.9=§r	###
+blackboard.intro.10=§r	###
+blackboard.intro.11=§r	###
+blackboard.intro.12=§r	###
+blackboard.intro.13=§r	###
+
+##	Lesson Complete Poster
+##	{"rawtext":[{"translate":"lesson.complete.poster.0"},{"text":"\n"},{"translate":"lesson.complete.poster.1"},{"text":"\n"},{"translate":"lesson.complete.poster.2"}]}
+lesson.complete.poster.0=Aby zakończyć lekcję, naciśnij klawisz ESC na klawiaturze oraz wybierz pozycję „Zapisz i wyjdź”.	###
+lesson.complete.poster.1=§r	###
+lesson.complete.poster.2=Możesz również rozejrzeć się po mieście, aby trochę poćwiczyć.	###
+
+##  Instructions
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"instruction.prefix"},{"translate":"instruction.color"},{"text":"\n"},{"translate":"act.0.instruction.actionbar.0"}]}
+act.0.instruction.actionbar.0=Wskaż kursorem złote bloki.	###
+act.0.instruction.actionbar.1=Obróć się do tego, który znajduje się za tobą.	###
+act.0.instruction.actionbar.2=Odwróć się z powrotem, aby wejść do parku.	###
+
+act.1.instruction.actionbar.0=Naciśnij W, aby iść do przodu.	### Keyboard instructions, 'W' 'A' 'S' 'D' are inputs in this context
+act.1.instruction.actionbar.1=Naciśnij klawisze A i D, aby poruszać się w lewo i w prawo.	###
+act.1.instruction.actionbar.2=Idź naprzód do fontanny.	###
+act.1.instruction.actionbar.3=Użyj myszki, aby skręcić wokół narożników.	###
+act.1.instruction.actionbar.4=Używaj klawiszy WASD i myszy, aby precyzyjnie sterować swoim ruchem.	###
+act.1.instruction.actionbar.5=Naciśnij W + spację, aby skoczyć do przodu.	###
+act.1.instruction.actionbar.6=Naciśnij W + spację, aby skoczyć do przodu.	###
+act.1.instruction.actionbar.7=Kontynuuj, aby wyjść z parku.	###
+
+instruction.color=§6	###
+instruction.prefix=§l§eWskazówka§r	###
+
+lesson.title.complete=Lekcja ukończona!	###
+lesson.title.reset=Resetowanie ukończone.	###
+
+lesson.complete.actionbar.0=Bonus: naciśnij CTRL + W, aby biegać po mieście.	###
+
+## Reset sign
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"reset.sign.0"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.1"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.2"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.3"}]}
+reset.sign.0=Wejdź na	###
+reset.sign.1=płytę naciskową,	###
+reset.sign.2=aby ponownie	###
+reset.sign.3=włączyć samouczek.	###

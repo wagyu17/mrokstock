@@ -1,0 +1,60 @@
+﻿##
+## Movement Tutorial
+## Copyright 2020 ReWrite Media, Inc.
+##
+
+pack.name=Bevægelsesvejledning	###
+pack.description=Nødvendige resurser til bevægelsesvejledningen	###
+
+##	Blackboard
+##	{"rawtext":[{"translate":"blackboard.intro.0"},{"text":"\n"},{"translate":"blackboard.intro.1"},{"text":"\n"},{"translate":"blackboard.intro.2"},{"text":"\n"},{"translate":"blackboard.intro.3"},{"text":"\n"},{"translate":"blackboard.intro.4"},{"text":"\n"},{"translate":"blackboard.intro.5"},{"text":"\n"},{"translate":"blackboard.intro.6"},{"text":"\n"},{"translate":"blackboard.intro.7"},{"text":"\n"},{"translate":"blackboard.intro.8"},{"text":"\n"},{"translate":"blackboard.intro.9"},{"text":"\n"},{"translate":"blackboard.intro.10"},{"text":"\n"},{"translate":"blackboard.intro.11"},{"text":"\n"},{"translate":"blackboard.intro.12"},{"text":"\n"},{"translate":"blackboard.intro.13"},{"text":"\n"},{"translate":"blackboard.intro.14"}]}
+blackboard.intro.0=§r	###
+blackboard.intro.1=                         Velkommen til	###
+blackboard.intro.2=                  Minecraft: Education Edition	###
+blackboard.intro.3=                        Bevægelsesvejledning	###
+blackboard.intro.4=§r	###
+blackboard.intro.5=Denne vejledning lærer dig at bevæge dig rundt i Minecraft. Instruktionerne vises nederst på skærmen over din ''hotbjælke'' og hjælper dig med, hvad du skal gøre.	###
+blackboard.intro.6=§r	###
+blackboard.intro.7=Brug musen til at se på den guldblokken ovenfor. Når den blok er blevet til jern, dukker en anden frem. Se på alle de guldblokkene for at åbne parkporten.	###
+blackboard.intro.8=§r	###
+blackboard.intro.9=§r	###
+blackboard.intro.10=§r	###
+blackboard.intro.11=§r	###
+blackboard.intro.12=§r	###
+blackboard.intro.13=§r	###
+
+##	Lesson Complete Poster
+##	{"rawtext":[{"translate":"lesson.complete.poster.0"},{"text":"\n"},{"translate":"lesson.complete.poster.1"},{"text":"\n"},{"translate":"lesson.complete.poster.2"}]}
+lesson.complete.poster.0=For at afslutte lektionen skal du trykke på ESC-tasten på dit tastatur og vælge ''Gem og afslut''.	###
+lesson.complete.poster.1=§r	###
+lesson.complete.poster.2=Du kan også udforske byen for at øve mere.	###
+
+##  Instructions
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"instruction.prefix"},{"translate":"instruction.color"},{"text":"\n"},{"translate":"act.0.instruction.actionbar.0"}]}
+act.0.instruction.actionbar.0=Ret markøren mod guldblokkene.	###
+act.0.instruction.actionbar.1=Vend dig om efter den bag dig.	###
+act.0.instruction.actionbar.2=Vend tilbage for at komme ind i parken.	###
+
+act.1.instruction.actionbar.0=Tryk på W for at gå fremad.	### Keyboard instructions, 'W' 'A' 'S' 'D' are inputs in this context
+act.1.instruction.actionbar.1=Brug A og D for at bevæge dig til venstre og højre.	###
+act.1.instruction.actionbar.2=Fortsæt fremad til springvandet.	###
+act.1.instruction.actionbar.3=Brug musen til at dreje rundt om hjørner.	###
+act.1.instruction.actionbar.4=Kombinér WASD og mus for præcis styring.	###
+act.1.instruction.actionbar.5=Tryk på W + mellemrumstasten for at hoppe fremad.	###
+act.1.instruction.actionbar.6=Tryk på W + mellemrumstasten for at hoppe fremad.	###
+act.1.instruction.actionbar.7=Fortsæt for at forlade parken.	###
+
+instruction.color=§6	###
+instruction.prefix=§l§eHint§r	###
+
+lesson.title.complete=Lektionen er fuldført!	###
+lesson.title.reset=Nulstilling fuldført.	###
+
+lesson.complete.actionbar.0=Bonus: Brug CTRL + W til at sprinte rundt i byen.	###
+
+## Reset sign
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"reset.sign.0"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.1"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.2"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.3"}]}
+reset.sign.0=Gå videre til	###
+reset.sign.1=trykpladen	###
+reset.sign.2=for at prøve	###
+reset.sign.3=vejledningen igen.	###

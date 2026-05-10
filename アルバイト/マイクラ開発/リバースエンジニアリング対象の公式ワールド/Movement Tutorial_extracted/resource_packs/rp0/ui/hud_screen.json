@@ -1,0 +1,48 @@
+{
+	"hud_actionbar_text": {
+	  "offset": [ 0, "50%-80px" ],
+	  "modifications":[
+		{
+		  "control_name":"actionbar_message",
+		  "operation":"remove"
+		},
+		{
+		  "array_name": "controls",
+		  "operation": "insert_front",
+		  "value": [
+			{
+				"actionbar_message2": {
+				  "shadow": true,
+				  "type": "label",
+				  "anchor_from": "top_middle",
+				  "anchor_to": "top_middle",
+				  "color": "$tool_tip_text",
+				  "text": "instruction.prefix",
+				  "localize": true,
+				  "alpha": "@hud.anim_actionbar_text_alpha_out"
+				}
+			}     
+		  ]
+		} ,
+		{
+		  "array_name": "controls",
+		  "operation": "insert_front",
+		  "value": [
+			{
+				"actionbar_message": {
+				  "shadow": true,
+				  "type": "label",
+				  "anchor_from": "bottom_middle",
+				  "anchor_to": "bottom_middle",				  
+				  "color": "$tool_tip_text",
+				  "text": "$actionbar_text",
+				  "localize": false,
+				  "alpha": "@hud.anim_actionbar_text_alpha_out"
+				}
+			}     
+		  ]
+		} 
+	  ]
+	}
+  }
+  

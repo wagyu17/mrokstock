@@ -1,0 +1,11 @@
+{
+	"texture_data": {
+		"mathmogicians_wand": {
+			"textures": "textures/items/mathmogicians_wand.png"
+		},
+		"mortar_board": {
+			"textures": "textures/items/mortar_board.png"
+		}
+	}
+}
+

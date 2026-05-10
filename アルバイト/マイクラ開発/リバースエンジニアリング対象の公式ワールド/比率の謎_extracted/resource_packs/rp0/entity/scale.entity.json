@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "blockbuilders:scale",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/scale"
+      },
+      "geometry": {
+        "default": "geometry.scale"
+      },
+      "render_controllers": ["controller.render.default"],
+      "scripts": {
+        "animate": [{ "move": "query.modified_move_speed" }, "look_at_target"]
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.npc.move"
+      }
+    }
+  }
+}

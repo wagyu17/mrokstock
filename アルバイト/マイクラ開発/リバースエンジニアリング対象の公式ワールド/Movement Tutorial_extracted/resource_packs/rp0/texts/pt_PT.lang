@@ -1,0 +1,60 @@
+﻿##
+## Movement Tutorial
+## Copyright 2020 ReWrite Media, Inc.
+##
+
+pack.name=Tutorial de Movimento	###
+pack.description=Recursos necessários para o Tutorial de Movimento	###
+
+##	Blackboard
+##	{"rawtext":[{"translate":"blackboard.intro.0"},{"text":"\n"},{"translate":"blackboard.intro.1"},{"text":"\n"},{"translate":"blackboard.intro.2"},{"text":"\n"},{"translate":"blackboard.intro.3"},{"text":"\n"},{"translate":"blackboard.intro.4"},{"text":"\n"},{"translate":"blackboard.intro.5"},{"text":"\n"},{"translate":"blackboard.intro.6"},{"text":"\n"},{"translate":"blackboard.intro.7"},{"text":"\n"},{"translate":"blackboard.intro.8"},{"text":"\n"},{"translate":"blackboard.intro.9"},{"text":"\n"},{"translate":"blackboard.intro.10"},{"text":"\n"},{"translate":"blackboard.intro.11"},{"text":"\n"},{"translate":"blackboard.intro.12"},{"text":"\n"},{"translate":"blackboard.intro.13"},{"text":"\n"},{"translate":"blackboard.intro.14"}]}
+blackboard.intro.0=§r	###
+blackboard.intro.1=                         Bem-vindo ao	###
+blackboard.intro.2=                  Minecraft: Education Edition	###
+blackboard.intro.3=                        Tutorial de Movimento	###
+blackboard.intro.4=§r	###
+blackboard.intro.5=Este tutorial vai ensinar-te a movimentares-te no Minecraft. As instruções vão aparecer na parte inferior do ecrã acima do “acesso rápido”, e dão-te ajuda sobre o que fazer a seguir.	###
+blackboard.intro.6=§r	###
+blackboard.intro.7=Usa o rato para olhares para o bloco dourado acima. Após esse bloco se transformar em ferro, vai aparecer outro. Olha para todos os blocos dourados para abrires o portão do parque.	###
+blackboard.intro.8=§r	###
+blackboard.intro.9=§r	###
+blackboard.intro.10=§r	###
+blackboard.intro.11=§r	###
+blackboard.intro.12=§r	###
+blackboard.intro.13=§r	###
+
+##	Lesson Complete Poster
+##	{"rawtext":[{"translate":"lesson.complete.poster.0"},{"text":"\n"},{"translate":"lesson.complete.poster.1"},{"text":"\n"},{"translate":"lesson.complete.poster.2"}]}
+lesson.complete.poster.0=Para saíres da lição, prime a tecla ESC no teclado e seleciona “Guardar e Sair”.	###
+lesson.complete.poster.1=§r	###
+lesson.complete.poster.2=Também podes explorar a cidade para treinares mais.	###
+
+##  Instructions
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"instruction.prefix"},{"translate":"instruction.color"},{"text":"\n"},{"translate":"act.0.instruction.actionbar.0"}]}
+act.0.instruction.actionbar.0=Aponta o cursor para os blocos dourados.	###
+act.0.instruction.actionbar.1=Dá meia-volta para veres o bloco que está atrás de ti.	###
+act.0.instruction.actionbar.2=Dá outra meia-volta para entrares no parque.	###
+
+act.1.instruction.actionbar.0=Prime W para andares para a frente.	### Keyboard instructions, 'W' 'A' 'S' 'D' are inputs in this context
+act.1.instruction.actionbar.1=Usa A e D para te moveres para a esquerda e para a direita.	###
+act.1.instruction.actionbar.2=Continua em frente até à fonte.	###
+act.1.instruction.actionbar.3=Usa o rato para te virares nas esquinas.	###
+act.1.instruction.actionbar.4=Combina as teclas WASD e o rato para conseguires um controlo preciso.	###
+act.1.instruction.actionbar.5=Prime W + BARRA DE ESPAÇO para saltares para a frente.	###
+act.1.instruction.actionbar.6=Prime W + BARRA DE ESPAÇO para saltares para a frente.	###
+act.1.instruction.actionbar.7=Continua para saíres do parque.	###
+
+instruction.color=§6	###
+instruction.prefix=§l§eDica§r	###
+
+lesson.title.complete=Lição Concluída!	###
+lesson.title.reset=Reposição Concluída.	###
+
+lesson.complete.actionbar.0=Bónus: Usa CTRL + W para correres pela cidade.	###
+
+## Reset sign
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"reset.sign.0"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.1"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.2"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.3"}]}
+reset.sign.0=Anda em cima da	###
+reset.sign.1=placa de pressão	###
+reset.sign.2=para fazeres o	###
+reset.sign.3=tutorial novamente.	###

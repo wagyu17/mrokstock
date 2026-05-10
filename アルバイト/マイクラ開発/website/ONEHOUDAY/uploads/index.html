@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>ワンライフ ドリル & プログラミング</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="game-only">
+
+<!-- sky background -->
+<div class="sky-layer">
+  <div class="cloud cloud-1"></div>
+  <div class="cloud cloud-2"></div>
+  <div class="cloud cloud-3"></div>
+  <div class="sun"></div>
+</div>
+
+<!-- top bar -->
+<header class="topbar">
+  <button id="home-btn" class="mc-btn mc-btn-stone mc-btn-sm" type="button">🏠 ホーム</button>
+  <nav id="breadcrumb" class="breadcrumb"></nav>
+  <div id="rank-badge" class="rank-badge">
+    <span id="rb-icon">🪵</span>
+    <span id="rb-name">木</span>
+    <span id="rb-points">0</span><span class="rb-p">P</span>
+  </div>
+</header>
+
+<main id="app" class="app-stage">
+
+  <!-- ========== Home ========== -->
+  <section id="view-home" class="view view-home">
+    <div class="title-logo" aria-label="ONEHOUDAY">
+      <span class="tl-block tl-g">O</span>
+      <span class="tl-block tl-y">N</span>
+      <span class="tl-block tl-r">E</span>
+      <span class="tl-block tl-d">H</span>
+      <span class="tl-block tl-p">O</span>
+      <span class="tl-block tl-s">U</span>
+      <span class="tl-block tl-e">D</span>
+      <span class="tl-block tl-o">A</span>
+      <span class="tl-block tl-w">Y</span>
+    </div>
+    <h1 class="v-title">すきな れんしゅうを えらんでね</h1>
+    <div class="mega-menu mega-menu-3">
+      <button class="mega-btn mega-math" data-go="math" type="button">
+        <span class="mega-ico">🧮</span>
+        <span class="mega-name">さんすう</span>
+        <span class="mega-sub">たし・ひき・かけ・わりざん / 九九</span>
+      </button>
+      <button class="mega-btn mega-prog" data-go="prog" type="button">
+        <span class="mega-ico">🤖</span>
+        <span class="mega-name">プログラミング</span>
+        <span class="mega-sub">ロボットを うごかそう</span>
+      </button>
+      <button class="mega-btn mega-type" data-go="type" type="button">
+        <span class="mega-ico">⌨</span>
+        <span class="mega-name">タイピング</span>
+        <span class="mega-sub">ワードディフェンス / 君が代</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========== タイピング メニュー ========== -->
+  <section id="view-type-menu" class="view" hidden>
+    <h1 class="v-title">タイピング・クラフト</h1>
+    <p class="v-lead">モードを えらんでね</p>
+    <div class="op-menu type-menu">
+      <button class="op-btn op-type-def" data-go="type:defense" type="button">
+        <span class="op-ico">🧟</span>
+        <span class="op-name">ワードディフェンス</span>
+        <span class="op-desc">おちてくる単語を うちおとせ！</span>
+      </button>
+      <button class="op-btn op-type-kimi" data-go="type:kimi" type="button">
+        <span class="op-ico">🗿</span>
+        <span class="op-name">君が代タイムアタック</span>
+        <span class="op-desc">石版を 彫りきろう！</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========== タイピング：ワードディフェンス ========== -->
+  <section id="view-type-defense" class="view" hidden>
+    <div class="game-top-bar">
+      <button id="td-back" class="mc-btn mc-btn-stone mc-btn-sm" type="button">← メニュー</button>
+      <div class="game-title">🧟 ワードディフェンス</div>
+      <div class="game-progress-text" id="td-state">おしたら スタート</div>
+    </div>
+
+    <div class="td-hud">
+      <div class="hud-chip"><span class="hc-label">スコア</span><span id="td-score">0</span></div>
+      <div class="hud-chip hud-combo"><span class="hc-label">コンボ</span><span id="td-combo">0</span></div>
+      <div class="hud-chip"><span class="hc-label">ライフ</span><span id="td-lives">♥♥♥</span></div>
+      <div class="hud-chip"><span class="hc-label">タイム</span><span id="td-time">60</span></div>
+    </div>
+
+    <div class="td-arena-wrap">
+      <div class="td-arena" id="td-arena"></div>
+      <div class="td-ground">
+        <div class="td-ground-grass"></div>
+      </div>
+    </div>
+
+    <div class="td-typed-row">
+      <div class="td-typed" id="td-typed" onclick="document.getElementById('td-keyboard').focus()"><span class="td-typed-placeholder">単語を みて タイピング！</span></div>
+      <input id="td-keyboard" class="td-keyboard" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" inputmode="text" aria-label="キーボード">
+    </div>
+
+    <div class="td-controls">
+      <button id="td-start" class="mc-btn mc-btn-diamond" type="button">▶ スタート</button>
+    </div>
+
+    <div id="td-toast" class="drill-toast"></div>
+  </section>
+
+  <!-- ========== タイピング：君が代タイムアタック ========== -->
+  <section id="view-type-kimi" class="view" hidden>
+    <div class="game-top-bar">
+      <button id="kk-back" class="mc-btn mc-btn-stone mc-btn-sm" type="button">← メニュー</button>
+      <div class="game-title">🗿 君が代タイムアタック</div>
+      <div class="game-progress-text">⏱ <span id="kk-timer">00:00.0</span></div>
+    </div>
+
+    <div class="kk-slab-wrap" onclick="document.getElementById('kk-keyboard').focus()">
+      <div class="kk-slab" id="kk-slab">
+        <div class="kk-best" id="kk-best"></div>
+        <div id="kk-lines" class="kk-lines"></div>
+        <div class="kk-carve-overlay" id="kk-carve"></div>
+      </div>
+      <input id="kk-keyboard" class="td-keyboard" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" inputmode="text" aria-label="キーボード">
+    </div>
+
+    <div class="td-controls">
+      <button id="kk-start" class="mc-btn mc-btn-diamond" type="button">▶ スタート</button>
+    </div>
+
+    <div id="kk-toast" class="drill-toast"></div>
+  </section>
+
+  <!-- ========== タイピング：リザルト ========== -->
+  <section id="view-type-result" class="view view-result" hidden>
+    <div class="result-card">
+      <div class="result-trophy" id="tr-trophy">🏆</div>
+      <h3 class="result-title" id="tr-title">クリア！</h3>
+      <div class="result-stage-name" id="tr-mode-name">ワードディフェンス</div>
+
+      <div class="result-stats" id="tr-stats"></div>
+
+      <div class="result-best" id="tr-best" hidden>🌟 じこベスト こうしん！</div>
+      <div class="result-medal-row" id="tr-medal-row"></div>
+
+      <div class="result-cta">
+        <button id="tr-retry" class="mc-btn mc-btn-grass" type="button">▶ もう一度</button>
+        <button id="tr-menu" class="mc-btn mc-btn-gold" type="button">⇦ メニューへ</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 算数メニュー（4つの演算） ========== -->
+  <section id="view-math" class="view" hidden>
+    <h1 class="v-title">なにを れんしゅうする？</h1>
+    <div class="op-menu">
+      <button class="op-btn op-add" data-go="op:add" type="button">
+        <span class="op-ico">➕</span><span class="op-name">たしざん</span>
+      </button>
+      <button class="op-btn op-sub" data-go="op:sub" type="button">
+        <span class="op-ico">➖</span><span class="op-name">ひきざん</span>
+      </button>
+      <button class="op-btn op-mul" data-go="op:mul" type="button">
+        <span class="op-ico">✖</span><span class="op-name">かけざん</span>
+      </button>
+      <button class="op-btn op-div" data-go="op:div" type="button">
+        <span class="op-ico">➗</span><span class="op-name">わりざん</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========== ステージ選択 ========== -->
+  <section id="view-stages" class="view" hidden>
+    <h1 class="v-title" id="stages-title">ステージを えらぼう</h1>
+    <p class="v-lead" id="stages-lead"></p>
+    <div class="stage-grid stage-grid-big" id="stage-grid"></div>
+  </section>
+
+  <!-- ========== ゲーム ========== -->
+  <section id="view-game" class="view view-game" hidden>
+    <div class="game-top-bar">
+      <button id="back-btn" class="mc-btn mc-btn-stone mc-btn-sm" type="button">← もどる</button>
+      <div class="game-title" id="game-title">1 の段</div>
+      <div class="game-progress-text" id="progress-text">1 / 9 問目</div>
+    </div>
+
+    <div class="game-meta-row">
+      <div class="progress-dots" id="progress-dots"></div>
+      <div class="game-timer" id="game-timer" hidden>⏱ <span id="timer-val">00:00</span></div>
+    </div>
+
+    <div class="problem-area" id="problem-area"></div>
+
+    <form class="drill-input-row" id="answer-form" autocomplete="off">
+      <input type="number" inputmode="numeric" id="answer" class="mc-input" placeholder="こたえは？" autocomplete="off">
+      <button type="submit" class="mc-btn mc-btn-diamond">⛏ こたえる</button>
+    </form>
+
+    <div id="drill-toast" class="drill-toast"></div>
+  </section>
+
+  <!-- ========== リザルト ========== -->
+  <section id="view-result" class="view view-result" hidden>
+    <div class="result-card">
+      <div class="result-trophy" id="result-trophy">🏆</div>
+      <h3 class="result-title" id="result-title">ステージ クリア！</h3>
+      <div class="result-stage-name" id="result-stage-name">1 の段</div>
+
+      <div class="result-stats">
+        <div class="result-stat"><div class="rs-label">せいかい</div><div class="rs-val"><span id="rs-correct">9</span> / <span id="rs-total">9</span></div></div>
+        <div class="result-stat"><div class="rs-label">1発せいかい</div><div class="rs-val"><span id="rs-perfect">9</span> 問</div></div>
+        <div class="result-stat"><div class="rs-label">タイム</div><div class="rs-val" id="rs-time">00:42</div></div>
+        <div class="result-stat"><div class="rs-label">もらえた P</div><div class="rs-val">+<span id="rs-points">1350</span></div></div>
+      </div>
+
+      <div class="result-best" id="result-best" hidden>🌟 じこベスト こうしん！</div>
+      <div class="result-medal-row" id="result-medal-row"></div>
+
+      <div class="result-cta">
+        <button id="retry-btn" class="mc-btn mc-btn-grass" type="button">▶ もう一度</button>
+        <button id="to-select-btn" class="mc-btn mc-btn-gold" type="button">⇦ ステージえらび</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== プログラミング：ミッション選択 ========== -->
+  <section id="view-prog-menu" class="view" hidden>
+    <h1 class="v-title">ミッションを えらぼう</h1>
+    <p class="v-lead">ロボットを うごかして、チェスト（たからばこ）まで たどりつかせよう！</p>
+    <div class="prog-mission-grid" id="prog-mission-grid"></div>
+  </section>
+
+  <!-- ========== プログラミング：ゲーム ========== -->
+  <section id="view-prog-game" class="view view-prog-game" hidden>
+    <div class="game-top-bar">
+      <button id="prog-back-btn" class="mc-btn mc-btn-stone mc-btn-sm" type="button">← ミッション</button>
+      <div class="game-title" id="prog-title">ミッション 1</div>
+      <div class="game-progress-text" id="prog-status">チェストへ！</div>
+    </div>
+
+    <div class="prog-layout">
+      <div class="prog-board-wrap">
+        <canvas id="prog-canvas" class="prog-canvas" width="360" height="360"></canvas>
+        <div class="prog-hint" id="prog-hint"></div>
+      </div>
+
+      <div class="prog-side">
+        <div class="prog-palette">
+          <h3 class="side-head">つかえる めいれい</h3>
+          <div class="cmd-buttons">
+            <button class="cmd-btn cmd-forward" data-cmd="forward" type="button">⬆ 1ぽ すすむ</button>
+            <button class="cmd-btn cmd-right"   data-cmd="right"   type="button">↻ みぎをむく</button>
+            <button class="cmd-btn cmd-left"    data-cmd="left"    type="button">↺ ひだりをむく</button>
+            <button class="cmd-btn cmd-loop"    data-cmd="loop"    type="button">🔁 くりかえす</button>
+          </div>
+          <div class="prog-legend">
+            タップで プログラムに ついか。<br>
+            🔁 は 2〜4回 えらべるよ。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prog-sequence-wrap">
+      <h3 class="side-head">プログラム</h3>
+      <div id="prog-sequence" class="prog-sequence"></div>
+      <div class="prog-actions">
+        <button id="prog-clear" class="mc-btn mc-btn-stone" type="button">🗑 ぜんぶ けす</button>
+        <button id="prog-run"   class="mc-btn mc-btn-diamond" type="button">▶ じっこう</button>
+      </div>
+    </div>
+
+    <div id="prog-toast" class="drill-toast"></div>
+  </section>
+
+  <!-- ========== プログラミング：リザルト ========== -->
+  <section id="view-prog-result" class="view view-result" hidden>
+    <div class="result-card">
+      <div class="result-trophy" id="pr-trophy">🏆</div>
+      <h3 class="result-title" id="pr-title">ミッション クリア！</h3>
+      <div class="result-stage-name" id="pr-mission-name">ミッション 1</div>
+
+      <div class="result-stats">
+        <div class="result-stat"><div class="rs-label">つかった めいれい</div><div class="rs-val"><span id="pr-cmd-count">0</span> 個</div></div>
+        <div class="result-stat"><div class="rs-label">もらえた P</div><div class="rs-val">+<span id="pr-points">500</span></div></div>
+      </div>
+
+      <div class="result-medal-row" id="pr-medal-row"></div>
+
+      <div class="result-cta">
+        <button id="pr-retry" class="mc-btn mc-btn-grass" type="button">▶ もう一度</button>
+        <button id="pr-menu"  class="mc-btn mc-btn-gold" type="button">⇦ ミッションえらび</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

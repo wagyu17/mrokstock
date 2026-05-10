@@ -1,0 +1,489 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "rwm:utility",
+			"is_summonable": true
+		},
+		"components": {
+		},
+		"component_groups": {
+			"always_show_name_add": {
+				"minecraft:color": {
+				},
+				"minecraft:nameable": {
+					"allow_name_tag_renaming": false,
+					"always_show": true
+				}
+			},
+			"always_show_name_remove": {
+				"minecraft:nameable": {
+					"allow_name_tag_renaming": false,
+					"always_show": false
+				}
+			},
+			"default": {
+				"minecraft:collision_box": {
+					"height": 0,
+					"width": 0
+				},
+				"minecraft:damage_sensor": [
+					{
+						"on_damage": {
+						},
+						"deals_damage": false
+					}
+				],
+				"minecraft:navigation.float":{
+					"can_float":true
+				},
+				"minecraft:persistent": {
+				},
+				"minecraft:pushable": {
+					"is_pushable": false,
+					"is_pushable_by_piston": false
+				},
+				"minecraft:push_through": {
+					"value": 1
+				},
+				"minecraft:physics": {
+					"has_collision": false,
+					"has_gravity": false
+				}
+			},
+			"despawn": {
+				"minecraft:despawn": {
+				}
+			},
+			"environment_sensor": {
+				"minecraft:environment_sensor": [
+					{
+						"on_environment": {
+							"event": "always_show_name_add",
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"value": "always_show_name"
+									},
+									{
+										"operator": "not",
+										"test": "has_component",
+										"value": "minecraft:color"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "always_show_name_remove",
+							"filters": {
+								"all_of": [
+									{
+										"operator": "not",
+										"test": "has_tag",
+										"value": "always_show_name"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:color"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "despawn",
+							"filters": {
+								"test": "has_tag",
+								"value": "despawn"
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "invisibility_add",
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"value": "invisibility"
+									},
+									{
+										"operator": "not",
+										"test": "has_mob_effect",
+										"value": "invisibility"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "invisibility_remove",
+							"filters": {
+								"all_of": [
+									{
+										"operator": "not",
+										"test": "has_tag",
+										"value": "invisibility"
+									},
+									{
+										"test": "has_mob_effect",
+										"value": "invisibility"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "loot",
+							"filters": {
+								"test": "has_tag",
+								"value": "loot"
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "scale_add",
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"value": "scale"
+									},
+									{
+										"operator": "not",
+										"test": "has_component",
+										"value": "minecraft:scale"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "scale_remove",
+							"filters": {
+								"all_of": [
+									{
+										"operator": "not",
+										"test": "has_tag",
+										"value": "scale"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:scale"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "target_add",
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"value": "target"
+									},
+									{
+										"operator": "not",
+										"test": "is_family",
+										"value": "target"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "target_remove",
+							"filters": {
+								"all_of": [
+									{
+										"operator": "not",
+										"test": "has_tag",
+										"value": "target"
+									},
+									{
+										"test": "is_family",
+										"value": "target"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "tick_world_add",
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"value": "tick_world"
+									},
+									{
+										"operator": "not",
+										"test": "has_component",
+										"value": "minecraft:tick_world"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "tick_world_remove",
+							"filters": {
+								"all_of": [
+									{
+										"operator": "not",
+										"test": "has_tag",
+										"value": "tick_world"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:tick_world"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "trade_table_add",
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"value": "trade_table"
+									},
+									{
+										"operator": "not",
+										"test": "has_component",
+										"value": "minecraft:economy_trade_table"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "trade_table_remove",
+							"filters": {
+								"all_of": [
+									{
+										"operator": "not",
+										"test": "has_tag",
+										"value": "trade_table"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:economy_trade_table"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_environment": {
+							"event": "transformation",
+							"filters": {
+								"test": "has_tag",
+								"value": "transformation"
+							}
+						}
+					}
+				]
+			},
+			"invisibility_add": {
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"amplifier": 0,
+							"duration": 1000000,
+							"effect": "invisibility",
+							"visible": false
+						}
+					]
+				}
+			},
+			"invisibility_remove": {
+				"minecraft:spell_effects": {
+					"remove_effects": "invisibility"
+				}
+			},
+			"loot": {
+				"minecraft:loot": {
+					"table": "loot_tables/entities/cow.json"
+				},
+				"minecraft:health": {
+					"health": 0
+				}
+			},
+			"scale": {
+				"minecraft:scale": {
+					"value": 0
+				}
+			},
+			"target": {
+				"minecraft:type_family": {
+					"family": [
+						"target"
+					]
+				}
+			},
+			"tick_world": {
+				"minecraft:tick_world": {
+					"radius": 2
+				}
+			},
+			"trade_table": {
+				"minecraft:economy_trade_table": {
+					"table": "trading/armorer_trades.json"
+				}
+			},
+			"transformation": {
+				"minecraft:transformation": {
+					"into": "minecraft:armor_stand"
+				}
+			}
+		},
+		"events":{
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"always_show_name_remove",
+						"default",
+						"environment_sensor"
+					]
+				}
+			},
+			"always_show_name_add": {
+				"add": {
+					"component_groups": [
+						"always_show_name_add"
+					]
+				}
+			},
+			"always_show_name_remove": {
+				"remove": {
+					"component_groups": [
+						"always_show_name_add"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"always_show_name_remove"
+					]
+				}
+			},
+			"default": {
+				"add": {
+					"component_groups": [
+						"always_show_name_remove",
+						"default",
+						"environment_sensor"
+					]
+				}
+			},
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"invisibility_add": {
+				"add": {
+					"component_groups": [
+						"invisibility_add"
+					]
+				}
+			},
+			"invisibility_remove": {
+				"add": {
+					"component_groups": [
+						"invisibility_remove"
+					]
+				}
+			},
+			"loot": {
+				"add": {
+					"component_groups": [
+						"loot"
+					]
+				}
+			},
+			"scale_add": {
+				"add": {
+					"component_groups": [
+						"scale"
+					]
+				}
+			},
+			"scale_remove": {
+				"remove": {
+					"component_groups": [
+						"scale"
+					]
+				}
+			},
+			"target_add": {
+				"add": {
+					"component_groups": [
+						"target"
+					]
+				}
+			},
+			"target_remove": {
+				"remove": {
+					"component_groups": [
+						"target"
+					]
+				}
+			},
+			"tick_world_add": {
+				"add": {
+					"component_groups": [
+						"tick_world"
+					]
+				}
+			},
+			"tick_world_remove": {
+				"remove": {
+					"component_groups": [
+						"tick_world"
+					]
+				}
+			},
+			"trade_table_add": {
+				"add": {
+					"component_groups": [
+						"trade_table"
+					]
+				}
+			},
+			"trade_table_remove": {
+				"remove": {
+					"component_groups": [
+						"trade_table"
+					]
+				}
+			},
+			"transformation": {
+				"add": {
+					"component_groups": [
+						"transformation"
+					]
+				}
+			}
+		}
+	}
+}

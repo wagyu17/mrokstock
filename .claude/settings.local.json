@@ -26,7 +26,8 @@
       "Bash(powershell.exe -Command \"\n\\\\$action = New-ScheduledTaskAction -Execute 'C:\\\\\\\\Users\\\\\\\\tomot\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Microsoft\\\\\\\\WindowsApps\\\\\\\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\\\\\\\python.exe' -Argument 'C:\\\\\\\\Users\\\\\\\\tomot\\\\\\\\Desktop\\\\\\\\My_Brain\\\\\\\\notion_to_obsidian.py --yes' -WorkingDirectory 'C:\\\\\\\\Users\\\\\\\\tomot\\\\\\\\Desktop\\\\\\\\My_Brain'\n\\\\$trigger = New-ScheduledTaskTrigger -Daily -At '22:00'\n\\\\$settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -RunOnlyIfNetworkAvailable\nRegister-ScheduledTask -TaskName 'NotionObsidianSync' -Action \\\\$action -Trigger \\\\$trigger -Settings \\\\$settings -Description 'Notion → Obsidian 毎日22時同期' -Force\n\" 2>&1)",
       "Bash(powershell.exe -Command \"Get-ScheduledTask -TaskName 'NotionObsidianSync' | Get-ScheduledTaskInfo | Select-Object LastRunTime, NextRunTime, LastTaskResult\" 2>&1)",
       "Skill(claude-api)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "PowerShell(Join-Path *)"
     ]
   }
 }

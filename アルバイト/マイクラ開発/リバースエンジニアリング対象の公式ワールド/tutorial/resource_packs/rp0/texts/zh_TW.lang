@@ -1,0 +1,60 @@
+﻿##
+## Movement Tutorial
+## Copyright 2020 ReWrite Media, Inc.
+##
+
+pack.name=動作教學課程	###
+pack.description=移動教學課程所需資源	###
+
+##	Blackboard
+##	{"rawtext":[{"translate":"blackboard.intro.0"},{"text":"\n"},{"translate":"blackboard.intro.1"},{"text":"\n"},{"translate":"blackboard.intro.2"},{"text":"\n"},{"translate":"blackboard.intro.3"},{"text":"\n"},{"translate":"blackboard.intro.4"},{"text":"\n"},{"translate":"blackboard.intro.5"},{"text":"\n"},{"translate":"blackboard.intro.6"},{"text":"\n"},{"translate":"blackboard.intro.7"},{"text":"\n"},{"translate":"blackboard.intro.8"},{"text":"\n"},{"translate":"blackboard.intro.9"},{"text":"\n"},{"translate":"blackboard.intro.10"},{"text":"\n"},{"translate":"blackboard.intro.11"},{"text":"\n"},{"translate":"blackboard.intro.12"},{"text":"\n"},{"translate":"blackboard.intro.13"},{"text":"\n"},{"translate":"blackboard.intro.14"}]}
+blackboard.intro.0=§r	###
+blackboard.intro.1=                         歡迎來到	###
+blackboard.intro.2=                  Minecraft: Education Edition	###
+blackboard.intro.3=                        移動教學課程	###
+blackboard.intro.4=§r	###
+blackboard.intro.5=此教學課程將示範如何在 Minecraft 裡移動。說明內容會顯示在畫面底部的「快捷欄」上方，以提供有關下一步操作的協助。	###
+blackboard.intro.6=§r	###
+blackboard.intro.7=使用滑鼠查看上面的金色方塊。方塊變成鐵塊後，會出現另一個方塊。看過所有金色方塊即可打開公園大門。	###
+blackboard.intro.8=§r	###
+blackboard.intro.9=§r	###
+blackboard.intro.10=§r	###
+blackboard.intro.11=§r	###
+blackboard.intro.12=§r	###
+blackboard.intro.13=§r	###
+
+##	Lesson Complete Poster
+##	{"rawtext":[{"translate":"lesson.complete.poster.0"},{"text":"\n"},{"translate":"lesson.complete.poster.1"},{"text":"\n"},{"translate":"lesson.complete.poster.2"}]}
+lesson.complete.poster.0=若要離開課程，請按一下鍵盤上的 ESC 鍵，然後選擇「儲存並退出」。	###
+lesson.complete.poster.1=§r	###
+lesson.complete.poster.2=你也可以繼續探索城市，多練習一下。	###
+
+##  Instructions
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"instruction.prefix"},{"translate":"instruction.color"},{"text":"\n"},{"translate":"act.0.instruction.actionbar.0"}]}
+act.0.instruction.actionbar.0=把游標指到金色方塊上。	###
+act.0.instruction.actionbar.1=轉身去找你後面的那個。	###
+act.0.instruction.actionbar.2=轉身回來進入公園。	###
+
+act.1.instruction.actionbar.0=按一下「W」往前走。	### Keyboard instructions, 'W' 'A' 'S' 'D' are inputs in this context
+act.1.instruction.actionbar.1=利用「A」和「D」來向左、向右移動。	###
+act.1.instruction.actionbar.2=繼續往前走到噴泉。	###
+act.1.instruction.actionbar.3=使用滑鼠轉彎。	###
+act.1.instruction.actionbar.4=「W」、「A」、「S」、「D」搭配滑鼠一起使用，就能更精確地控制。	###
+act.1.instruction.actionbar.5=按一下「W」+ 空白鍵往前跳。	###
+act.1.instruction.actionbar.6=按一下「W」+ 空白鍵往前跳。	###
+act.1.instruction.actionbar.7=繼續往前，離開公園。	###
+
+instruction.color=§6	###
+instruction.prefix=§l§e提示§r	###
+
+lesson.title.complete=課程完成！	###
+lesson.title.reset=重設完成。	###
+
+lesson.complete.actionbar.0=獎勵：使用「CTRL」+「W」在城市間衝刺。	###
+
+## Reset sign
+##	{"rawtext":[{"translate":"instruction.color"},{"translate":"reset.sign.0"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.1"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.2"},{"text":"\n"},{"translate":"instruction.color"},{"translate":"reset.sign.3"}]}
+reset.sign.0=走到	###
+reset.sign.1=壓板上	###
+reset.sign.2=就能再試	###
+reset.sign.3=一次教學課程。	###
