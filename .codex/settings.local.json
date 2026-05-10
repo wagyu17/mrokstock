@@ -1,0 +1,12 @@
+{
+  "project_name": "mrok-management",
+  "allowed_domains": [
+    "www.instagram.com",
+    "shiftb.dev",
+    "code.Codex.com"
+  ],
+  "remote_access": {
+    "enabled": true,
+    "allow_mobile": true
+  }
+}
