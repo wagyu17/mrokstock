@@ -7,6 +7,8 @@
 
 GitHubを中央リポジトリ（SSOT）とし、Google Driveを介してローカルPC、Web AI、モバイル端末が同期される構造になっています。
 
+![alt text](image.png)
+
 ```mermaid
 graph TD
     subgraph "Cloud / Storage (Sync Hub)"
