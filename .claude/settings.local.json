@@ -1,33 +1,36 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pip show:*)",
-      "Bash(pip install:*)",
-      "Bash(where python:*)",
-      "Bash(python -c \"import mcp; import mcp.server; print\\(''OK''\\)\")",
-      "Skill(update-config)",
-      "Bash(claude mcp:*)",
-      "Bash(python mcp_server.py)",
+      "Bash(*)",
+      "Read(*)",
+      "Edit(*)",
+      "Write(*)",
+      "MultiEdit(*)",
+      "Grep(*)",
+      "Glob(*)",
+      "WebSearch",
+      "WebFetch(*)",
+      "PowerShell(*)",
+      "Skill(*)",
       "mcp__notion__notion-search",
       "mcp__my-brain__get_document_index",
       "mcp__my-brain__list_documents",
       "mcp__my-brain__read_document",
       "mcp__notion__notion-fetch",
       "mcp__notion__notion-update-data-source",
-      "mcp__notion__notion-update-page",
-      "Bash(python -c \":*)",
-      "Bash(echo \"3:*)",
-      "Bash(python notion_organizer.py)",
-      "Bash(python notion_to_obsidian.py)",
-      "Bash(python notion_to_obsidian.py --yes)",
-      "Bash(tee migration_log.txt)",
-      "Bash(python:*)",
-      "Bash(schtasks.exe /create /tn \"NotionObsidianSync\" /tr \"C:\\\\\\\\Users\\\\\\\\tomot\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Microsoft\\\\\\\\WindowsApps\\\\\\\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\\\\\\\python.exe C:\\\\\\\\Users\\\\\\\\tomot\\\\\\\\Desktop\\\\\\\\My_Brain\\\\\\\\notion_to_obsidian.py --yes\" /sc daily /st 22:00 /f 2>&1)",
-      "Bash(powershell.exe -Command \"\n\\\\$action = New-ScheduledTaskAction -Execute 'C:\\\\\\\\Users\\\\\\\\tomot\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Microsoft\\\\\\\\WindowsApps\\\\\\\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\\\\\\\python.exe' -Argument 'C:\\\\\\\\Users\\\\\\\\tomot\\\\\\\\Desktop\\\\\\\\My_Brain\\\\\\\\notion_to_obsidian.py --yes' -WorkingDirectory 'C:\\\\\\\\Users\\\\\\\\tomot\\\\\\\\Desktop\\\\\\\\My_Brain'\n\\\\$trigger = New-ScheduledTaskTrigger -Daily -At '22:00'\n\\\\$settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -RunOnlyIfNetworkAvailable\nRegister-ScheduledTask -TaskName 'NotionObsidianSync' -Action \\\\$action -Trigger \\\\$trigger -Settings \\\\$settings -Description 'Notion → Obsidian 毎日22時同期' -Force\n\" 2>&1)",
-      "Bash(powershell.exe -Command \"Get-ScheduledTask -TaskName 'NotionObsidianSync' | Get-ScheduledTaskInfo | Select-Object LastRunTime, NextRunTime, LastTaskResult\" 2>&1)",
-      "Skill(claude-api)",
-      "Bash(ls:*)",
-      "PowerShell(Join-Path *)"
+      "mcp__notion__notion-update-page"
+    ],
+    "deny": [
+      "Bash(rm *)",
+      "Bash(rm -rf *)",
+      "Bash(rmdir *)",
+      "Bash(del *)",
+      "Bash(rd *)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(rm *)",
+      "PowerShell(rmdir *)",
+      "PowerShell(del *)",
+      "PowerShell(ri *)"
     ]
   }
 }

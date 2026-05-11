@@ -28,7 +28,11 @@
       "Bash(pip install *)",
       "Bash(gh --version)",
       "Bash(PYTHONIOENCODING=utf-8 python)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "PowerShell(python -c \"import fitparse; print\\(fitparse.__version__\\)\" 2>&1)",
+      "PowerShell(python \"C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\scripts\\\\analyze_race_fit.py\" 2>&1 | Select-Object -First 400)",
+      "PowerShell(\\(Get-Content \"C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\claude_file\\\\5_10_training_plan.md\" | Measure-Object -Line\\).Lines)",
+      "PowerShell(\\(Get-Content \"C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\アーカイブ\\\\トレーニングログ_全記録.md\" | Measure-Object -Line\\).Lines)"
     ]
   }
 }
