@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-cd /d "C:\Users\tomot\Desktop\陸上"
+cd /d "%~dp0"
 echo ================================
 echo  Garmin データ同期中...
 echo ================================
@@ -32,3 +32,8 @@ echo ================================
 git add training_log_2026.csv site/ 更新用トレーニングログ/
 git diff --staged --quiet || git commit -m "chore: auto sync %date%"
 git push
+echo.
+echo ================================
+echo  Google Drive へ同期中...
+echo ================================
+powershell -ExecutionPolicy Bypass -File "..\Scripts\sync_to_gdrive.ps1"
