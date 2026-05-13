@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/ALL/Schedule/今日のTo Do/日付.md",
+                "file": "陸上/claude_file/6_7_training_plan.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "日付"
+              "title": "6_7_training_plan"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notion/ALL/Schedule/今日のTo Do/日付.md",
+                "file": "陸上/claude_file/6_7_training_plan.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "日付のアウトライン"
+              "title": "6_7_training_planのアウトライン"
             }
           }
         ],
@@ -199,6 +199,7 @@
   },
   "active": "d7c0293d241a5827",
   "lastOpenFiles": [
+    "陸上/claude_file/6_7_daily_schedule.md",
     "Notion/ALL/Schedule/今日のTo Do/2026_03_28.md",
     "HOME.md",
     "Notion/ALL/就活/database/自己分析/database/考え/database/untitled.md",
@@ -225,7 +226,6 @@
     "Training/Monthly/2025-07_筋トレ_monthly.md",
     "Training/Monthly/2025-06_筋トレ_monthly.md",
     "Training/Monthly/2025-05_筋トレ_monthly.md",
-    "Training/Monthly/2025-01_筋トレ_monthly.md",
     "Training/Logs/2025/11",
     "Training/Session_Data/21302179567_ACTIVITY.fit",
     "Training/Session_Data/21095025503_ACTIVITY.fit",
