@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>マイクラ自習ガイド ｜ C1 クラシック</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --grass: #55b94a;
+      --grass-dark: #2f7431;
+      --wood: #b97941;
+      --line: #243324;
+      --ink: #17251c;
+      --muted: #4f6355;
+      --paper: #fffdf1;
+      --paper-2: #fbf6e2;
+      --gold: #ffd35c;
+      --blue: #3e8fe6;
+      --red: #ee6f57;
+      --nav-bg: #2f7431;
+      --nav-bg-2: #265c27;
+      --shadow: 4px 4px 0 rgba(23,37,28,0.2);
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #f1ecd6;
+    }
+
+    a { color: inherit; }
+
+    /* ===== レイアウト本体 ===== */
+    .shell {
+      display: grid;
+      grid-template-columns: 248px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    /* ===== 左サイドナビ（固定） ===== */
+    .sidenav {
+      position: sticky;
+      top: 0;
+      align-self: start;
+      height: 100vh;
+      padding: 18px 14px 24px;
+      border-right: 4px solid var(--line);
+      background:
+        linear-gradient(180deg, var(--nav-bg) 0 84px, var(--nav-bg-2) 84px),
+        repeating-linear-gradient(0deg, rgba(0,0,0,0.05) 0 2px, transparent 2px 24px);
+      color: #fffce6;
+      overflow-y: auto;
+    }
+
+    .brand {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr);
+      gap: 10px;
+      align-items: center;
+      padding: 6px 6px 14px;
+      border-bottom: 3px dashed rgba(255,255,255,0.4);
+      margin-bottom: 14px;
+    }
+
+    .brand-cube {
+      width: 44px;
+      height: 44px;
+      background: var(--grass);
+      border: 3px solid var(--line);
+      box-shadow: inset 0 -10px 0 rgba(0,0,0,0.18), 3px 3px 0 rgba(0,0,0,0.25);
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+    }
+    .brand span {
+      display: block;
+      font-size: 11px;
+      color: rgba(255,255,255,0.78);
+    }
+
+    .nav-section {
+      margin: 12px 0 4px;
+      padding: 0 4px;
+      color: rgba(255,255,255,0.7);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      font-weight: 900;
+    }
+
+    .nav-link {
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr);
+      gap: 8px;
+      align-items: center;
+      padding: 8px 8px;
+      margin-bottom: 4px;
+      border: 2px solid transparent;
+      border-radius: 0;
+      color: #fffce6;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .nav-link:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.35);
+    }
+
+    .nav-link.is-active {
+      background: var(--gold);
+      color: var(--ink);
+      border-color: var(--line);
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+    }
+
+    .nav-mark {
+      width: 26px;
+      height: 26px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,0.18);
+      border: 2px solid rgba(255,255,255,0.5);
+      font-weight: 900;
+      font-size: 13px;
+    }
+    .nav-link.is-active .nav-mark {
+      background: var(--ink);
+      color: var(--gold);
+      border-color: var(--line);
+    }
+
+    .nav-foot {
+      margin-top: 20px;
+      padding: 10px;
+      border: 3px solid #8b3a1a;
+      background: #ffe1b3;
+      color: #4a2410;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.55;
+    }
+    .nav-foot strong { display: block; margin-bottom: 4px; color: #6b2a0d; }
+
+    /* ===== メインコンテンツ ===== */
+    .main {
+      padding: 28px clamp(18px, 4vw, 48px) 48px;
+      max-width: 980px;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .topbar .crumb { color: var(--grass-dark); }
+    .topbar .sep { opacity: 0.5; }
+
+    .hero {
+      padding: 26px 28px 30px;
+      border: 4px solid var(--line);
+      background:
+        linear-gradient(180deg, #ffffff, #fffbe7);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 18px;
+      background: repeating-linear-gradient(90deg, #4ca845 0 28px, #5ebb51 28px 56px);
+      border-top: 3px solid var(--line);
+    }
+    .hero h1 {
+      margin: 4px 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1;
+    }
+    .hero .eyebrow {
+      display: inline-block;
+      padding: 4px 10px;
+      color: white;
+      background: var(--grass-dark);
+      border: 2px solid var(--line);
+      font-weight: 900;
+      font-size: 13px;
+    }
+    .hero p {
+      max-width: 720px;
+      margin: 10px 0 0;
+      color: #2b3f30;
+      line-height: 1.75;
+      font-weight: 700;
+    }
+
+    /* ===== セクション共通 ===== */
+    .panel {
+      margin: 24px 0;
+      padding: 24px;
+      border: 3px solid var(--line);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+    .panel h2,
+    .panel h3 {
+      margin: 0 0 12px;
+      letter-spacing: 0;
+    }
+    .panel h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      padding-bottom: 8px;
+      border-bottom: 3px solid var(--grass);
+      display: inline-block;
+    }
+    .panel h3 { font-size: 19px; }
+    .lead {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+      font-weight: 700;
+    }
+
+    /* ===== map / hint / place / shortcut / command / steps ===== */
+    .map {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .map-tile {
+      min-height: 76px;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+      border: 3px solid var(--line);
+      text-align: center;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+    .grass-tile { background: #bff1a5; }
+    .water-tile { background: #a9dcff; }
+    .sand-tile { background: #ffe69a; }
+    .stone-tile { background: #d8e0e5; }
+
+    .steps {
+      display: grid;
+      gap: 10px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: step;
+    }
+    .steps li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 10px 12px;
+      border-left: 4px solid var(--grass);
+      background: #fffff6;
+    }
+    .steps li::before {
+      content: counter(step);
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      color: white;
+      background: var(--grass-dark);
+      border: 2px solid var(--line);
+      font-weight: 900;
+      font-size: 14px;
+    }
+    .steps strong { display: block; margin-bottom: 4px; font-size: 16px; }
+    .steps span { display: block; color: var(--muted); line-height: 1.65; font-weight: 700; font-size: 14px; }
+
+    .shortcut-grid,
+    .place-grid,
+    .hint-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .keycap {
+      min-height: 44px;
+      display: grid;
+      place-items: center;
+      padding: 6px;
+      border: 3px solid var(--line);
+      background: #eef2f3;
+      box-shadow: inset 0 -5px 0 #c4d0d6;
+      font-weight: 900;
+      text-align: center;
+      font-size: 14px;
+    }
+    .hint {
+      min-height: 110px;
+      padding: 12px;
+      border: 3px solid var(--line);
+      background: #eaf7df;
+      font-weight: 700;
+    }
+    .hint strong { display: block; margin-bottom: 6px; font-size: 15px; }
+    .hint p { margin: 0; color: var(--muted); line-height: 1.65; font-size: 13px; }
+
+    .place-card {
+      min-height: 120px;
+      padding: 12px;
+      border: 3px solid var(--line);
+      background: #eef8ff;
+      font-weight: 700;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    .place-card strong { display: block; margin-bottom: 6px; font-size: 15px; }
+
+    .command-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .command-card {
+      min-height: 152px;
+      padding: 12px;
+      border: 3px solid var(--line);
+      background: #1f2c38;
+      color: #ecf8ff;
+      box-shadow: inset 0 -6px 0 rgba(0,0,0,0.18);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .command-card strong { display: block; font-size: 16px; margin-bottom: 4px; }
+    .command-card code {
+      display: block;
+      margin: 6px 0;
+      padding: 6px 8px;
+      border: 2px solid #101820;
+      background: #0e151c;
+      color: #9bea7a;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .timeline { display: grid; gap: 8px; margin-top: 12px; }
+    .timeline-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 8px; align-items: center; font-weight: 900; }
+    .track { min-height: 30px; border: 3px solid var(--line); background: #eef2f3; padding: 3px; }
+    .clip { height: 100%; width: 58%; background: var(--blue); border: 2px solid #1f5185; }
+    .track.text .clip { width: 34%; background: var(--gold); border-color: #98752d; }
+    .track.sound .clip { width: 72%; background: var(--red); border-color: #9b3f31; }
+
+    .keyboard { display: grid; gap: 6px; padding: 10px; border: 3px solid var(--line); background: #283949; margin-top: 12px; }
+    .key-row { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 5px; }
+    .key-row.home-row { padding-inline: 14px; grid-template-columns: repeat(8, minmax(0, 1fr)); }
+    .key { min-height: 30px; display: grid; place-items: center; border: 2px solid #111d15; background: #f4f7f3; color: #203040; font-weight: 900; font-size: 13px; box-shadow: inset 0 -4px 0 #c5d1c3; }
+    .key.home { background: #ffd668; box-shadow: inset 0 -4px 0 #d19a31; }
+
+    .desktop-board {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      padding: 12px;
+      margin-top: 10px;
+      border: 3px solid var(--line);
+      background: linear-gradient(180deg, #7fd1ff 0 55%, #55b857 55% 62%, #92613f 62%);
+    }
+    .fake-window { min-height: 160px; border: 3px solid var(--line); background: #fffdf1; }
+    .fake-title { display: flex; align-items: center; justify-content: space-between; min-height: 28px; padding: 4px 8px; color: white; background: #263d2d; font-weight: 900; font-size: 13px; }
+    .fake-body { display: grid; gap: 8px; padding: 10px; }
+    .folder-row { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 8px; align-items: center; min-height: 38px; border: 2px solid #d2ddc7; padding: 4px; background: #fffff6; font-weight: 800; font-size: 13px; }
+    .folder-icon { width: 30px; height: 24px; border: 2px solid #8b6221; background: var(--gold); position: relative; }
+    .folder-icon::before { content: ""; display: block; width: 14px; height: 6px; margin: -7px 0 0 2px; border: 2px solid #8b6221; border-bottom: 0; background: #ffd66c; }
+
+    .footer {
+      margin-top: 36px;
+      padding: 14px;
+      border-top: 3px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .shell { grid-template-columns: 1fr; }
+      .sidenav {
+        position: static;
+        height: auto;
+        border-right: 0;
+        border-bottom: 4px solid var(--line);
+      }
+      .main { padding: 18px; }
+      .map, .shortcut-grid, .place-grid, .hint-grid, .command-grid, .desktop-board {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidenav" aria-label="セクションメニュー">
+      <div class="brand">
+        <div class="brand-cube" aria-hidden="true"></div>
+        <div>
+          <strong>自習ガイド</strong>
+          <span>マイクラ × Windows × 動画</span>
+        </div>
+      </div>
+
+      <div class="nav-section">章を選ぶ</div>
+      <a class="nav-link is-active" href="#hero"><span class="nav-mark">★</span><span>トップ</span></a>
+      <a class="nav-link" href="#windows"><span class="nav-mark">W</span><span>Windowsそうび</span></a>
+      <a class="nav-link" href="#keys"><span class="nav-mark">K</span><span>キーでこまった時</span></a>
+      <a class="nav-link" href="#save-place"><span class="nav-mark">S</span><span>保存場所の探し方</span></a>
+      <a class="nav-link" href="#commands"><span class="nav-mark">/</span><span>マイクラのコマンド</span></a>
+      <a class="nav-link" href="#mod"><span class="nav-mark">M</span><span>CurseForgeでMOD</span></a>
+      <a class="nav-link" href="#worlds"><span class="nav-mark">世</span><span>配布ワールド</span></a>
+      <a class="nav-link" href="#clipchamp"><span class="nav-mark">C</span><span>Clipchamp 動画</span></a>
+      <a class="nav-link" href="#typing"><span class="nav-mark">T</span><span>タイピング</span></a>
+
+      <div class="nav-foot">
+        <strong>大事なルール</strong>
+        MODは大人といっしょ。知らないボタンは押さない。こまったら呼ぶ。
+      </div>
+    </aside>
+
+    <div class="main">
+      <div class="topbar">
+        <span class="crumb">自習ガイド</span>
+        <span class="sep">›</span>
+        <span>パソコンを見ながら進める攻略本</span>
+      </div>
+
+      <header class="hero" id="hero">
+        <span class="eyebrow">パソコンを見ながら進める攻略本</span>
+        <h1>マイクラ自習ガイド</h1>
+        <p>マイクラのコマンド、CurseForgeのMOD、クラフターズコロニーの配布ワールド、Clipchampの動画編集を見るページです。わからなくなったら「どこを見るか」「何を押すか」「どこに保存されたか」を確認します。</p>
+      </header>
+
+      <section class="panel" id="windows">
+        <h2>Windowsそうび</h2>
+        <p class="lead">マイクラやClipchampを始める前に、パソコンの画面を自分で動かす練習をします。2つの画面をならべる、フォルダを開く、保存した動画を見つける、ができると一人で進めやすくなります。</p>
+        <div class="map" aria-label="Windowsで覚えること">
+          <div class="map-tile water-tile">2画面</div>
+          <div class="map-tile grass-tile">ダブルクリック</div>
+          <div class="map-tile sand-tile">保存場所</div>
+          <div class="map-tile stone-tile">タスクバー</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>画面をならべる</h3>
+        <div class="desktop-board" aria-label="Windowsで2つの画面をならべる例">
+          <div class="fake-window">
+            <div class="fake-title"><span>このページ</span><span>□ ×</span></div>
+            <div class="fake-body">
+              <div class="folder-row"><div class="folder-icon"></div><span>左: 手順を見る</span></div>
+              <div class="folder-row"><div class="folder-icon"></div><span>わからない時に戻る</span></div>
+            </div>
+          </div>
+          <div class="fake-window">
+            <div class="fake-title"><span>マイクラ / Clipchamp</span><span>□ ×</span></div>
+            <div class="fake-body">
+              <div class="folder-row"><div class="folder-icon"></div><span>右: 実際に操作する</span></div>
+              <div class="folder-row"><div class="folder-icon"></div><span>できたら手順を見る</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="shortcut-grid">
+          <div class="keycap">Windowsキー</div>
+          <div class="keycap">← 左に置く</div>
+          <div class="keycap">→ 右に置く</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>Windowsの基本操作</h3>
+        <ol class="steps">
+          <li><div><strong>1回クリックは「選ぶ」</strong><span>ファイルやフォルダを1回だけ押すと、青くなって選ばれます。</span></div></li>
+          <li><div><strong>ダブルクリックは「開く」</strong><span>フォルダやファイルを2回すばやく押すと開きます。開かなければ、あわてずもう一度やります。</span></div></li>
+          <li><div><strong>上のバーを持つと画面を動かせる</strong><span>ウィンドウの一番上をドラッグすると、画面の場所を変えられます。</span></div></li>
+          <li><div><strong>下のタスクバーで戻る</strong><span>画面を見失ったら、下にあるアイコンからマイクラ、Clipchamp、エクスプローラー、このページに戻ります。</span></div></li>
+          <li><div><strong>エクスプローラーでファイルを探す</strong><span>黄色いフォルダのマークを開くと、デスクトップ、ダウンロード、ビデオ、ピクチャを探せます。</span></div></li>
+        </ol>
+      </section>
+
+      <section class="panel" id="keys">
+        <h2>キーでこまった時</h2>
+        <div class="shortcut-grid">
+          <div class="keycap">Esc<br>動かない時</div>
+          <div class="keycap">半角 / 全角<br>あ ⇔ A</div>
+          <div class="keycap">Ctrl + C<br>コピー</div>
+          <div class="keycap">Ctrl + V<br>ペースト</div>
+          <div class="keycap">Win + G<br>録画画面</div>
+          <div class="keycap">Alt + Tab<br>画面を切りかえ</div>
+          <div class="keycap">Enter<br>決定</div>
+        </div>
+        <ol class="steps">
+          <li><div><strong>マイクラが動かなくなったら `Esc`</strong><span>メニューや入力画面で止まったように見える時は、まず `Esc` キーを押して戻ります。</span></div></li>
+          <li><div><strong>英数字を打つ前に「あ」か「A」を見る</strong><span>画面の下のバーが「あ」なら日本語入力です。コマンドや英数字を打つ時は、`半角 / 全角 漢字` キーで「A」にしてから操作します。</span></div></li>
+          <li><div><strong>コピーは `Ctrl` + `C`</strong><span>コピーしたい文字を選んでから、`Ctrl` を押しながら `C` を押します。</span></div></li>
+          <li><div><strong>ペーストは `Ctrl` + `V`</strong><span>貼りたい場所をクリックしてから、`Ctrl` を押しながら `V` を押します。</span></div></li>
+          <li><div><strong>画面収録は `Win` + `G`</strong><span>`Win` キーを押しながら `G` を押すとキャプチャ画面が開きます。赤い録画ボタンを押すと、画面収録を開始できます。</span></div></li>
+          <li><div><strong>貼れない時は場所をクリックしなおす</strong><span>チャット欄、検索欄、ファイル名の場所など、文字を入れたい場所をもう一度クリックしてからペーストします。</span></div></li>
+        </ol>
+      </section>
+
+      <section class="panel" id="save-place">
+        <h2>保存場所の探し方</h2>
+        <div class="place-grid">
+          <div class="place-card"><strong>Clipchampの動画</strong>書き出す前に「保存先」を見ます。見つからない時は、エクスプローラーで「ビデオ」「ダウンロード」「デスクトップ」を順に探します。動画は `.mp4` が多いです。</div>
+          <div class="place-card"><strong>ダウンロードしたMOD</strong>まず「ダウンロード」フォルダを見ます。`.zip` や `.jar` のファイルは、勝手に開かず大人に見せます。</div>
+          <div class="place-card"><strong>スクリーンショット</strong>「ピクチャ」や「スクリーンショット」フォルダに入ることがあります。ゲーム内で保存した画像は、使ったアプリの保存場所も見ます。</div>
+        </div>
+      </section>
+
+      <section class="panel" id="commands">
+        <h2>マイクラのコマンド</h2>
+        <p class="lead">コマンドは、マイクラの世界にお願いを出す言葉です。最初の `/`、スペース、数字の場所をよく見ます。長いコマンドは、1文字ずつではなく「かたまり」で読みます。</p>
+        <div class="command-grid">
+          <div class="command-card">
+            <strong>/time</strong>
+            <code>/time set day</code>
+            朝や夜など、世界の時間を変えるコマンドです。暗くて作業しにくい時は day にします。
+          </div>
+          <div class="command-card">
+            <strong>/effect</strong>
+            <code>/effect give @p speed 30 1</code>
+            自分や相手に効果をつけます。`@p` は近くのプレイヤー、`30` は秒数、`1` は強さです。
+          </div>
+          <div class="command-card">
+            <strong>/fill</strong>
+            <code>/fill x1 y1 z1 x2 y2 z2 stone</code>
+            2つの場所の間をブロックでうめます。座標をまちがえると広く変わるので、テスト場所で使います。
+          </div>
+        </div>
+        <h3 style="margin-top:20px;">コマンドを打つ前に見るところ</h3>
+        <ol class="steps">
+          <li><div><strong>先頭に `/` があるか見る</strong><span>コマンドは `/time` のように、スラッシュから始まります。</span></div></li>
+          <li><div><strong>スペースで分かれているか見る</strong><span>`/time set day` は、`/time`、`set`、`day` の3つのかたまりです。</span></div></li>
+          <li><div><strong>対象を見る</strong><span>`@p` は近くのプレイヤー、`@a` は全員、`@s` は自分です。</span></div></li>
+          <li><div><strong>/fill は小さい範囲で試す</strong><span>大きな範囲を一気に変えるので、最初は小さい場所で練習します。</span></div></li>
+        </ol>
+      </section>
+
+      <section class="panel" id="mod">
+        <h2>CurseForgeでMOD導入</h2>
+        <p class="lead">CurseForgeは、マイクラのMODやMODパックを探して入れる時に使います。大事なのは「マイクラのバージョン」「MODローダー」「入れた後にどこから起動するか」を見ることです。</p>
+        <div class="hint-grid">
+          <div class="hint"><strong>バージョン</strong><p>MODが対応している Minecraft のバージョンを見ます。合っていないと動かないことがあります。</p></div>
+          <div class="hint"><strong>MODローダー</strong><p>Forge、Fabric、NeoForge などを見ます。MODとプロファイルの種類を合わせます。</p></div>
+          <div class="hint"><strong>起動</strong><p>CurseForge Appで入れた時は、作ったプロファイルから Play して起動します。</p></div>
+        </div>
+        <h3 style="margin-top:20px;">CurseForgeで見る順番</h3>
+        <ol class="steps">
+          <li><div><strong>入れたいMODを決める</strong><span>何ができるMODなのか、1行で言えるようにします。</span></div></li>
+          <li><div><strong>Minecraft Versionを見る</strong><span>自分が遊ぶバージョンと合っているか確認します。</span></div></li>
+          <li><div><strong>Forge / Fabric / NeoForge を見る</strong><span>MODローダーが合っているか確認します。</span></div></li>
+          <li><div><strong>新しいプロファイルで試す</strong><span>大事なワールドをこわさないように、まずテスト用ワールドで確認します。</span></div></li>
+          <li><div><strong>起動場所を覚える</strong><span>CurseForgeで入れたMODは、CurseForge Appのプロファイルから起動することがあります。</span></div></li>
+        </ol>
+      </section>
+
+      <section class="panel" id="worlds">
+        <h2>クラフターズコロニーの配布ワールド</h2>
+        <p class="lead">配布ワールドは、ほかの人が作ったワールドをダウンロードして遊ぶものです。最初に「統合版かJava版か」「ファイルがどこに保存されたか」「どうやってマイクラに入れるか」を見ます。</p>
+        <div class="hint-grid">
+          <div class="hint"><strong>版を見る</strong><p>統合版/BE向けか、Java版向けかを確認します。自分のマイクラと違う版だと遊べません。</p></div>
+          <div class="hint"><strong>保存場所</strong><p>ダウンロードしたファイルは、まず「ダウンロード」フォルダで探します。</p></div>
+          <div class="hint"><strong>形式を見る</strong><p>統合版では `.mcworld`、Java版では `.zip` など、ファイル形式を見ることが大事です。</p></div>
+        </div>
+        <h3 style="margin-top:20px;">配布ワールドを入れる時の順番</h3>
+        <ol class="steps">
+          <li><div><strong>ワールドの説明を読む</strong><span>何をするワールドか、対応しているマイクラの版とバージョンを見ます。</span></div></li>
+          <li><div><strong>ダウンロード後に場所を見る</strong><span>ファイルが見つからない時は、エクスプローラーで「ダウンロード」を開きます。</span></div></li>
+          <li><div><strong>統合版は `.mcworld` を見る</strong><span>`.mcworld` ファイルは、開くとマイクラにインポートされることがあります。</span></div></li>
+          <li><div><strong>Java版はフォルダの場所に注意する</strong><span>Java版のワールドは、解凍や保存場所の確認が必要なことがあります。わからなければ大人に聞きます。</span></div></li>
+          <li><div><strong>入れた後はワールド一覧を見る</strong><span>マイクラを開いて、ワールド一覧に追加されているか確認します。</span></div></li>
+        </ol>
+      </section>
+
+      <section class="panel" id="clipchamp">
+        <h2>Clipchamp 動画づくり</h2>
+        <p class="lead">ゴールは、15秒から30秒の短い動画を1本作ること。まず `Win + G` でマイクラの画面を録画し、Clipchampで短く切って見やすくします。</p>
+        <div class="timeline" aria-label="Clipchampのタイムライン例">
+          <div class="timeline-row"><span>動画</span><div class="track"><div class="clip"></div></div></div>
+          <div class="timeline-row"><span>文字</span><div class="track text"><div class="clip"></div></div></div>
+          <div class="timeline-row"><span>音</span><div class="track sound"><div class="clip"></div></div></div>
+        </div>
+        <h3 style="margin-top:20px;">動画づくりの順番</h3>
+        <ol class="steps">
+          <li><div><strong>テーマを1つ決める</strong><span>例: 建築しょうかい、すごい装置、今日のベストシーン。</span></div></li>
+          <li><div><strong>`Win` + `G` で録画画面を開く</strong><span>キャプチャ画面が開いたら、赤い録画ボタンを押して画面収録を始めます。</span></div></li>
+          <li><div><strong>素材を2つから5つ選ぶ</strong><span>動画や写真を入れすぎると見づらいので、少なめでOKです。</span></div></li>
+          <li><div><strong>いらないところを切る</strong><span>待っている時間、同じ場面、失敗している長い部分を短くします。</span></div></li>
+          <li><div><strong>文字を1つ入れる</strong><span>見ている人に伝えたいことを、短い言葉で入れます。</span></div></li>
+          <li><div><strong>保存先を見て書き出す</strong><span>音量を確認してから、どのフォルダに保存されるか見て、動画を書き出します。</span></div></li>
+          <li><div><strong>保存した動画を見つける</strong><span>エクスプローラーで保存先を開きます。わからない時は「ビデオ」「ダウンロード」「デスクトップ」を順に探します。</span></div></li>
+        </ol>
+      </section>
+
+      <section class="panel" id="typing">
+        <h2>タイピング</h2>
+        <p class="lead">まずは速さより正しさ。FとJのでっぱりを見つけて、打ったらホームポジションにもどります。</p>
+        <div class="keyboard" aria-label="ホームポジション">
+          <div class="key-row">
+            <div class="key">Q</div><div class="key">W</div><div class="key">E</div><div class="key">R</div><div class="key">T</div><div class="key">Y</div><div class="key">U</div><div class="key">I</div><div class="key">O</div><div class="key">P</div>
+          </div>
+          <div class="key-row home-row">
+            <div class="key home">A</div><div class="key home">S</div><div class="key home">D</div><div class="key home">F</div><div class="key home">J</div><div class="key home">K</div><div class="key home">L</div><div class="key">;</div>
+          </div>
+          <div class="key-row">
+            <div class="key">Z</div><div class="key">X</div><div class="key">C</div><div class="key">V</div><div class="key">B</div><div class="key">N</div><div class="key">M</div><div class="key">,</div><div class="key">.</div><div class="key">/</div>
+          </div>
+        </div>
+        <h3 style="margin-top:20px;">タイピングの見るところ</h3>
+        <ol class="steps">
+          <li><div><strong>FとJに人差し指を置く</strong><span>でっぱりをさわって、見なくても場所がわかるようにします。</span></div></li>
+          <li><div><strong>打ったら戻る</strong><span>どのキーを打っても、最後はホームポジションに戻します。</span></div></li>
+          <li><div><strong>まちがえたキーを見つける</strong><span>速さよりも、どのキーをまちがえやすいかを見つけることが大事です。</span></div></li>
+        </ol>
+      </section>
+
+      <footer class="footer">
+        このページは読むための静的HTMLです。名前入力、チェック、保存機能はありません。
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // スクロールスパイ：現在見ているセクションをサイドナビでハイライト
+    const links = Array.from(document.querySelectorAll('.nav-link'));
+    const map = new Map();
+    links.forEach(a => {
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el) map.set(el, a);
+    });
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          links.forEach(l => l.classList.remove('is-active'));
+          const a = map.get(e.target);
+          if (a) a.classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+    map.forEach((_, el) => io.observe(el));
+  </script>
+</body>
+</html>

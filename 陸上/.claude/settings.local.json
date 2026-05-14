@@ -36,7 +36,9 @@
       "Bash(findstr /N \"2026-05-1\" \"C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\training_log_2026.csv\")",
       "Bash(findstr /N \"2026-05\" \"C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\training_log_2026.csv\")",
       "Bash(dir \"C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\更新用トレーニングログ\")",
-      "Bash(dir /O-D \"C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\更新用トレーニングログ\\\\activity_*.csv\")"
+      "Bash(dir /O-D \"C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\更新用トレーニングログ\\\\activity_*.csv\")",
+      "Bash(powershell *)",
+      "PowerShell($enc = [System.Text.Encoding]::GetEncoding\\('shift_jis'\\); $bytes = [System.IO.File]::ReadAllBytes\\('C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\training_log_2026.csv'\\); $text = $enc.GetString\\($bytes\\); $lines = $text -split \"`n\"; $lines[0..20] -join \"`n\")"
     ]
   }
 }
