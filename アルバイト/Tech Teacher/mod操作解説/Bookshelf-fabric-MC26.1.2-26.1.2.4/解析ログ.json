@@ -1,0 +1,331 @@
+﻿{
+    "jar":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\Bookshelf-fabric-MC26.1.2-26.1.2.4\\Bookshelf-fabric-MC26.1.2-26.1.2.4.jar",
+    "generatedMarkdown":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\Bookshelf-fabric-MC26.1.2-26.1.2.4\\キー割り当てと操作方法.md",
+    "generatedCodexPrompt":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\Bookshelf-fabric-MC26.1.2-26.1.2.4\\Codex追記依頼.md",
+    "generatedAt":  "2026-05-15T13:26:51.7522236+09:00",
+    "metadata":  {
+                     "DisplayName":  "Bookshelf",
+                     "ModId":  "bookshelf",
+                     "Version":  "26.1.2.4",
+                     "Loader":  "Fabric",
+                     "MinecraftVersion":  "\u003e=26.1",
+                     "Description":  "Bookshelf is a library mod that provides code, frameworks, and utilities for other mods. Many mods make use of Bookshelf and are powered by its code.",
+                     "MetadataFile":  "fabric.mod.json"
+                 },
+    "keyMappings":  [
+
+                    ],
+    "commands":  [
+                     {
+                         "SourceClass":  "net.darkhax.bookshelf.common.impl.command.FontCommand",
+                         "Literals":  [
+                                          "font",
+                                          "rename",
+                                          "say",
+                                          "message"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.darkhax.bookshelf.common.api.commands.args.FontArgument",
+                         "Literals":  [
+                                          "font"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.darkhax.bookshelf.common.api.commands.args.TagArgument",
+                         "Literals":  [
+                                          "registry_name"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.darkhax.bookshelf.common.api.commands.PermissionLevel",
+                         "Literals":  [
+                                          "MODERATOR",
+                                          "GAMEMASTER",
+                                          "ADMIN",
+                                          "OWNER"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.darkhax.bookshelf.common.impl.command.DebugCommands",
+                         "Literals":  [
+                                          "debug",
+                                          "chests",
+                                          "dispensers",
+                                          "gameplay",
+                                          "pots",
+                                          "spawners",
+                                          "minecraft",
+                                          "MISSING_TAG_NAMES",
+                                          "LOOT_POOL_HASH",
+                                          "SIMPLE_TABLES"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.darkhax.bookshelf.common.impl.command.EnchantCommand",
+                         "Literals":  [
+                                          "enchant",
+                                          "enchantment",
+                                          "level"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.darkhax.bookshelf.common.impl.command.HandCommand",
+                         "Literals":  [
+                                          "hand",
+                                          "ID",
+                                          "STRING",
+                                          "INGREDIENT",
+                                          "STACK_JSON",
+                                          "STACK_NBT",
+                                          "COMPONENTS",
+                                          "TAGS"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.darkhax.bookshelf.common.impl.command.RenameCommand",
+                         "Literals":  [
+                                          "rename",
+                                          "new_name"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.darkhax.bookshelf.common.impl.command.StructureCommand",
+                         "Literals":  [
+                                          "structure"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.darkhax.bookshelf.common.impl.command.TranslateCommand",
+                         "Literals":  [
+                                          "translate",
+                                          "key"
+                                      ]
+                     }
+                 ],
+    "classCandidates":  [
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.commands.IEnumCommand",
+                                "Path":  "net/darkhax/bookshelf/common/api/commands/IEnumCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.commands.PermissionLevel",
+                                "Path":  "net/darkhax/bookshelf/common/api/commands/PermissionLevel.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.commands.args.ArgumentSerializer$ArgTemplate",
+                                "Path":  "net/darkhax/bookshelf/common/api/commands/args/ArgumentSerializer$ArgTemplate.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.commands.args.ArgumentSerializer",
+                                "Path":  "net/darkhax/bookshelf/common/api/commands/args/ArgumentSerializer.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.commands.args.FontArgument",
+                                "Path":  "net/darkhax/bookshelf/common/api/commands/args/FontArgument.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.commands.args.SingletonArgumentInfo$Template",
+                                "Path":  "net/darkhax/bookshelf/common/api/commands/args/SingletonArgumentInfo$Template.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.commands.args.SingletonArgumentInfo",
+                                "Path":  "net/darkhax/bookshelf/common/api/commands/args/SingletonArgumentInfo.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.commands.args.TagArgument",
+                                "Path":  "net/darkhax/bookshelf/common/api/commands/args/TagArgument.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.data.codecs.map.MapCodecs",
+                                "Path":  "net/darkhax/bookshelf/common/api/data/codecs/map/MapCodecs.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.menu.slot.InputSlot",
+                                "Path":  "net/darkhax/bookshelf/common/api/menu/slot/InputSlot.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.network.AbstractPacket",
+                                "Path":  "net/darkhax/bookshelf/common/api/network/AbstractPacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.network.INetworkHandler",
+                                "Path":  "net/darkhax/bookshelf/common/api/network/INetworkHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.network.IPacket",
+                                "Path":  "net/darkhax/bookshelf/common/api/network/IPacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.registry.ContentProvider",
+                                "Path":  "net/darkhax/bookshelf/common/api/registry/ContentProvider.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.util.CommandHelper",
+                                "Path":  "net/darkhax/bookshelf/common/api/util/CommandHelper.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.util.IRenderHelper",
+                                "Path":  "net/darkhax/bookshelf/common/api/util/IRenderHelper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.api.util.TextHelper",
+                                "Path":  "net/darkhax/bookshelf/common/api/util/TextHelper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.BookshelfContent",
+                                "Path":  "net/darkhax/bookshelf/common/impl/BookshelfContent.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.command.DebugCommands$DebugTask",
+                                "Path":  "net/darkhax/bookshelf/common/impl/command/DebugCommands$DebugTask.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.command.DebugCommands",
+                                "Path":  "net/darkhax/bookshelf/common/impl/command/DebugCommands.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.command.EnchantCommand",
+                                "Path":  "net/darkhax/bookshelf/common/impl/command/EnchantCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.command.FontCommand",
+                                "Path":  "net/darkhax/bookshelf/common/impl/command/FontCommand.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.command.HandCommand$ItemFormat",
+                                "Path":  "net/darkhax/bookshelf/common/impl/command/HandCommand$ItemFormat.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.command.HandCommand",
+                                "Path":  "net/darkhax/bookshelf/common/impl/command/HandCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.command.RenameCommand",
+                                "Path":  "net/darkhax/bookshelf/common/impl/command/RenameCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.command.StructureCommand",
+                                "Path":  "net/darkhax/bookshelf/common/impl/command/StructureCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.command.TranslateCommand",
+                                "Path":  "net/darkhax/bookshelf/common/impl/command/TranslateCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.registry.adapter.CommandArgumentAdapter$TypeInfo",
+                                "Path":  "net/darkhax/bookshelf/common/impl/registry/adapter/CommandArgumentAdapter$TypeInfo.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.registry.adapter.CommandArgumentAdapter",
+                                "Path":  "net/darkhax/bookshelf/common/impl/registry/adapter/CommandArgumentAdapter.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.registry.adapter.MenuScreenAdapter$ScreenFactory",
+                                "Path":  "net/darkhax/bookshelf/common/impl/registry/adapter/MenuScreenAdapter$ScreenFactory.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.registry.adapter.MenuScreenAdapter",
+                                "Path":  "net/darkhax/bookshelf/common/impl/registry/adapter/MenuScreenAdapter.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.impl.registry.adapter.PacketAdapter",
+                                "Path":  "net/darkhax/bookshelf/common/impl/registry/adapter/PacketAdapter.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.mixin.access.client.AccessorFontManager",
+                                "Path":  "net/darkhax/bookshelf/common/mixin/access/client/AccessorFontManager.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.common.mixin.access.client.AccessorMinecraft",
+                                "Path":  "net/darkhax/bookshelf/common/mixin/access/client/AccessorMinecraft.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.fabric.impl.network.FabricNetworkHandler",
+                                "Path":  "net/darkhax/bookshelf/fabric/impl/network/FabricNetworkHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.fabric.impl.util.FabricRegistryHelper",
+                                "Path":  "net/darkhax/bookshelf/fabric/impl/util/FabricRegistryHelper.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.darkhax.bookshelf.fabric.impl.util.FabricRenderHelper",
+                                "Path":  "net/darkhax/bookshelf/fabric/impl/util/FabricRenderHelper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            }
+                        ],
+    "javapAvailable":  true
+}

@@ -38,7 +38,11 @@
       "Bash(dir \"C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\更新用トレーニングログ\")",
       "Bash(dir /O-D \"C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\更新用トレーニングログ\\\\activity_*.csv\")",
       "Bash(powershell *)",
-      "PowerShell($enc = [System.Text.Encoding]::GetEncoding\\('shift_jis'\\); $bytes = [System.IO.File]::ReadAllBytes\\('C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\training_log_2026.csv'\\); $text = $enc.GetString\\($bytes\\); $lines = $text -split \"`n\"; $lines[0..20] -join \"`n\")"
+      "PowerShell($enc = [System.Text.Encoding]::GetEncoding\\('shift_jis'\\); $bytes = [System.IO.File]::ReadAllBytes\\('C:\\\\Users\\\\tomot\\\\Desktop\\\\management\\\\陸上\\\\training_log_2026.csv'\\); $text = $enc.GetString\\($bytes\\); $lines = $text -split \"`n\"; $lines[0..20] -join \"`n\")",
+      "WebSearch",
+      "WebFetch(domain:www.idotaseikei.or.jp)",
+      "WebFetch(domain:firsttrack.twolaps.co.jp)",
+      "WebFetch(domain:twolaps.co.jp)"
     ]
   }
 }

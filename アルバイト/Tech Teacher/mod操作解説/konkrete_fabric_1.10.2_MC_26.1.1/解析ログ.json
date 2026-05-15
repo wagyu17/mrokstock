@@ -1,0 +1,325 @@
+﻿{
+    "jar":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\konkrete_fabric_1.10.2_MC_26.1.1\\konkrete_fabric_1.10.2_MC_26.1.1.jar",
+    "generatedMarkdown":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\konkrete_fabric_1.10.2_MC_26.1.1\\キー割り当てと操作方法.md",
+    "generatedCodexPrompt":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\konkrete_fabric_1.10.2_MC_26.1.1\\Codex追記依頼.md",
+    "generatedAt":  "2026-05-15T13:28:28.7696098+09:00",
+    "metadata":  {
+                     "DisplayName":  "Konkrete",
+                     "ModId":  "konkrete",
+                     "Version":  "1.10.2",
+                     "Loader":  "Fabric",
+                     "MinecraftVersion":  "\u003e=26.1.1",
+                     "Description":  "Core library for Keksuccino\u0027s mods.",
+                     "MetadataFile":  "fabric.mod.json"
+                 },
+    "keyMappings":  [
+                        {
+                            "Key":  "未検出",
+                            "Label":  "key.keyboard.",
+                            "TranslationKey":  "key.keyboard.",
+                            "SourceClass":  "de.keksuccino.konkrete.commandline.CommandLineDebugSystem"
+                        }
+                    ],
+    "commands":  [
+                     {
+                         "SourceClass":  "de.keksuccino.konkrete.commandline.CommandLineDebugSystem",
+                         "Literals":  [
+                                          "KonkreteCommandLineDebug",
+                                          "konkretedebug",
+                                          "help",
+                                          "screen",
+                                          "size",
+                                          "screensize",
+                                          "widgets",
+                                          "mousemove",
+                                          "mousedelta",
+                                          "widgetclick",
+                                          "click",
+                                          "key",
+                                          "pause",
+                                          "leaveworld",
+                                          "leave",
+                                          "title",
+                                          "loadworld",
+                                          "screenshot",
+                                          "scroll",
+                                          "fullscreen",
+                                          "chat",
+                                          "command",
+                                          "quit",
+                                          "close",
+                                          "exit",
+                                          "dx",
+                                          "dy",
+                                          "toggle",
+                                          "on",
+                                          "off",
+                                          "konkrete_debug_world",
+                                          "left",
+                                          "right",
+                                          "up",
+                                          "down",
+                                          "keyCode",
+                                          "enter",
+                                          "return",
+                                          "escape",
+                                          "esc"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "de.keksuccino.konkrete.commandline.CommandLineDebugSystem$WorldLoadRequest",
+                         "Literals":  [
+                                          "Loaded"
+                                      ]
+                     }
+                 ],
+    "classCandidates":  [
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.commandline.CommandLineDebugSystem$CommandResponse",
+                                "Path":  "de/keksuccino/konkrete/commandline/CommandLineDebugSystem$CommandResponse.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.commandline.CommandLineDebugSystem$KeyDefinition",
+                                "Path":  "de/keksuccino/konkrete/commandline/CommandLineDebugSystem$KeyDefinition.class",
+                                "Type":  "Key, Command",
+                                "Score":  100
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.commandline.CommandLineDebugSystem$RequestedKey",
+                                "Path":  "de/keksuccino/konkrete/commandline/CommandLineDebugSystem$RequestedKey.class",
+                                "Type":  "Key, Command",
+                                "Score":  100
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.commandline.CommandLineDebugSystem$ThrowingSupplier",
+                                "Path":  "de/keksuccino/konkrete/commandline/CommandLineDebugSystem$ThrowingSupplier.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.commandline.CommandLineDebugSystem$WidgetSnapshot",
+                                "Path":  "de/keksuccino/konkrete/commandline/CommandLineDebugSystem$WidgetSnapshot.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.commandline.CommandLineDebugSystem$WorldLoadRequest",
+                                "Path":  "de/keksuccino/konkrete/commandline/CommandLineDebugSystem$WorldLoadRequest.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.commandline.CommandLineDebugSystem",
+                                "Path":  "de/keksuccino/konkrete/commandline/CommandLineDebugSystem.class",
+                                "Type":  "Key, Command, Operation",
+                                "Score":  120
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.gui.content.widget.WidgetUtils",
+                                "Path":  "de/keksuccino/konkrete/gui/content/widget/WidgetUtils.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.input.CharData",
+                                "Path":  "de/keksuccino/konkrete/input/CharData.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.input.CharacterFilter",
+                                "Path":  "de/keksuccino/konkrete/input/CharacterFilter.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.input.KeyboardData",
+                                "Path":  "de/keksuccino/konkrete/input/KeyboardData.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.input.MouseInput",
+                                "Path":  "de/keksuccino/konkrete/input/MouseInput.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.input.StringUtils",
+                                "Path":  "de/keksuccino/konkrete/input/StringUtils.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.mixin.mixins.client.IMixinKeyMapping",
+                                "Path":  "de/keksuccino/konkrete/mixin/mixins/client/IMixinKeyMapping.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.mixin.mixins.client.MixinMinecraft",
+                                "Path":  "de/keksuccino/konkrete/mixin/mixins/client/MixinMinecraft.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.mixin.mixins.client.MixinMouseHandler",
+                                "Path":  "de/keksuccino/konkrete/mixin/mixins/client/MixinMouseHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.mixin.mixins.common.client.IMixinKeyboardHandler",
+                                "Path":  "de/keksuccino/konkrete/mixin/mixins/common/client/IMixinKeyboardHandler.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.mixin.mixins.common.client.IMixinScreen",
+                                "Path":  "de/keksuccino/konkrete/mixin/mixins/common/client/IMixinScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.platform.FabricPlatformHelper",
+                                "Path":  "de/keksuccino/konkrete/platform/FabricPlatformHelper.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.platform.services.IPlatformHelper",
+                                "Path":  "de/keksuccino/konkrete/platform/services/IPlatformHelper.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.konkrete.rendering.GifDecoder",
+                                "Path":  "de/keksuccino/konkrete/rendering/GifDecoder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.net.objecthunter.exp4j.tokenizer.UnknownFunctionOrVariableException",
+                                "Path":  "de/keksuccino/net/objecthunter/exp4j/tokenizer/UnknownFunctionOrVariableException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.InvalidCriteriaException",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/InvalidCriteriaException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.InvalidJsonException",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/InvalidJsonException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.InvalidModificationException",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/InvalidModificationException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.InvalidPathException",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/InvalidPathException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.JsonPathException",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/JsonPathException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.PathNotFoundException",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/PathNotFoundException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.ValueCompareException",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/ValueCompareException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.internal.Utils",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/internal/Utils.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.internal.function.json.KeySetFunction",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/internal/function/json/KeySetFunction.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.internal.function.latebinding.ILateBindingValue",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/internal/function/latebinding/ILateBindingValue.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.internal.function.latebinding.JsonLateBindingValue",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/internal/function/latebinding/JsonLateBindingValue.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.internal.function.latebinding.PathLateBindingValue",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/internal/function/latebinding/PathLateBindingValue.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.internal.path.PathCompiler",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/internal/path/PathCompiler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.com.jayway.jsonpath.spi.mapper.MappingException",
+                                "Path":  "de/keksuccino/com/jayway/jsonpath/spi/mapper/MappingException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.net.minidev.json.JSONNavi",
+                                "Path":  "de/keksuccino/net/minidev/json/JSONNavi.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.net.minidev.json.parser.JSONParserInputStream",
+                                "Path":  "de/keksuccino/net/minidev/json/parser/JSONParserInputStream.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.net.minidev.json.parser.ParseException",
+                                "Path":  "de/keksuccino/net/minidev/json/parser/ParseException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.net.minidev.asm.ex.ConvertException",
+                                "Path":  "de/keksuccino/net/minidev/asm/ex/ConvertException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "de.keksuccino.net.minidev.asm.ex.NoSuchFieldException",
+                                "Path":  "de/keksuccino/net/minidev/asm/ex/NoSuchFieldException.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            }
+                        ],
+    "javapAvailable":  true
+}

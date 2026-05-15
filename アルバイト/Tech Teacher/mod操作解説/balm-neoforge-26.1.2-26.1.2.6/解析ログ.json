@@ -1,0 +1,820 @@
+﻿{
+    "jar":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\balm-neoforge-26.1.2-26.1.2.6\\balm-neoforge-26.1.2-26.1.2.6.jar",
+    "generatedMarkdown":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\balm-neoforge-26.1.2-26.1.2.6\\キー割り当てと操作方法.md",
+    "generatedCodexPrompt":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\balm-neoforge-26.1.2-26.1.2.6\\Codex追記依頼.md",
+    "generatedAt":  "2026-05-15T13:26:23.4407704+09:00",
+    "metadata":  {
+                     "DisplayName":  "Balm",
+                     "ModId":  "balm",
+                     "Version":  "26.1.2.6",
+                     "Loader":  "NeoForge/Forge系",
+                     "MinecraftVersion":  "[26.1-,26.2)",
+                     "Description":  "",
+                     "MetadataFile":  "META-INF/neoforge.mods.toml"
+                 },
+    "keyMappings":  [
+                        {
+                            "Key":  "未検出",
+                            "Label":  "key.category",
+                            "TranslationKey":  "key.category",
+                            "SourceClass":  "net.blay09.mods.balm.client.platform.util.I18nExport"
+                        }
+                    ],
+    "commands":  [
+                     {
+                         "SourceClass":  "net.blay09.mods.balm.commands.internal.InternalsCommand",
+                         "Literals":  [
+                                          "balm",
+                                          "dev",
+                                          "export",
+                                          "config",
+                                          "mod",
+                                          "icons",
+                                          "filter"
+                                      ]
+                     }
+                 ],
+    "classCandidates":  [
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.BalmClientRegistrars",
+                                "Path":  "net/blay09/mods/balm/client/BalmClientRegistrars.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.BalmClientTooltipComponentRegistrar",
+                                "Path":  "net/blay09/mods/balm/client/BalmClientTooltipComponentRegistrar.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.BalmKeyMappingRegistrar",
+                                "Path":  "net/blay09/mods/balm/client/BalmKeyMappingRegistrar.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.gui.components.ParallelProgressRenderer",
+                                "Path":  "net/blay09/mods/balm/client/gui/components/ParallelProgressRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.gui.components.ProgressRenderer",
+                                "Path":  "net/blay09/mods/balm/client/gui/components/ProgressRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.gui.components.SegmentedProgressRenderer",
+                                "Path":  "net/blay09/mods/balm/client/gui/components/SegmentedProgressRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.gui.components.SimpleProgressRenderer$Direction",
+                                "Path":  "net/blay09/mods/balm/client/gui/components/SimpleProgressRenderer$Direction.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.gui.components.SimpleProgressRenderer",
+                                "Path":  "net/blay09/mods/balm/client/gui/components/SimpleProgressRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.gui.components.package-info",
+                                "Path":  "net/blay09/mods/balm/client/gui/components/package-info.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.gui.screens.BalmScreenFactory",
+                                "Path":  "net/blay09/mods/balm/client/gui/screens/BalmScreenFactory.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.gui.screens.BalmScreenUtils",
+                                "Path":  "net/blay09/mods/balm/client/gui/screens/BalmScreenUtils.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.gui.screens.package-info",
+                                "Path":  "net/blay09/mods/balm/client/gui/screens/package-info.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.gui.screens.inventory.BalmMenuScreenRegistrar",
+                                "Path":  "net/blay09/mods/balm/client/gui/screens/inventory/BalmMenuScreenRegistrar.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.gui.screens.inventory.package-info",
+                                "Path":  "net/blay09/mods/balm/client/gui/screens/inventory/package-info.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.BalmClientHooks",
+                                "Path":  "net/blay09/mods/balm/client/platform/BalmClientHooks.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.config.BalmConfigScreenFactory",
+                                "Path":  "net/blay09/mods/balm/client/platform/config/BalmConfigScreenFactory.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.config.BalmConfigScreenProvider",
+                                "Path":  "net/blay09/mods/balm/client/platform/config/BalmConfigScreenProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ClientInputCallback$Keyboard",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ClientInputCallback$Keyboard.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ClientInputCallback",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ClientInputCallback.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.RenderCallback$Gui$After",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/RenderCallback$Gui$After.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.RenderCallback$Gui$Before",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/RenderCallback$Gui$Before.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.RenderCallback$Gui$BossInfo",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/RenderCallback$Gui$BossInfo.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.RenderCallback$Gui$Chat",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/RenderCallback$Gui$Chat.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.RenderCallback$Gui$Debug",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/RenderCallback$Gui$Debug.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.RenderCallback$Gui$Health",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/RenderCallback$Gui$Health.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.RenderCallback$Gui$PlayerList",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/RenderCallback$Gui$PlayerList.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.RenderCallback$Gui",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/RenderCallback$Gui.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.RenderCallback",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/RenderCallback.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$Init$After",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$Init$After.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$Init$Before",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$Init$Before.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$Init",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$Init.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$KeyPress$After",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$KeyPress$After.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$KeyPress$Before",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$KeyPress$Before.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$KeyPress",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$KeyPress.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$KeyRelease$After",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$KeyRelease$After.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$KeyRelease$Before",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$KeyRelease$Before.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$KeyRelease",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$KeyRelease.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MouseDrag$After",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MouseDrag$After.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MouseDrag$Before",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MouseDrag$Before.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MouseDrag",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MouseDrag.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MousePress$After",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MousePress$After.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MousePress$Before",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MousePress$Before.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MousePress",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MousePress.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MouseRelease$After",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MouseRelease$After.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MouseRelease$Before",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MouseRelease$Before.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MouseRelease",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MouseRelease.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MouseScroll$After",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MouseScroll$After.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MouseScroll$Before",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MouseScroll$Before.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$MouseScroll",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$MouseScroll.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$Opening",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$Opening.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback$Render",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback$Render.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.callback.ScreenCallback",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/callback/ScreenCallback.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.event.internal.BalmSupplementalClientEvents",
+                                "Path":  "net/blay09/mods/balm/client/platform/event/internal/BalmSupplementalClientEvents.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.internal.BalmClientSafeClientAccess",
+                                "Path":  "net/blay09/mods/balm/client/platform/internal/BalmClientSafeClientAccess.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.internal.CommonBalmClientHooks",
+                                "Path":  "net/blay09/mods/balm/client/platform/internal/CommonBalmClientHooks.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.module.BalmClientModule",
+                                "Path":  "net/blay09/mods/balm/client/platform/module/BalmClientModule.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.module.internal.InternalsClientModule",
+                                "Path":  "net/blay09/mods/balm/client/platform/module/internal/InternalsClientModule.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.runtime.internal.BalmClientRuntime",
+                                "Path":  "net/blay09/mods/balm/client/platform/runtime/internal/BalmClientRuntime.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.util.I18nExport",
+                                "Path":  "net/blay09/mods/balm/client/platform/util/I18nExport.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.client.platform.util.IconExport",
+                                "Path":  "net/blay09/mods/balm/client/platform/util/IconExport.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.commands.BalmCommands",
+                                "Path":  "net/blay09/mods/balm/commands/BalmCommands.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.commands.package-info",
+                                "Path":  "net/blay09/mods/balm/commands/package-info.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.commands.internal.InternalsCommand",
+                                "Path":  "net/blay09/mods/balm/commands/internal/InternalsCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.commands.internal.package-info",
+                                "Path":  "net/blay09/mods/balm/commands/internal/package-info.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.internal.mixin.DebugScreenOverlayMixin",
+                                "Path":  "net/blay09/mods/balm/internal/mixin/DebugScreenOverlayMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.internal.mixin.ReloadableServerResourcesMixin",
+                                "Path":  "net/blay09/mods/balm/internal/mixin/ReloadableServerResourcesMixin.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.mixin.AbstractContainerScreenAccessor",
+                                "Path":  "net/blay09/mods/balm/mixin/AbstractContainerScreenAccessor.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.mixin.CheckboxAccessor",
+                                "Path":  "net/blay09/mods/balm/mixin/CheckboxAccessor.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.mixin.ImageButtonAccessor",
+                                "Path":  "net/blay09/mods/balm/mixin/ImageButtonAccessor.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.mixin.KeyMappingAccessor",
+                                "Path":  "net/blay09/mods/balm/mixin/KeyMappingAccessor.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.mixin.ScreenAccessor",
+                                "Path":  "net/blay09/mods/balm/mixin/ScreenAccessor.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.client.gui.screens.inventory.internal.NeoForgeBalmMenuScreenRegistrar",
+                                "Path":  "net/blay09/mods/balm/neoforge/client/gui/screens/inventory/internal/NeoForgeBalmMenuScreenRegistrar.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.client.gui.screens.inventory.internal.package-info",
+                                "Path":  "net/blay09/mods/balm/neoforge/client/gui/screens/inventory/internal/package-info.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.client.internal.NeoForgeBalmClientTooltipComponentRegistrar",
+                                "Path":  "net/blay09/mods/balm/neoforge/client/internal/NeoForgeBalmClientTooltipComponentRegistrar.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.client.internal.NeoForgeBalmKeyMappingRegistrar",
+                                "Path":  "net/blay09/mods/balm/neoforge/client/internal/NeoForgeBalmKeyMappingRegistrar.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.client.platform.config.internal.NeoForgeBalmConfigScreenProviders",
+                                "Path":  "net/blay09/mods/balm/neoforge/client/platform/config/internal/NeoForgeBalmConfigScreenProviders.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.client.platform.event.internal.NeoForgeBalmClientEventMappings",
+                                "Path":  "net/blay09/mods/balm/neoforge/client/platform/event/internal/NeoForgeBalmClientEventMappings.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.client.platform.event.internal.NeoForgeBalmSupplementalClientEvents",
+                                "Path":  "net/blay09/mods/balm/neoforge/client/platform/event/internal/NeoForgeBalmSupplementalClientEvents.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.client.platform.runtime.internal.NeoForgeBalmClientRuntime",
+                                "Path":  "net/blay09/mods/balm/neoforge/client/platform/runtime/internal/NeoForgeBalmClientRuntime.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.commands.internal.NeoForgeBalmCommands",
+                                "Path":  "net/blay09/mods/balm/neoforge/commands/internal/NeoForgeBalmCommands.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.commands.internal.package-info",
+                                "Path":  "net/blay09/mods/balm/neoforge/commands/internal/package-info.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.internal.mixin.ScreenMixin",
+                                "Path":  "net/blay09/mods/balm/neoforge/internal/mixin/ScreenMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.network.internal.NeoForgeBalmNetworking$Registrations",
+                                "Path":  "net/blay09/mods/balm/neoforge/network/internal/NeoForgeBalmNetworking$Registrations.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.network.internal.NeoForgeBalmNetworking",
+                                "Path":  "net/blay09/mods/balm/neoforge/network/internal/NeoForgeBalmNetworking.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.platform.config.internal.NeoForgeBalmConfig",
+                                "Path":  "net/blay09/mods/balm/neoforge/platform/config/internal/NeoForgeBalmConfig.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.platform.event.internal.NeoForgeBalmEventMappings",
+                                "Path":  "net/blay09/mods/balm/neoforge/platform/event/internal/NeoForgeBalmEventMappings.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.neoforge.platform.permissions.internal.NeoForgeBalmPermissions",
+                                "Path":  "net/blay09/mods/balm/neoforge/platform/permissions/internal/NeoForgeBalmPermissions.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.network.BalmNetworking",
+                                "Path":  "net/blay09/mods/balm/network/BalmNetworking.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.network.internal.CommonBalmNetworking",
+                                "Path":  "net/blay09/mods/balm/network/internal/CommonBalmNetworking.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.network.internal.RemotePlayerModList",
+                                "Path":  "net/blay09/mods/balm/network/internal/RemotePlayerModList.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.network.protocol.common.custom.ClientboundMessageRegistration",
+                                "Path":  "net/blay09/mods/balm/network/protocol/common/custom/ClientboundMessageRegistration.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.network.protocol.common.custom.ServerboundMessageRegistration",
+                                "Path":  "net/blay09/mods/balm/network/protocol/common/custom/ServerboundMessageRegistration.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.network.protocol.common.custom.internal.ClientboundConfigPacket",
+                                "Path":  "net/blay09/mods/balm/network/protocol/common/custom/internal/ClientboundConfigPacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.network.protocol.common.custom.internal.MessageRegistration",
+                                "Path":  "net/blay09/mods/balm/network/protocol/common/custom/internal/MessageRegistration.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.network.protocol.common.custom.internal.ServerboundModListMessage",
+                                "Path":  "net/blay09/mods/balm/network/protocol/common/custom/internal/ServerboundModListMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.BalmSafeClientAccess",
+                                "Path":  "net/blay09/mods/balm/platform/BalmSafeClientAccess.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.config.internal.ClothConfigSupport",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/config/internal/ClothConfigSupport.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.config.internal.ConfiguredConfigProvider",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/config/internal/ConfiguredConfigProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.config.internal.ConfiguredConfigSupport",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/config/internal/ConfiguredConfigSupport.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.hudinfo.internal.JadeModIntegration$JadeHudInfoOutput",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/hudinfo/internal/JadeModIntegration$JadeHudInfoOutput.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.recipeviewer.RecipeViewerOcclusionProvider",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/recipeviewer/RecipeViewerOcclusionProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.recipeviewer.RecipeViewerRegistrar",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/recipeviewer/RecipeViewerRegistrar.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.recipeviewer.internal.ScreenOcclusionRegistration",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/recipeviewer/internal/ScreenOcclusionRegistration.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.recipeviewer.internal.jei.CommonJeiPlugin$1",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/recipeviewer/internal/jei/CommonJeiPlugin$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.recipeviewer.internal.jei.CommonJeiPlugin$2",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/recipeviewer/internal/jei/CommonJeiPlugin$2.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.recipeviewer.internal.jei.CommonJeiPlugin",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/recipeviewer/internal/jei/CommonJeiPlugin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.recipeviewer.internal.jei.CommonJeiRecipeCategory",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/recipeviewer/internal/jei/CommonJeiRecipeCategory.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.recipeviewer.internal.jei.JeiRecipeTypeRegistration",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/recipeviewer/internal/jei/JeiRecipeTypeRegistration.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.recipeviewer.internal.jei.JeiRecipeViewerDisplaySlotBuilder",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/recipeviewer/internal/jei/JeiRecipeViewerDisplaySlotBuilder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.recipeviewer.internal.jei.JeiRecipeViewerDisplaySlotsBuilder",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/recipeviewer/internal/jei/JeiRecipeViewerDisplaySlotsBuilder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.compatibility.recipeviewer.internal.jei.JeiRecipeViewerRegistrar",
+                                "Path":  "net/blay09/mods/balm/platform/compatibility/recipeviewer/internal/jei/JeiRecipeViewerRegistrar.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.config.BalmConfig",
+                                "Path":  "net/blay09/mods/balm/platform/config/BalmConfig.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.config.internal.AbstractBalmConfig",
+                                "Path":  "net/blay09/mods/balm/platform/config/internal/AbstractBalmConfig.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.config.internal.BalmConfigScreenProviders",
+                                "Path":  "net/blay09/mods/balm/platform/config/internal/BalmConfigScreenProviders.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.config.internal.ConfigSync",
+                                "Path":  "net/blay09/mods/balm/platform/config/internal/ConfigSync.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.config.notoml.NotomlError",
+                                "Path":  "net/blay09/mods/balm/platform/config/notoml/NotomlError.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.config.notoml.NotomlStateMachine",
+                                "Path":  "net/blay09/mods/balm/platform/config/notoml/NotomlStateMachine.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.event.callback.CommandCallback$Before",
+                                "Path":  "net/blay09/mods/balm/platform/event/callback/CommandCallback$Before.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.event.callback.CommandCallback",
+                                "Path":  "net/blay09/mods/balm/platform/event/callback/CommandCallback.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.module.internal.InternalsModule",
+                                "Path":  "net/blay09/mods/balm/platform/module/internal/InternalsModule.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.permissions.BalmPermissions",
+                                "Path":  "net/blay09/mods/balm/platform/permissions/BalmPermissions.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.permissions.PermissionContext",
+                                "Path":  "net/blay09/mods/balm/platform/permissions/PermissionContext.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.permissions.internal.CommandPermissionContext",
+                                "Path":  "net/blay09/mods/balm/platform/permissions/internal/CommandPermissionContext.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.permissions.internal.CommonBalmPermissions",
+                                "Path":  "net/blay09/mods/balm/platform/permissions/internal/CommonBalmPermissions.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.permissions.internal.OfflinePermissionContext",
+                                "Path":  "net/blay09/mods/balm/platform/permissions/internal/OfflinePermissionContext.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.platform.permissions.internal.PlayerPermissionContext",
+                                "Path":  "net/blay09/mods/balm/platform/permissions/internal/PlayerPermissionContext.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.server.packs.resources.BalmClientResourceReloadListenerRegistrar$VanillaKeys",
+                                "Path":  "net/blay09/mods/balm/server/packs/resources/BalmClientResourceReloadListenerRegistrar$VanillaKeys.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.server.packs.resources.BalmResourceReloadListenerRegistrar$VanillaKeys",
+                                "Path":  "net/blay09/mods/balm/server/packs/resources/BalmResourceReloadListenerRegistrar$VanillaKeys.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.world.BalmMenuProvider",
+                                "Path":  "net/blay09/mods/balm/world/BalmMenuProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.balm.world.level.block.entity.BalmBlockEntityUtils",
+                                "Path":  "net/blay09/mods/balm/world/level/block/entity/BalmBlockEntityUtils.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            }
+                        ],
+    "javapAvailable":  true
+}

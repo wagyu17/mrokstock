@@ -1,0 +1,1193 @@
+﻿{
+    "jar":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\Jade-mc26.1-NeoForge-26.1.1\\Jade-mc26.1-NeoForge-26.1.1.jar",
+    "generatedMarkdown":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\Jade-mc26.1-NeoForge-26.1.1\\キー割り当てと操作方法.md",
+    "generatedCodexPrompt":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\Jade-mc26.1-NeoForge-26.1.1\\Codex追記依頼.md",
+    "generatedAt":  "2026-05-15T13:27:56.8205303+09:00",
+    "metadata":  {
+                     "DisplayName":  "Jade",
+                     "ModId":  "jade",
+                     "Version":  "${file.jarVersion}",
+                     "Loader":  "NeoForge/Forge系",
+                     "MinecraftVersion":  "",
+                     "Description":  "Minecraft mod shows what you are looking at. (Hwyla fork)",
+                     "MetadataFile":  "META-INF/neoforge.mods.toml"
+                 },
+    "keyMappings":  [
+                        {
+                            "Key":  "未検出",
+                            "Label":  "Show Details",
+                            "TranslationKey":  "key.jade.show_details",
+                            "SourceClass":  "snownee.jade.gui.BaseOptionsScreen"
+                        }
+                    ],
+    "commands":  [
+                     {
+                         "SourceClass":  "snownee.jade.command.JadeClientCommand",
+                         "Literals":  [
+                                          "jadec",
+                                          "handlers",
+                                          "config",
+                                          "use_profile",
+                                          "index",
+                                          "pin"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "snownee.jade.command.JadeServerCommand",
+                         "Literals":  [
+                                          "jade",
+                                          "show",
+                                          "hide"
+                                      ]
+                     }
+                 ],
+    "classCandidates":  [
+                            {
+                                "ClassName":  "snownee.jade.Jade",
+                                "Path":  "snownee/jade/Jade.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.JadeClient",
+                                "Path":  "snownee/jade/JadeClient.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.JadeInternals",
+                                "Path":  "snownee/jade/JadeInternals.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.access.AccessibilityPlugin",
+                                "Path":  "snownee/jade/addon/access/AccessibilityPlugin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.access.EntityDetailsBodyProvider",
+                                "Path":  "snownee/jade/addon/access/EntityDetailsBodyProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.access.EntityDetailsProvider",
+                                "Path":  "snownee/jade/addon/access/EntityDetailsProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.access.NpcDescriptionProvider",
+                                "Path":  "snownee/jade/addon/access/NpcDescriptionProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.access.SignProvider",
+                                "Path":  "snownee/jade/addon/access/SignProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.core.BlockFaceProvider",
+                                "Path":  "snownee/jade/addon/core/BlockFaceProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.core.DistanceProvider",
+                                "Path":  "snownee/jade/addon/core/DistanceProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.core.ModNameProvider$ForBlock",
+                                "Path":  "snownee/jade/addon/core/ModNameProvider$ForBlock.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.core.ModNameProvider$ForEntity",
+                                "Path":  "snownee/jade/addon/core/ModNameProvider$ForEntity.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.core.ObjectNameProvider$ForEntity",
+                                "Path":  "snownee/jade/addon/core/ObjectNameProvider$ForEntity.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.debug.BlockStatesProvider",
+                                "Path":  "snownee/jade/addon/debug/BlockStatesProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.harvest.HarvestToolProvider",
+                                "Path":  "snownee/jade/addon/harvest/HarvestToolProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.universal.EnergyStorageProvider$Client",
+                                "Path":  "snownee/jade/addon/universal/EnergyStorageProvider$Client.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.universal.FluidStorageProvider$Client",
+                                "Path":  "snownee/jade/addon/universal/FluidStorageProvider$Client.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.universal.ItemStorageProvider$Client",
+                                "Path":  "snownee/jade/addon/universal/ItemStorageProvider$Client.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.universal.ProgressProvider$Client",
+                                "Path":  "snownee/jade/addon/universal/ProgressProvider$Client.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.ArmorStandProvider",
+                                "Path":  "snownee/jade/addon/vanilla/ArmorStandProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.BrewingStandProvider$Client",
+                                "Path":  "snownee/jade/addon/vanilla/BrewingStandProvider$Client.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.CommandBlockProvider$Client",
+                                "Path":  "snownee/jade/addon/vanilla/CommandBlockProvider$Client.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.CommandBlockProvider",
+                                "Path":  "snownee/jade/addon/vanilla/CommandBlockProvider.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.EnchantmentPowerProvider",
+                                "Path":  "snownee/jade/addon/vanilla/EnchantmentPowerProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.EntityHealthAndArmorProvider$Client",
+                                "Path":  "snownee/jade/addon/vanilla/EntityHealthAndArmorProvider$Client.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.FurnaceProvider$Client",
+                                "Path":  "snownee/jade/addon/vanilla/FurnaceProvider$Client.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.HorseStatsProvider",
+                                "Path":  "snownee/jade/addon/vanilla/HorseStatsProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.ItemTooltipProvider",
+                                "Path":  "snownee/jade/addon/vanilla/ItemTooltipProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.LecternProvider$Client",
+                                "Path":  "snownee/jade/addon/vanilla/LecternProvider$Client.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.PetArmorProvider$Client",
+                                "Path":  "snownee/jade/addon/vanilla/PetArmorProvider$Client.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.StatusEffectsProvider$Client",
+                                "Path":  "snownee/jade/addon/vanilla/StatusEffectsProvider$Client.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.TotalEnchantmentPowerProvider",
+                                "Path":  "snownee/jade/addon/vanilla/TotalEnchantmentPowerProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.addon.vanilla.VanillaPlugin",
+                                "Path":  "snownee/jade/addon/vanilla/VanillaPlugin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ITooltip",
+                                "Path":  "snownee/jade/api/ITooltip.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.IWailaClientRegistration",
+                                "Path":  "snownee/jade/api/IWailaClientRegistration.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.JadeIds",
+                                "Path":  "snownee/jade/api/JadeIds.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.JadeKeys",
+                                "Path":  "snownee/jade/api/JadeKeys.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.callback.JadeAfterRenderCallback",
+                                "Path":  "snownee/jade/api/callback/JadeAfterRenderCallback.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.callback.JadeBeforeRenderCallback",
+                                "Path":  "snownee/jade/api/callback/JadeBeforeRenderCallback.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.config.IWailaConfig$General",
+                                "Path":  "snownee/jade/api/config/IWailaConfig$General.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.config.IWailaConfig$Overlay",
+                                "Path":  "snownee/jade/api/config/IWailaConfig$Overlay.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.config.IWailaConfig",
+                                "Path":  "snownee/jade/api/config/IWailaConfig.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.theme.SneakyDetails$Simple",
+                                "Path":  "snownee/jade/api/theme/SneakyDetails$Simple.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.theme.SneakyDetails",
+                                "Path":  "snownee/jade/api/theme/SneakyDetails.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.theme.Theme",
+                                "Path":  "snownee/jade/api/theme/Theme.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.BoxElement",
+                                "Path":  "snownee/jade/api/ui/BoxElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.BoxStyle",
+                                "Path":  "snownee/jade/api/ui/BoxStyle.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.ColorPalette$1",
+                                "Path":  "snownee/jade/api/ui/ColorPalette$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.ColorPalette",
+                                "Path":  "snownee/jade/api/ui/ColorPalette.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.Element$RenderDebugContext",
+                                "Path":  "snownee/jade/api/ui/Element$RenderDebugContext.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.Element",
+                                "Path":  "snownee/jade/api/ui/Element.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.IDisplayHelper",
+                                "Path":  "snownee/jade/api/ui/IDisplayHelper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.JadeUI",
+                                "Path":  "snownee/jade/api/ui/JadeUI.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.MessageType",
+                                "Path":  "snownee/jade/api/ui/MessageType.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.Orientation",
+                                "Path":  "snownee/jade/api/ui/Orientation.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.ProgressStyle",
+                                "Path":  "snownee/jade/api/ui/ProgressStyle.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.Rect2f",
+                                "Path":  "snownee/jade/api/ui/Rect2f.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.ResizeableElement",
+                                "Path":  "snownee/jade/api/ui/ResizeableElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.ScreenDirection",
+                                "Path":  "snownee/jade/api/ui/ScreenDirection.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.ui.TextElement",
+                                "Path":  "snownee/jade/api/ui/TextElement.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.view.ClientViewGroup",
+                                "Path":  "snownee/jade/api/view/ClientViewGroup.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.view.FluidView",
+                                "Path":  "snownee/jade/api/view/FluidView.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.view.ProgressView$Data",
+                                "Path":  "snownee/jade/api/view/ProgressView$Data.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.view.ProgressView$Part",
+                                "Path":  "snownee/jade/api/view/ProgressView$Part.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.view.ProgressView$PartBuilder",
+                                "Path":  "snownee/jade/api/view/ProgressView$PartBuilder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.api.view.ProgressView",
+                                "Path":  "snownee/jade/api/view/ProgressView.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.command.ArgumentFactory",
+                                "Path":  "snownee/jade/command/ArgumentFactory.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.command.JadeClientCommand",
+                                "Path":  "snownee/jade/command/JadeClientCommand.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.command.JadeServerCommand",
+                                "Path":  "snownee/jade/command/JadeServerCommand.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.command.package-info",
+                                "Path":  "snownee/jade/command/package-info.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.compat.JEICompat",
+                                "Path":  "snownee/jade/compat/JEICompat.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.compat.ModMenuCompat",
+                                "Path":  "snownee/jade/compat/ModMenuCompat.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.compat.PolydexCompat",
+                                "Path":  "snownee/jade/compat/PolydexCompat.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.compat.RecipeLookupResult",
+                                "Path":  "snownee/jade/compat/RecipeLookupResult.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.BaseOptionsScreen$1",
+                                "Path":  "snownee/jade/gui/BaseOptionsScreen$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.BaseOptionsScreen",
+                                "Path":  "snownee/jade/gui/BaseOptionsScreen.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.CreditButton",
+                                "Path":  "snownee/jade/gui/CreditButton.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.HomeConfigScreen$1",
+                                "Path":  "snownee/jade/gui/HomeConfigScreen$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.HomeConfigScreen$TextParticle",
+                                "Path":  "snownee/jade/gui/HomeConfigScreen$TextParticle.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.HomeConfigScreen",
+                                "Path":  "snownee/jade/gui/HomeConfigScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.JadeLinearLayout$Align",
+                                "Path":  "snownee/jade/gui/JadeLinearLayout$Align.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.JadeLinearLayout$ChildContainer",
+                                "Path":  "snownee/jade/gui/JadeLinearLayout$ChildContainer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.JadeLinearLayout",
+                                "Path":  "snownee/jade/gui/JadeLinearLayout.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.LayoutWithPadding",
+                                "Path":  "snownee/jade/gui/LayoutWithPadding.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.MultilineTooltip",
+                                "Path":  "snownee/jade/gui/MultilineTooltip.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.PinScreen",
+                                "Path":  "snownee/jade/gui/PinScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.PluginsConfigScreen",
+                                "Path":  "snownee/jade/gui/PluginsConfigScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.PreviewOptionsScreen",
+                                "Path":  "snownee/jade/gui/PreviewOptionsScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.ProfileConfigScreen$ProfileEntry",
+                                "Path":  "snownee/jade/gui/ProfileConfigScreen$ProfileEntry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.ProfileConfigScreen",
+                                "Path":  "snownee/jade/gui/ProfileConfigScreen.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.ResizeableLayout",
+                                "Path":  "snownee/jade/gui/ResizeableLayout.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.WailaConfigScreen$1",
+                                "Path":  "snownee/jade/gui/WailaConfigScreen$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.WailaConfigScreen$2",
+                                "Path":  "snownee/jade/gui/WailaConfigScreen$2.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.WailaConfigScreen",
+                                "Path":  "snownee/jade/gui/WailaConfigScreen.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.package-info",
+                                "Path":  "snownee/jade/gui/package-info.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.BelowOrAboveListEntryTooltipPositioner",
+                                "Path":  "snownee/jade/gui/config/BelowOrAboveListEntryTooltipPositioner.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.FixedTooltipPositioner",
+                                "Path":  "snownee/jade/gui/config/FixedTooltipPositioner.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.KeybindOptionButton",
+                                "Path":  "snownee/jade/gui/config/KeybindOptionButton.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.NotUglyEditBox$BackgroundMode",
+                                "Path":  "snownee/jade/gui/config/NotUglyEditBox$BackgroundMode.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.NotUglyEditBox",
+                                "Path":  "snownee/jade/gui/config/NotUglyEditBox.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.OptionButton",
+                                "Path":  "snownee/jade/gui/config/OptionButton.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.OptionsList$Entry",
+                                "Path":  "snownee/jade/gui/config/OptionsList$Entry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.OptionsList$EntryWidget",
+                                "Path":  "snownee/jade/gui/config/OptionsList$EntryWidget.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.OptionsList$Title$1",
+                                "Path":  "snownee/jade/gui/config/OptionsList$Title$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.OptionsList$Title",
+                                "Path":  "snownee/jade/gui/config/OptionsList$Title.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.OptionsList",
+                                "Path":  "snownee/jade/gui/config/OptionsList.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.OptionsNav$Entry$1",
+                                "Path":  "snownee/jade/gui/config/OptionsNav$Entry$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.OptionsNav$Entry",
+                                "Path":  "snownee/jade/gui/config/OptionsNav$Entry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.OptionsNav",
+                                "Path":  "snownee/jade/gui/config/OptionsNav.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.package-info",
+                                "Path":  "snownee/jade/gui/config/package-info.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.value.CycleOptionValue",
+                                "Path":  "snownee/jade/gui/config/value/CycleOptionValue.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.value.InputOptionValue",
+                                "Path":  "snownee/jade/gui/config/value/InputOptionValue.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.value.OptionValue",
+                                "Path":  "snownee/jade/gui/config/value/OptionValue.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.value.SliderOptionValue$Slider",
+                                "Path":  "snownee/jade/gui/config/value/SliderOptionValue$Slider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.value.SliderOptionValue",
+                                "Path":  "snownee/jade/gui/config/value/SliderOptionValue.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.gui.config.value.package-info",
+                                "Path":  "snownee/jade/gui/config/value/package-info.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.BlockAccessorClientHandler",
+                                "Path":  "snownee/jade/impl/BlockAccessorClientHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.BlockAccessorImpl",
+                                "Path":  "snownee/jade/impl/BlockAccessorImpl.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.EntityAccessorClientHandler",
+                                "Path":  "snownee/jade/impl/EntityAccessorClientHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.EntityAccessorImpl",
+                                "Path":  "snownee/jade/impl/EntityAccessorImpl.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ObjectDataCenter",
+                                "Path":  "snownee/jade/impl/ObjectDataCenter.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.Tooltip$1",
+                                "Path":  "snownee/jade/impl/Tooltip$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.Tooltip$2",
+                                "Path":  "snownee/jade/impl/Tooltip$2.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.Tooltip$Line",
+                                "Path":  "snownee/jade/impl/Tooltip$Line.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.Tooltip",
+                                "Path":  "snownee/jade/impl/Tooltip.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.WailaClientRegistration",
+                                "Path":  "snownee/jade/impl/WailaClientRegistration.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.WailaConfig$Accessibility",
+                                "Path":  "snownee/jade/impl/config/WailaConfig$Accessibility.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.WailaConfig$General$ExtraOptions",
+                                "Path":  "snownee/jade/impl/config/WailaConfig$General$ExtraOptions.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.WailaConfig$General",
+                                "Path":  "snownee/jade/impl/config/WailaConfig$General.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.WailaConfig$History",
+                                "Path":  "snownee/jade/impl/config/WailaConfig$History.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.WailaConfig$Overlay",
+                                "Path":  "snownee/jade/impl/config/WailaConfig$Overlay.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.WailaConfig$Root",
+                                "Path":  "snownee/jade/impl/config/WailaConfig$Root.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.WailaConfig",
+                                "Path":  "snownee/jade/impl/config/WailaConfig.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.entry.BooleanConfigEntry",
+                                "Path":  "snownee/jade/impl/config/entry/BooleanConfigEntry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.entry.ConfigEntry",
+                                "Path":  "snownee/jade/impl/config/entry/ConfigEntry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.entry.EnumConfigEntry",
+                                "Path":  "snownee/jade/impl/config/entry/EnumConfigEntry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.entry.FloatConfigEntry",
+                                "Path":  "snownee/jade/impl/config/entry/FloatConfigEntry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.entry.IntConfigEntry",
+                                "Path":  "snownee/jade/impl/config/entry/IntConfigEntry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.config.entry.StringConfigEntry",
+                                "Path":  "snownee/jade/impl/config/entry/StringConfigEntry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.theme.ThemeHelper",
+                                "Path":  "snownee/jade/impl/theme/ThemeHelper.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.ArmorElement",
+                                "Path":  "snownee/jade/impl/ui/ArmorElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.BoxElementImpl",
+                                "Path":  "snownee/jade/impl/ui/BoxElementImpl.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.CompoundElement",
+                                "Path":  "snownee/jade/impl/ui/CompoundElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.FluidStackElement",
+                                "Path":  "snownee/jade/impl/ui/FluidStackElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.HealthElement",
+                                "Path":  "snownee/jade/impl/ui/HealthElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.HorizontalLineElement",
+                                "Path":  "snownee/jade/impl/ui/HorizontalLineElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.ItemStackElement",
+                                "Path":  "snownee/jade/impl/ui/ItemStackElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.JadeUIInternal",
+                                "Path":  "snownee/jade/impl/ui/JadeUIInternal.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.ProgressElement",
+                                "Path":  "snownee/jade/impl/ui/ProgressElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.ProgressOverlayElement",
+                                "Path":  "snownee/jade/impl/ui/ProgressOverlayElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.SimpleProgressStyle",
+                                "Path":  "snownee/jade/impl/ui/SimpleProgressStyle.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.SpacerElement",
+                                "Path":  "snownee/jade/impl/ui/SpacerElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.SpriteElement",
+                                "Path":  "snownee/jade/impl/ui/SpriteElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.impl.ui.TextElementImpl",
+                                "Path":  "snownee/jade/impl/ui/TextElementImpl.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.key_extension.KeyExManager",
+                                "Path":  "snownee/jade/key_extension/KeyExManager.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.key_extension.KeyMappingEx",
+                                "Path":  "snownee/jade/key_extension/KeyMappingEx.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.key_extension.package-info",
+                                "Path":  "snownee/jade/key_extension/package-info.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.mixin.BossHealthOverlayMixin",
+                                "Path":  "snownee/jade/mixin/BossHealthOverlayMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.mixin.CreativeModeInventoryScreenMixin",
+                                "Path":  "snownee/jade/mixin/CreativeModeInventoryScreenMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.mixin.GuiGraphicsExtractorMixin",
+                                "Path":  "snownee/jade/mixin/GuiGraphicsExtractorMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.mixin.KeyAccess",
+                                "Path":  "snownee/jade/mixin/KeyAccess.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.mixin.PreparedTextBuilderMixin",
+                                "Path":  "snownee/jade/mixin/PreparedTextBuilderMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.mixin.key_extension.KeyBindsListMixin",
+                                "Path":  "snownee/jade/mixin/key_extension/KeyBindsListMixin.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.mixin.key_extension.KeyMappingMixin",
+                                "Path":  "snownee/jade/mixin/key_extension/KeyMappingMixin.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.mixin.key_extension.package-info",
+                                "Path":  "snownee/jade/mixin/key_extension/package-info.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.network.ClientHandshakePacket",
+                                "Path":  "snownee/jade/network/ClientHandshakePacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.network.ReceiveDataPacket",
+                                "Path":  "snownee/jade/network/ReceiveDataPacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.network.RequestBlockPacket",
+                                "Path":  "snownee/jade/network/RequestBlockPacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.network.RequestEntityPacket",
+                                "Path":  "snownee/jade/network/RequestEntityPacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.network.ServerHandshakePacket",
+                                "Path":  "snownee/jade/network/ServerHandshakePacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.network.ServerPayloadContext",
+                                "Path":  "snownee/jade/network/ServerPayloadContext.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.network.ShowOverlayPacket",
+                                "Path":  "snownee/jade/network/ShowOverlayPacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.overlay.DatapackBlockManager",
+                                "Path":  "snownee/jade/overlay/DatapackBlockManager.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.overlay.DisplayHelper",
+                                "Path":  "snownee/jade/overlay/DisplayHelper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.overlay.FloatBlitRenderState",
+                                "Path":  "snownee/jade/overlay/FloatBlitRenderState.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.overlay.FloatColoredRectangleRenderState",
+                                "Path":  "snownee/jade/overlay/FloatColoredRectangleRenderState.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.overlay.OverlayRenderer",
+                                "Path":  "snownee/jade/overlay/OverlayRenderer.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.overlay.RayTracing",
+                                "Path":  "snownee/jade/overlay/RayTracing.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.overlay.WailaTickHandler$State",
+                                "Path":  "snownee/jade/overlay/WailaTickHandler$State.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.overlay.WailaTickHandler",
+                                "Path":  "snownee/jade/overlay/WailaTickHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.overlay.package-info",
+                                "Path":  "snownee/jade/overlay/package-info.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.util.ClientProxy",
+                                "Path":  "snownee/jade/util/ClientProxy.class",
+                                "Type":  "Key, Command, Operation",
+                                "Score":  120
+                            },
+                            {
+                                "ClassName":  "snownee.jade.util.CommonProxy$Entrypoint",
+                                "Path":  "snownee/jade/util/CommonProxy$Entrypoint.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.util.CommonProxy",
+                                "Path":  "snownee/jade/util/CommonProxy.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "snownee.jade.util.FluidTextHelper",
+                                "Path":  "snownee/jade/util/FluidTextHelper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.util.JadeFont",
+                                "Path":  "snownee/jade/util/JadeFont.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.util.JadeGuiGraphics",
+                                "Path":  "snownee/jade/util/JadeGuiGraphics.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.util.KeyedReloadListener",
+                                "Path":  "snownee/jade/util/KeyedReloadListener.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.util.KeyedResourceManagerReloadListener",
+                                "Path":  "snownee/jade/util/KeyedResourceManagerReloadListener.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "snownee.jade.util.ModIdentification",
+                                "Path":  "snownee/jade/util/ModIdentification.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "snownee.jade.util.WordCutter",
+                                "Path":  "snownee/jade/util/WordCutter.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            }
+                        ],
+    "javapAvailable":  true
+}

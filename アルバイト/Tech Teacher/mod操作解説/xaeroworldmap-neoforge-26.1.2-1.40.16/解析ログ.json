@@ -1,0 +1,1044 @@
+﻿{
+    "jar":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\xaeroworldmap-neoforge-26.1.2-1.40.16\\xaeroworldmap-neoforge-26.1.2-1.40.16.jar",
+    "generatedMarkdown":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\xaeroworldmap-neoforge-26.1.2-1.40.16\\キー割り当てと操作方法.md",
+    "generatedCodexPrompt":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\xaeroworldmap-neoforge-26.1.2-1.40.16\\Codex追記依頼.md",
+    "generatedAt":  "2026-05-15T13:33:48.8652060+09:00",
+    "metadata":  {
+                     "DisplayName":  "Xaero\u0027s World Map",
+                     "ModId":  "xaeroworldmap",
+                     "Version":  "1.40.16",
+                     "Loader":  "NeoForge/Forge系",
+                     "MinecraftVersion":  "(26.1.1, 26.2.0)",
+                     "Description":  "",
+                     "MetadataFile":  "META-INF/neoforge.mods.toml"
+                 },
+    "keyMappings":  [
+
+                    ],
+    "commands":  [
+
+                 ],
+    "classCandidates":  [
+                            {
+                                "ClassName":  "xaero.map.MapFullReloader",
+                                "Path":  "xaero/map/MapFullReloader.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.MapProcessor$1",
+                                "Path":  "xaero/map/MapProcessor$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.MapProcessor",
+                                "Path":  "xaero/map/MapProcessor.class",
+                                "Type":  "Key, Command, Operation",
+                                "Score":  120
+                            },
+                            {
+                                "ClassName":  "xaero.map.MapWriter",
+                                "Path":  "xaero/map/MapWriter.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.MapWriterNeoForge",
+                                "Path":  "xaero/map/MapWriterNeoForge.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.WorldMap",
+                                "Path":  "xaero/map/WorldMap.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.WorldMapClientOnly",
+                                "Path":  "xaero/map/WorldMapClientOnly.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.WorldMapClientOnlyNeoForge",
+                                "Path":  "xaero/map/WorldMapClientOnlyNeoForge.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.WorldMapNeoForge",
+                                "Path":  "xaero/map/WorldMapNeoForge.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.WorldMapSession",
+                                "Path":  "xaero/map/WorldMapSession.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.biome.BiomeColorCalculator",
+                                "Path":  "xaero/map/biome/BiomeColorCalculator.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.biome.BlockTintProvider",
+                                "Path":  "xaero/map/biome/BlockTintProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.common.config.WorldMapConfigConstants",
+                                "Path":  "xaero/map/common/config/WorldMapConfigConstants.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.common.config.option.WorldMapProfiledConfigOptions",
+                                "Path":  "xaero/map/common/config/option/WorldMapProfiledConfigOptions.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.config.option.ui.type.WorldMapConfigOptionUITypes",
+                                "Path":  "xaero/map/config/option/ui/type/WorldMapConfigOptionUITypes.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.config.option.value.redirect.WorldMapConfigOptionClientRedirectors",
+                                "Path":  "xaero/map/config/option/value/redirect/WorldMapConfigOptionClientRedirectors.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.config.primary.option.WorldMapPrimaryClientConfigOptions",
+                                "Path":  "xaero/map/config/primary/option/WorldMapPrimaryClientConfigOptions.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.config.util.WorldMapClientConfigUtils",
+                                "Path":  "xaero/map/config/util/WorldMapClientConfigUtils.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.controls.ControlsHandler",
+                                "Path":  "xaero/map/controls/ControlsHandler.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.controls.ControlsRegister",
+                                "Path":  "xaero/map/controls/ControlsRegister.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.controls.KeyEvent",
+                                "Path":  "xaero/map/controls/KeyEvent.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "xaero.map.core.IGuiRenderer",
+                                "Path":  "xaero/map/core/IGuiRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.core.IWorldMapSMultiBlockChangePacket",
+                                "Path":  "xaero/map/core/IWorldMapSMultiBlockChangePacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.core.XaeroWorldMapCore",
+                                "Path":  "xaero/map/core/XaeroWorldMapCore.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.element.HoveredMapElementHolder",
+                                "Path":  "xaero/map/element/HoveredMapElementHolder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.element.MapElementGraphics",
+                                "Path":  "xaero/map/element/MapElementGraphics.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.element.MapElementMenuRenderer",
+                                "Path":  "xaero/map/element/MapElementMenuRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.element.MapElementRenderHandler$Builder",
+                                "Path":  "xaero/map/element/MapElementRenderHandler$Builder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.element.MapElementRenderHandler",
+                                "Path":  "xaero/map/element/MapElementRenderHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.element.MenuOnlyElementRenderer",
+                                "Path":  "xaero/map/element/MenuOnlyElementRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.element.MenuScrollReader",
+                                "Path":  "xaero/map/element/MenuScrollReader.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.element.render.ElementReader",
+                                "Path":  "xaero/map/element/render/ElementReader.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.element.render.ElementRenderInfo",
+                                "Path":  "xaero/map/element/render/ElementRenderInfo.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.events.ClientEvents",
+                                "Path":  "xaero/map/events/ClientEvents.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.events.ClientEventsNeoForge",
+                                "Path":  "xaero/map/events/ClientEventsNeoForge.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.events.CommonEvents",
+                                "Path":  "xaero/map/events/CommonEvents.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.events.ModClientEventsNeoForge",
+                                "Path":  "xaero/map/events/ModClientEventsNeoForge.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.file.MapSaveLoad$1",
+                                "Path":  "xaero/map/file/MapSaveLoad$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.file.MapSaveLoad",
+                                "Path":  "xaero/map/file/MapSaveLoad.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.file.OldFormatSupport",
+                                "Path":  "xaero/map/file/OldFormatSupport.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "xaero.map.file.export.PNGExportResult",
+                                "Path":  "xaero/map/file/export/PNGExportResult.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.file.export.PNGExportResultType",
+                                "Path":  "xaero/map/file/export/PNGExportResultType.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.file.export.PNGExporter",
+                                "Path":  "xaero/map/file/export/PNGExporter.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.file.worldsave.WorldDataReader",
+                                "Path":  "xaero/map/file/worldsave/WorldDataReader.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.graphics.CustomRenderTypes",
+                                "Path":  "xaero/map/graphics/CustomRenderTypes.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.graphics.MapRenderHelper",
+                                "Path":  "xaero/map/graphics/MapRenderHelper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.ConfirmScreenBase",
+                                "Path":  "xaero/map/gui/ConfirmScreenBase.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.CrosshairMessageOverlay",
+                                "Path":  "xaero/map/gui/CrosshairMessageOverlay.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.CursorBox",
+                                "Path":  "xaero/map/gui/CursorBox.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.EditDefaultTpCommandScreen",
+                                "Path":  "xaero/map/gui/EditDefaultTpCommandScreen.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.ExportScreen",
+                                "Path":  "xaero/map/gui/ExportScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiCaveModeOptions",
+                                "Path":  "xaero/map/gui/GuiCaveModeOptions.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiDimensionOptions",
+                                "Path":  "xaero/map/gui/GuiDimensionOptions.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$1",
+                                "Path":  "xaero/map/gui/GuiMap$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$10",
+                                "Path":  "xaero/map/gui/GuiMap$10.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$11",
+                                "Path":  "xaero/map/gui/GuiMap$11.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$12",
+                                "Path":  "xaero/map/gui/GuiMap$12.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$13",
+                                "Path":  "xaero/map/gui/GuiMap$13.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$2",
+                                "Path":  "xaero/map/gui/GuiMap$2.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$3",
+                                "Path":  "xaero/map/gui/GuiMap$3.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$4",
+                                "Path":  "xaero/map/gui/GuiMap$4.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$5",
+                                "Path":  "xaero/map/gui/GuiMap$5.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$6",
+                                "Path":  "xaero/map/gui/GuiMap$6.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$7",
+                                "Path":  "xaero/map/gui/GuiMap$7.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$8",
+                                "Path":  "xaero/map/gui/GuiMap$8.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap$9",
+                                "Path":  "xaero/map/gui/GuiMap$9.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMap",
+                                "Path":  "xaero/map/gui/GuiMap.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMapName",
+                                "Path":  "xaero/map/gui/GuiMapName.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMapSwitching",
+                                "Path":  "xaero/map/gui/GuiMapSwitching.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMapSwitchingButton",
+                                "Path":  "xaero/map/gui/GuiMapSwitchingButton.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiMapTpCommand",
+                                "Path":  "xaero/map/gui/GuiMapTpCommand.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiPlayerTpCommand",
+                                "Path":  "xaero/map/gui/GuiPlayerTpCommand.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiTexturedButton",
+                                "Path":  "xaero/map/gui/GuiTexturedButton.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.GuiWorldMapSettings",
+                                "Path":  "xaero/map/gui/GuiWorldMapSettings.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.IRightClickableElement",
+                                "Path":  "xaero/map/gui/IRightClickableElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.MapMouseButtonPress",
+                                "Path":  "xaero/map/gui/MapMouseButtonPress.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.MapTileSelection",
+                                "Path":  "xaero/map/gui/MapTileSelection.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.ScreenSwitchSettingEntry",
+                                "Path":  "xaero/map/gui/ScreenSwitchSettingEntry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.TooltipButton",
+                                "Path":  "xaero/map/gui/TooltipButton.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.TooltipSlider",
+                                "Path":  "xaero/map/gui/TooltipSlider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.dropdown.rightclick.GuiRightClickMenu",
+                                "Path":  "xaero/map/gui/dropdown/rightclick/GuiRightClickMenu.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.dropdown.rightclick.RightClickOption",
+                                "Path":  "xaero/map/gui/dropdown/rightclick/RightClickOption.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.message.Message",
+                                "Path":  "xaero/map/gui/message/Message.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.message.MessageBox$Builder",
+                                "Path":  "xaero/map/gui/message/MessageBox$Builder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.message.MessageBox",
+                                "Path":  "xaero/map/gui/message/MessageBox.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.gui.message.render.MessageBoxRenderer",
+                                "Path":  "xaero/map/gui/message/render/MessageBoxRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mcworld.WorldMapClientWorldData",
+                                "Path":  "xaero/map/mcworld/WorldMapClientWorldData.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.message.LevelMapPropertiesConsumer",
+                                "Path":  "xaero/map/message/LevelMapPropertiesConsumer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.message.WorldMapMessageRegister",
+                                "Path":  "xaero/map/message/WorldMapMessageRegister.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.message.basic.ClientboundRulesPacket$ClientHandler",
+                                "Path":  "xaero/map/message/basic/ClientboundRulesPacket$ClientHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.message.basic.ClientboundRulesPacket",
+                                "Path":  "xaero/map/message/basic/ClientboundRulesPacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.message.basic.HandshakePacket$ClientHandler",
+                                "Path":  "xaero/map/message/basic/HandshakePacket$ClientHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.message.basic.HandshakePacket$ServerHandler",
+                                "Path":  "xaero/map/message/basic/HandshakePacket$ServerHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.message.basic.HandshakePacket",
+                                "Path":  "xaero/map/message/basic/HandshakePacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.message.tracker.ClientboundPlayerTrackerResetPacket$Handler",
+                                "Path":  "xaero/map/message/tracker/ClientboundPlayerTrackerResetPacket$Handler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.message.tracker.ClientboundPlayerTrackerResetPacket",
+                                "Path":  "xaero/map/message/tracker/ClientboundPlayerTrackerResetPacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.message.tracker.ClientboundTrackedPlayerPacket$Handler",
+                                "Path":  "xaero/map/message/tracker/ClientboundTrackedPlayerPacket$Handler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.message.tracker.ClientboundTrackedPlayerPacket",
+                                "Path":  "xaero/map/message/tracker/ClientboundTrackedPlayerPacket.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.misc.CaveStartCalculator",
+                                "Path":  "xaero/map/misc/CaveStartCalculator.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.misc.Internet",
+                                "Path":  "xaero/map/misc/Internet.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.misc.Misc",
+                                "Path":  "xaero/map/misc/Misc.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mixin.MixinChatListener",
+                                "Path":  "xaero/map/mixin/MixinChatListener.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mixin.MixinChunkDeltaUpdateS2CPacketAccessor",
+                                "Path":  "xaero/map/mixin/MixinChunkDeltaUpdateS2CPacketAccessor.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mixin.MixinClientPlayNetworkHandler",
+                                "Path":  "xaero/map/mixin/MixinClientPlayNetworkHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mixin.MixinForgeClientPacketListener",
+                                "Path":  "xaero/map/mixin/MixinForgeClientPacketListener.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mixin.MixinGuiRenderer",
+                                "Path":  "xaero/map/mixin/MixinGuiRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mixin.MixinOptionalGui",
+                                "Path":  "xaero/map/mixin/MixinOptionalGui.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.SupportXaeroMinimap",
+                                "Path":  "xaero/map/mods/SupportXaeroMinimap.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.Waypoint",
+                                "Path":  "xaero/map/mods/gui/Waypoint.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointMenuRenderContext",
+                                "Path":  "xaero/map/mods/gui/WaypointMenuRenderContext.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointMenuRenderProvider",
+                                "Path":  "xaero/map/mods/gui/WaypointMenuRenderProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointMenuRenderer",
+                                "Path":  "xaero/map/mods/gui/WaypointMenuRenderer.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointReader$1",
+                                "Path":  "xaero/map/mods/gui/WaypointReader$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointReader$2",
+                                "Path":  "xaero/map/mods/gui/WaypointReader$2.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointReader$3",
+                                "Path":  "xaero/map/mods/gui/WaypointReader$3.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointReader$4",
+                                "Path":  "xaero/map/mods/gui/WaypointReader$4.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointReader$5",
+                                "Path":  "xaero/map/mods/gui/WaypointReader$5.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointReader$6",
+                                "Path":  "xaero/map/mods/gui/WaypointReader$6.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointReader$7",
+                                "Path":  "xaero/map/mods/gui/WaypointReader$7.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointReader",
+                                "Path":  "xaero/map/mods/gui/WaypointReader.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointRenderContext",
+                                "Path":  "xaero/map/mods/gui/WaypointRenderContext.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointRenderProvider",
+                                "Path":  "xaero/map/mods/gui/WaypointRenderProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointRenderer$Builder",
+                                "Path":  "xaero/map/mods/gui/WaypointRenderer$Builder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointRenderer",
+                                "Path":  "xaero/map/mods/gui/WaypointRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.gui.WaypointSymbolCreator",
+                                "Path":  "xaero/map/mods/gui/WaypointSymbolCreator.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.minimap.element.MinimapElementRendererWrapper",
+                                "Path":  "xaero/map/mods/minimap/element/MinimapElementRendererWrapper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.SupportOpenPartiesAndClaims$1",
+                                "Path":  "xaero/map/mods/pac/SupportOpenPartiesAndClaims$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.SupportOpenPartiesAndClaims$2",
+                                "Path":  "xaero/map/mods/pac/SupportOpenPartiesAndClaims$2.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.SupportOpenPartiesAndClaims$3",
+                                "Path":  "xaero/map/mods/pac/SupportOpenPartiesAndClaims$3.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.SupportOpenPartiesAndClaims$4",
+                                "Path":  "xaero/map/mods/pac/SupportOpenPartiesAndClaims$4.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.SupportOpenPartiesAndClaims$5",
+                                "Path":  "xaero/map/mods/pac/SupportOpenPartiesAndClaims$5.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.SupportOpenPartiesAndClaims$6",
+                                "Path":  "xaero/map/mods/pac/SupportOpenPartiesAndClaims$6.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.SupportOpenPartiesAndClaims",
+                                "Path":  "xaero/map/mods/pac/SupportOpenPartiesAndClaims.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.gui.claim.ClaimResultElement$Builder",
+                                "Path":  "xaero/map/mods/pac/gui/claim/ClaimResultElement$Builder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.gui.claim.ClaimResultElement",
+                                "Path":  "xaero/map/mods/pac/gui/claim/ClaimResultElement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.gui.claim.ClaimResultElementManager$Builder",
+                                "Path":  "xaero/map/mods/pac/gui/claim/ClaimResultElementManager$Builder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.gui.claim.ClaimResultElementManager",
+                                "Path":  "xaero/map/mods/pac/gui/claim/ClaimResultElementManager.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.gui.claim.element.ClaimResultElementRenderContext",
+                                "Path":  "xaero/map/mods/pac/gui/claim/element/ClaimResultElementRenderContext.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.gui.claim.element.ClaimResultElementRenderProvider",
+                                "Path":  "xaero/map/mods/pac/gui/claim/element/ClaimResultElementRenderProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.gui.claim.element.ClaimResultElementRenderReader",
+                                "Path":  "xaero/map/mods/pac/gui/claim/element/ClaimResultElementRenderReader.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.gui.claim.element.ClaimResultElementRenderer$Builder",
+                                "Path":  "xaero/map/mods/pac/gui/claim/element/ClaimResultElementRenderer$Builder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.gui.claim.element.ClaimResultElementRenderer",
+                                "Path":  "xaero/map/mods/pac/gui/claim/element/ClaimResultElementRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.gui.claim.result.ClientClaimResultListener",
+                                "Path":  "xaero/map/mods/pac/gui/claim/result/ClientClaimResultListener.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.mods.pac.highlight.ClaimsHighlighter",
+                                "Path":  "xaero/map/mods/pac/highlight/ClaimsHighlighter.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.radar.tracker.PlayerTeleporter",
+                                "Path":  "xaero/map/radar/tracker/PlayerTeleporter.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.radar.tracker.PlayerTrackerIconRenderer",
+                                "Path":  "xaero/map/radar/tracker/PlayerTrackerIconRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.radar.tracker.PlayerTrackerMapElementReader$1",
+                                "Path":  "xaero/map/radar/tracker/PlayerTrackerMapElementReader$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.radar.tracker.PlayerTrackerMapElementReader$2",
+                                "Path":  "xaero/map/radar/tracker/PlayerTrackerMapElementReader$2.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.radar.tracker.PlayerTrackerMapElementReader$3",
+                                "Path":  "xaero/map/radar/tracker/PlayerTrackerMapElementReader$3.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.radar.tracker.PlayerTrackerMapElementReader$4",
+                                "Path":  "xaero/map/radar/tracker/PlayerTrackerMapElementReader$4.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.radar.tracker.PlayerTrackerMapElementReader",
+                                "Path":  "xaero/map/radar/tracker/PlayerTrackerMapElementReader.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.radar.tracker.PlayerTrackerMapElementRenderer",
+                                "Path":  "xaero/map/radar/tracker/PlayerTrackerMapElementRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.radar.tracker.PlayerTrackerMenuRenderer",
+                                "Path":  "xaero/map/radar/tracker/PlayerTrackerMenuRenderer.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "xaero.map.radar.tracker.TrackedPlayerIconManager",
+                                "Path":  "xaero/map/radar/tracker/TrackedPlayerIconManager.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.radar.tracker.TrackedPlayerIconPrerenderer",
+                                "Path":  "xaero/map/radar/tracker/TrackedPlayerIconPrerenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.region.MapBlock",
+                                "Path":  "xaero/map/region/MapBlock.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.region.MapPixel",
+                                "Path":  "xaero/map/region/MapPixel.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.region.MapTileChunk",
+                                "Path":  "xaero/map/region/MapTileChunk.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.region.Overlay",
+                                "Path":  "xaero/map/region/Overlay.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.region.OverlayBuilder",
+                                "Path":  "xaero/map/region/OverlayBuilder.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.region.OverlayManager",
+                                "Path":  "xaero/map/region/OverlayManager.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.region.texture.BranchRegionTexture",
+                                "Path":  "xaero/map/region/texture/BranchRegionTexture.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.region.texture.LeafRegionTexture",
+                                "Path":  "xaero/map/region/texture/LeafRegionTexture.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.region.texture.RegionTexture",
+                                "Path":  "xaero/map/region/texture/RegionTexture.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.server.MinecraftServerData",
+                                "Path":  "xaero/map/server/MinecraftServerData.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.server.mods.argonauts.ArgonautsSyncedPlayerTrackerSystem",
+                                "Path":  "xaero/map/server/mods/argonauts/ArgonautsSyncedPlayerTrackerSystem.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.server.radar.tracker.SyncedPlayerTracker",
+                                "Path":  "xaero/map/server/radar/tracker/SyncedPlayerTracker.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.teleport.MapTeleporter",
+                                "Path":  "xaero/map/teleport/MapTeleporter.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.world.MapDimension",
+                                "Path":  "xaero/map/world/MapDimension.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "xaero.map.world.MapWorld",
+                                "Path":  "xaero/map/world/MapWorld.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            }
+                        ],
+    "javapAvailable":  true
+}

@@ -1,0 +1,837 @@
+﻿{
+    "jar":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\sophisticatedbackpacks-1.21.4-3.25.45.1744\\sophisticatedbackpacks-1.21.4-3.25.45.1744.jar",
+    "generatedMarkdown":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\sophisticatedbackpacks-1.21.4-3.25.45.1744\\キー割り当てと操作方法.md",
+    "generatedCodexPrompt":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\sophisticatedbackpacks-1.21.4-3.25.45.1744\\Codex追記依頼.md",
+    "generatedAt":  "2026-05-15T13:30:53.3584671+09:00",
+    "metadata":  {
+                     "DisplayName":  "Sophisticated Backpacks",
+                     "ModId":  "sophisticatedbackpacks",
+                     "Version":  "3.25.45",
+                     "Loader":  "NeoForge/Forge系",
+                     "MinecraftVersion":  "[1.21.4,1.21.5)",
+                     "Description":  "",
+                     "MetadataFile":  "META-INF/neoforge.mods.toml"
+                 },
+    "keyMappings":  [
+
+                    ],
+    "commands":  [
+                     {
+                         "SourceClass":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackTemplateArgumentType",
+                         "Literals":  [
+                                          "Template"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.p3pp3rf1y.sophisticatedbackpacks.command.ListCommand",
+                         "Literals":  [
+                                          "list",
+                                          "playerName"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.p3pp3rf1y.sophisticatedbackpacks.command.TemplateCommand",
+                         "Literals":  [
+                                          "template",
+                                          "list",
+                                          "create",
+                                          "templateName",
+                                          "override",
+                                          "delete",
+                                          "give",
+                                          "export",
+                                          "backpackItemRegistryName",
+                                          "Local",
+                                          "Datapack"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackCommand",
+                         "Literals":  [
+                                          "sb",
+                                          "sophisticatedbackpacks",
+                                          "backpack_uuid",
+                                          "player_name",
+                                          "template_name",
+                                          "backpack_item",
+                                          "backpack_upgrade_item"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackItemArgumentType",
+                         "Literals":  [
+                                          "backpack"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackUpgradeItemArgumentType",
+                         "Literals":  [
+                                          "stack_upgrade_tier_1"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.p3pp3rf1y.sophisticatedbackpacks.command.DynamicCommand",
+                         "Literals":  [
+                                          "dynamic",
+                                          "begin",
+                                          "templateName",
+                                          "backpackItem",
+                                          "baseTemplateName",
+                                          "addItem",
+                                          "slot",
+                                          "addUpgrade",
+                                          "end",
+                                          "backpackItemRegistryName"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.p3pp3rf1y.sophisticatedbackpacks.command.GiveCommand",
+                         "Literals":  [
+                                          "give",
+                                          "backpackUuid"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.p3pp3rf1y.sophisticatedbackpacks.command.RemoveNonPlayerCommand",
+                         "Literals":  [
+                                          "removeNonPlayer",
+                                          "onlyWithEmptyInventory"
+                                      ]
+                     }
+                 ],
+    "classCandidates":  [
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.everlasting.EverlastingUpgradeItem",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/everlasting/EverlastingUpgradeItem.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.anvil.AnvilUpgradeContainer$PersistableAnvilMenu$1",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/anvil/AnvilUpgradeContainer$PersistableAnvilMenu$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.anvil.AnvilUpgradeTab$1",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/anvil/AnvilUpgradeTab$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.anvil.AnvilUpgradeTab",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/anvil/AnvilUpgradeTab.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.anvil.AnvilUpgradeContainer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/anvil/AnvilUpgradeContainer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.inception.InceptionUpgradeItem",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/inception/InceptionUpgradeItem.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.inception.InceptionUpgradeTab",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/inception/InceptionUpgradeTab.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.inception.InceptionUpgradeContainer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/inception/InceptionUpgradeContainer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.toolswapper.ToolSwapperUpgradeItem",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/toolswapper/ToolSwapperUpgradeItem.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.toolswapper.ToolSwapperUpgradeTab",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/toolswapper/ToolSwapperUpgradeTab.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.toolswapper.ToolSwapperUpgradeContainer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/toolswapper/ToolSwapperUpgradeContainer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.smithing.SmithingUpgradeContainer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/smithing/SmithingUpgradeContainer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.smithing.SmithingUpgradeTab",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/smithing/SmithingUpgradeTab.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.smithing.SmithingUpgradeContainer$PersistableSmithingMenu$1",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/smithing/SmithingUpgradeContainer$PersistableSmithingMenu$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.deposit.DepositUpgradeTab$Basic",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/deposit/DepositUpgradeTab$Basic.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.deposit.DepositUpgradeTab$Advanced",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/deposit/DepositUpgradeTab$Advanced.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.deposit.DepositUpgradeContainer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/deposit/DepositUpgradeContainer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.deposit.DepositFilterLogicContainer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/deposit/DepositFilterLogicContainer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.deposit.DepositUpgradeWrapper",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/deposit/DepositUpgradeWrapper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.deposit.DepositUpgradeTab",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/deposit/DepositUpgradeTab.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.deposit.DepositFilterLogicControl$Basic",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/deposit/DepositFilterLogicControl$Basic.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.deposit.DepositFilterLogicControl$Advanced",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/deposit/DepositFilterLogicControl$Advanced.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.deposit.DepositFilterLogicControl",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/deposit/DepositFilterLogicControl.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.restock.RestockUpgradeTab",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/restock/RestockUpgradeTab.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.restock.RestockUpgradeWrapper",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/restock/RestockUpgradeWrapper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.restock.RestockUpgradeTab$Advanced",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/restock/RestockUpgradeTab$Advanced.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.restock.RestockUpgradeTab$Basic",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/restock/RestockUpgradeTab$Basic.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.refill.RefillUpgradeTab$Basic",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/refill/RefillUpgradeTab$Basic.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.refill.RefillUpgradeTab$Advanced",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/refill/RefillUpgradeTab$Advanced.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.refill.RefillUpgradeWrapper",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/refill/RefillUpgradeWrapper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.refill.RefillUpgradeTab",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/refill/RefillUpgradeTab.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.refill.RefillUpgradeContainer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/refill/RefillUpgradeContainer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.refill.RefillUpgradeWrapper$TargetSlot",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/refill/RefillUpgradeWrapper$TargetSlot.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.upgrades.refill.RefillUpgradeTab$RefillFilterLogicControl",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/upgrades/refill/RefillUpgradeTab$RefillFilterLogicControl.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.SophisticatedBackpacks",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/SophisticatedBackpacks.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.AnotherPlayerBackpackOpenPayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/AnotherPlayerBackpackOpenPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.InventoryInteractionPayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/InventoryInteractionPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.BlockToolSwapPayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/BlockToolSwapPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.BlockPickPayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/BlockPickPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.RequestBackpackInventoryContentsPayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/RequestBackpackInventoryContentsPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.RequestPlayerSettingsPayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/RequestPlayerSettingsPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.EntityToolSwapPayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/EntityToolSwapPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.SyncClientInfoPayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/SyncClientInfoPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.BackpackClosePayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/BackpackClosePayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.BackpackContentsPayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/BackpackContentsPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.BackpackOpenPayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/BackpackOpenPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.network.UpgradeTogglePayload",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/network/UpgradeTogglePayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackPlayerArgumentType",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/BackpackPlayerArgumentType.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.GiveCommand",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/GiveCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.DynamicCommand",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/DynamicCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackTemplateArgumentType",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/BackpackTemplateArgumentType.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.TemplateCommand",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/TemplateCommand.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackCommand",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/BackpackCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.RemoveNonPlayerCommand",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/RemoveNonPlayerCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackUUIDArgumentType",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/BackpackUUIDArgumentType.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackUpgradeItemArgumentType$1",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/BackpackUpgradeItemArgumentType$1.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackItemArgumentType$1",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/BackpackItemArgumentType$1.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackUpgradeItemArgumentType",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/BackpackUpgradeItemArgumentType.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.ListCommand",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/ListCommand.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.BackpackItemArgumentType",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/BackpackItemArgumentType.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.command.DynamicCommand$DynamicTemplate",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/command/DynamicCommand$DynamicTemplate.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.util.PlayerInventoryProvider",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/util/PlayerInventoryProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.util.PlayerInventoryHandler",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/util/PlayerInventoryHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.KeybindHandler$BackpackKeyConflictContext",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/KeybindHandler$BackpackKeyConflictContext.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackButtonDefinitions",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/gui/BackpackButtonDefinitions.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackTranslationHelper",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/gui/BackpackTranslationHelper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.package-info",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/gui/package-info.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackScreen",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/gui/BackpackScreen.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.IBackpackScreen",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/gui/IBackpackScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.gui.BackpackSettingsScreen",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/gui/BackpackSettingsScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.render.BackpackItemModel$SpecialRenderer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/render/BackpackItemModel$SpecialRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.render.ClientBackpackContentsTooltip",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/render/ClientBackpackContentsTooltip.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.render.BackpackBlockEntityRenderer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/render/BackpackBlockEntityRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.render.BackpackBlockModel$Baked$FluidCacheKey",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/render/BackpackBlockModel$Baked$FluidCacheKey.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.render.BackpackLayerRenderer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/render/BackpackLayerRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.render.BackpackBlockModel$Loader",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/render/BackpackBlockModel$Loader.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.render.BackpackBlockModel$Baked",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/render/BackpackBlockModel$Baked.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.KeybindHandler",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/KeybindHandler.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.client.ClientEventHandler",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/client/ClientEventHandler.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.settings.BackToBackpackTab",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/settings/BackToBackpackTab.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.settings.BackpackMainSettingsTab",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/settings/BackpackMainSettingsTab.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.settings.BackpackMainSettingsContainer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/settings/BackpackMainSettingsContainer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.settings.BackpackSettingsTabControl",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/settings/BackpackSettingsTabControl.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.backpack.BackpackShapeHelper$ShapeKey",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/backpack/BackpackShapeHelper$ShapeKey.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.backpack.BackpackBlock",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/backpack/BackpackBlock.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.backpack.DatapackBackpackTemplateManager$Loader",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/backpack/DatapackBackpackTemplateManager$Loader.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.backpack.BackpackBlockEntity",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/backpack/BackpackBlockEntity.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.backpack.BackpackTemplates",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/backpack/BackpackTemplates.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.backpack.BackpackBlockEntity$1",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/backpack/BackpackBlockEntity$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.backpack.BackpackItemClient",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/backpack/BackpackItemClient.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.backpack.wrapper.BackpackWrapper",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/backpack/wrapper/BackpackWrapper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.backpack.wrapper.BackpackWrapper$2",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/backpack/wrapper/BackpackWrapper$2.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.backpack.BackpackItem",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/backpack/BackpackItem.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContext$Item",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/BackpackContext$Item.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.package-info",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/package-info.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackSettingsContainerMenu",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/BackpackSettingsContainerMenu.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContext$AnotherPlayerSubBackpack",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/BackpackContext$AnotherPlayerSubBackpack.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContext$AnotherPlayer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/BackpackContext$AnotherPlayer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContext$Block",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/BackpackContext$Block.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContainer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/BackpackContainer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContext$ContextType",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/BackpackContext$ContextType.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContainer$BackpackUpgradeSlot",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/BackpackContainer$BackpackUpgradeSlot.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContext$BlockSubBackpack",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/BackpackContext$BlockSubBackpack.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContext$ItemSubBackpack",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/BackpackContext$ItemSubBackpack.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.IContextAwareContainer",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/IContextAwareContainer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContext",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/gui/BackpackContext.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.common.CommonEventHandler",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/common/CommonEventHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.init.ModItems",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/init/ModItems.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.init.ModItemsClient",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/init/ModItemsClient.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.init.ModPayloads",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/init/ModPayloads.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.compat.recipeviewers.jei.BackpackJeiPlugin$3",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/compat/recipeviewers/jei/BackpackJeiPlugin$3.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.compat.recipeviewers.jei.BackpackJeiPlugin$2",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/compat/recipeviewers/jei/BackpackJeiPlugin$2.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.compat.recipeviewers.jei.BackpackJeiPlugin",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/compat/recipeviewers/jei/BackpackJeiPlugin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.compat.recipeviewers.jei.BackpackJeiPlugin$1",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/compat/recipeviewers/jei/BackpackJeiPlugin$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.compat.recipeviewers.jei.BackpackJeiPlugin$4",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/compat/recipeviewers/jei/BackpackJeiPlugin$4.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.compat.recipeviewers.emi.BackpackEmiPlugin",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/compat/recipeviewers/emi/BackpackEmiPlugin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.compat.recipeviewers.rei.BackpackReiClientPlugin",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/compat/recipeviewers/rei/BackpackReiClientPlugin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.compat.sawmill.SawmillCompat",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/compat/sawmill/SawmillCompat.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.compat.sawmill.SawmillCompatClient",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/compat/sawmill/SawmillCompatClient.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.compat.chipped.ChippedCompat",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/compat/chipped/ChippedCompat.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.compat.chipped.ChippedCompatClient",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/compat/chipped/ChippedCompatClient.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.p3pp3rf1y.sophisticatedbackpacks.data.BackpackModelProvider",
+                                "Path":  "net/p3pp3rf1y/sophisticatedbackpacks/data/BackpackModelProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            }
+                        ],
+    "javapAvailable":  true
+}

@@ -1,0 +1,329 @@
+﻿{
+    "jar":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\modernfix-neoforge-5.27.7+mc1.21.1\\modernfix-neoforge-5.27.7+mc1.21.1.jar",
+    "generatedMarkdown":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\modernfix-neoforge-5.27.7+mc1.21.1\\キー割り当てと操作方法.md",
+    "generatedCodexPrompt":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\modernfix-neoforge-5.27.7+mc1.21.1\\Codex追記依頼.md",
+    "generatedAt":  "2026-05-15T13:29:02.7022556+09:00",
+    "metadata":  {
+                     "DisplayName":  "ModernFix",
+                     "ModId":  "modernfix",
+                     "Version":  "5.27.7+mc1.21.1",
+                     "Loader":  "NeoForge/Forge系",
+                     "MinecraftVersion":  "[1.21, 1.22)",
+                     "Description":  "",
+                     "MetadataFile":  "META-INF/neoforge.mods.toml"
+                 },
+    "keyMappings":  [
+                        {
+                            "Key":  "未検出",
+                            "Label":  "Open config screen",
+                            "TranslationKey":  "key.modernfix.config",
+                            "SourceClass":  "org.embeddedt.modernfix.neoforge.init.ModernFixClientForge"
+                        },
+                        {
+                            "Key":  "未検出",
+                            "Label":  "ModernFix",
+                            "TranslationKey":  "key.modernfix",
+                            "SourceClass":  "org.embeddedt.modernfix.neoforge.init.ModernFixClientForge"
+                        }
+                    ],
+    "commands":  [
+                     {
+                         "SourceClass":  "org.embeddedt.modernfix.spark.SparkLaunchProfiler$ModernFixCommandSender",
+                         "Literals":  [
+                                          "ModernFix"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "org.embeddedt.modernfix.command.ModernFixCommands",
+                         "Literals":  [
+                                          "modernfix",
+                                          "mcfunctions"
+                                      ]
+                     }
+                 ],
+    "classCandidates":  [
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.ModernFix",
+                                "Path":  "org/embeddedt/modernfix/ModernFix.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.ModernFixClient",
+                                "Path":  "org/embeddedt/modernfix/ModernFixClient.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.command.ModernFixCommands",
+                                "Path":  "org/embeddedt/modernfix/command/ModernFixCommands.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.bugfix.extra_experimental_screen.CreateWorldScreenMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/bugfix/extra_experimental_screen/CreateWorldScreenMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.bugfix.missing_block_entities.LevelChunkMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/bugfix/missing_block_entities/LevelChunkMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.bugfix.world_leaks.MinecraftMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/bugfix/world_leaks/MinecraftMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.bugfix.world_screen_skipped.WorldSelectionListMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/bugfix/world_screen_skipped/WorldSelectionListMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.feature.mcfunction_profiling.ServerFunctionManagerMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/feature/mcfunction_profiling/ServerFunctionManagerMixin.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.feature.measure_time.ConnectScreenMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/feature/measure_time/ConnectScreenMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.feature.measure_time.MinecraftMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/feature/measure_time/MinecraftMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.feature.remove_chat_signing.ProfileKeyPairManagerMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/feature/remove_chat_signing/ProfileKeyPairManagerMixin.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.cache_strongholds.ChunkGeneratorMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/cache_strongholds/ChunkGeneratorMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.compress_unihex_font.GlyphProviderTypeMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/compress_unihex_font/GlyphProviderTypeMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.compress_unihex_font.UnihexProviderByteContentsMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/compress_unihex_font/UnihexProviderByteContentsMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.compress_unihex_font.UnihexProviderShortContentsMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/compress_unihex_font/UnihexProviderShortContentsMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.dedicated_reload_executor.CreateWorldScreenMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/dedicated_reload_executor/CreateWorldScreenMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.dedicated_reload_executor.MinecraftServerMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/dedicated_reload_executor/MinecraftServerMixin.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.dedicated_reload_executor.WorldOpenFlowsMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/dedicated_reload_executor/WorldOpenFlowsMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.encoder_cache_leak.ClientConfigurationPacketListenerImplMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/encoder_cache_leak/ClientConfigurationPacketListenerImplMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.encoder_cache_leak.MinecraftMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/encoder_cache_leak/MinecraftMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.faster_item_rendering.ItemRendererMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/faster_item_rendering/ItemRendererMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.lazy_search_tree_registry.SessionSearchTreesMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/lazy_search_tree_registry/SessionSearchTreesMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.smart_ingredient_sync.ConnectionMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/smart_ingredient_sync/ConnectionMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.smart_ingredient_sync.IngredientMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/smart_ingredient_sync/IngredientMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.common.mixin.perf.suspend_integrated_server_during_load.PlayerListMixin",
+                                "Path":  "org/embeddedt/modernfix/common/mixin/perf/suspend_integrated_server_during_load/PlayerListMixin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.core.config.ModernFixEarlyConfig",
+                                "Path":  "org/embeddedt/modernfix/core/config/ModernFixEarlyConfig.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.neoforge.init.ModernFixClientForge",
+                                "Path":  "org/embeddedt/modernfix/neoforge/init/ModernFixClientForge.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.neoforge.init.ModernFixForge",
+                                "Path":  "org/embeddedt/modernfix/neoforge/init/ModernFixForge.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.neoforge.packet.ClientLoadFinishedPayload",
+                                "Path":  "org/embeddedt/modernfix/neoforge/packet/ClientLoadFinishedPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.neoforge.packet.SmartIngredientSyncPayload",
+                                "Path":  "org/embeddedt/modernfix/neoforge/packet/SmartIngredientSyncPayload.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.neoforge.util.AsyncLoadingScreen",
+                                "Path":  "org/embeddedt/modernfix/neoforge/util/AsyncLoadingScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.platform.ModernFixPlatformHooks",
+                                "Path":  "org/embeddedt/modernfix/platform/ModernFixPlatformHooks.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.platform.neoforge.ModernFixPlatformHooksImpl",
+                                "Path":  "org/embeddedt/modernfix/platform/neoforge/ModernFixPlatformHooksImpl.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.render.SimpleItemModelView",
+                                "Path":  "org/embeddedt/modernfix/render/SimpleItemModelView.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.render.font.CompactUnihexContents$Bytes",
+                                "Path":  "org/embeddedt/modernfix/render/font/CompactUnihexContents$Bytes.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.render.font.CompactUnihexContents$Shorts",
+                                "Path":  "org/embeddedt/modernfix/render/font/CompactUnihexContents$Shorts.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.render.font.CompactUnihexContents",
+                                "Path":  "org/embeddedt/modernfix/render/font/CompactUnihexContents.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.render.font.LazyGlyphProvider$Definition",
+                                "Path":  "org/embeddedt/modernfix/render/font/LazyGlyphProvider$Definition.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.render.font.LazyGlyphProvider",
+                                "Path":  "org/embeddedt/modernfix/render/font/LazyGlyphProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.screen.ModernFixConfigScreen",
+                                "Path":  "org/embeddedt/modernfix/screen/ModernFixConfigScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.screen.ModernFixOptionInfoScreen",
+                                "Path":  "org/embeddedt/modernfix/screen/ModernFixOptionInfoScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.screen.OptionList$CategoryEntry",
+                                "Path":  "org/embeddedt/modernfix/screen/OptionList$CategoryEntry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.screen.OptionList$Entry",
+                                "Path":  "org/embeddedt/modernfix/screen/OptionList$Entry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.screen.OptionList$OptionEntry",
+                                "Path":  "org/embeddedt/modernfix/screen/OptionList$OptionEntry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.screen.OptionList",
+                                "Path":  "org/embeddedt/modernfix/screen/OptionList.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.spark.SparkLaunchProfiler$ModernFixCommandSender",
+                                "Path":  "org/embeddedt/modernfix/spark/SparkLaunchProfiler$ModernFixCommandSender.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "org.embeddedt.modernfix.spark.SparkLaunchProfiler",
+                                "Path":  "org/embeddedt/modernfix/spark/SparkLaunchProfiler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            }
+                        ],
+    "javapAvailable":  true
+}

@@ -1,0 +1,96 @@
+﻿{
+    "jar":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\MouseTweaks-fabric-mc26.1-2.31\\MouseTweaks-fabric-mc26.1-2.31.jar",
+    "generatedMarkdown":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\MouseTweaks-fabric-mc26.1-2.31\\キー割り当てと操作方法.md",
+    "generatedCodexPrompt":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\MouseTweaks-fabric-mc26.1-2.31\\Codex追記依頼.md",
+    "generatedAt":  "2026-05-15T13:29:15.5748590+09:00",
+    "metadata":  {
+                     "DisplayName":  "Mouse Tweaks",
+                     "ModId":  "mousetweaks",
+                     "Version":  "2.31",
+                     "Loader":  "Fabric",
+                     "MinecraftVersion":  "~26.1",
+                     "Description":  "A mod that enhances the inventory management by adding various additional functions to the usual mouse buttons.",
+                     "MetadataFile":  "fabric.mod.json"
+                 },
+    "keyMappings":  [
+
+                    ],
+    "commands":  [
+
+                 ],
+    "classCandidates":  [
+                            {
+                                "ClassName":  "yalter.mousetweaks.ConfigScreen$1",
+                                "Path":  "yalter/mousetweaks/ConfigScreen$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "yalter.mousetweaks.ConfigScreen",
+                                "Path":  "yalter/mousetweaks/ConfigScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "yalter.mousetweaks.IGuiScreenHandler",
+                                "Path":  "yalter/mousetweaks/IGuiScreenHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "yalter.mousetweaks.Main",
+                                "Path":  "yalter/mousetweaks/Main.class",
+                                "Type":  "Key, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "yalter.mousetweaks.ModMenuApiImpl",
+                                "Path":  "yalter/mousetweaks/ModMenuApiImpl.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "yalter.mousetweaks.api.IMTModGuiContainer3Ex",
+                                "Path":  "yalter/mousetweaks/api/IMTModGuiContainer3Ex.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "yalter.mousetweaks.fabric.MouseTweaksFabric",
+                                "Path":  "yalter/mousetweaks/fabric/MouseTweaksFabric.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "yalter.mousetweaks.fabric.mixin.MixinMouseHandler",
+                                "Path":  "yalter/mousetweaks/fabric/mixin/MixinMouseHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "yalter.mousetweaks.handlers.GuiContainerCreativeHandler",
+                                "Path":  "yalter/mousetweaks/handlers/GuiContainerCreativeHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "yalter.mousetweaks.handlers.GuiContainerHandler",
+                                "Path":  "yalter/mousetweaks/handlers/GuiContainerHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "yalter.mousetweaks.handlers.IMTModGuiContainer3ExHandler",
+                                "Path":  "yalter/mousetweaks/handlers/IMTModGuiContainer3ExHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "yalter.mousetweaks.mixin.AbstractContainerScreenAccessor",
+                                "Path":  "yalter/mousetweaks/mixin/AbstractContainerScreenAccessor.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            }
+                        ],
+    "javapAvailable":  true
+}

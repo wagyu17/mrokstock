@@ -1,0 +1,525 @@
+﻿{
+    "jar":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\waystones-neoforge-1.21.1-21.1.32\\waystones-neoforge-1.21.1-21.1.32.jar",
+    "generatedMarkdown":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\waystones-neoforge-1.21.1-21.1.32\\キー割り当てと操作方法.md",
+    "generatedCodexPrompt":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\waystones-neoforge-1.21.1-21.1.32\\Codex追記依頼.md",
+    "generatedAt":  "2026-05-15T13:32:08.1921990+09:00",
+    "metadata":  {
+                     "DisplayName":  "Waystones",
+                     "ModId":  "waystones",
+                     "Version":  "21.1.32",
+                     "Loader":  "NeoForge/Forge系",
+                     "MinecraftVersion":  "[1.21,)",
+                     "Description":  "",
+                     "MetadataFile":  "META-INF/neoforge.mods.toml"
+                 },
+    "keyMappings":  [
+
+                    ],
+    "commands":  [
+                     {
+                         "SourceClass":  "net.blay09.mods.waystones.command.ModCommands",
+                         "Literals":  [
+                                          "waystones",
+                                          "activate",
+                                          "forget",
+                                          "place",
+                                          "style",
+                                          "list",
+                                          "gui",
+                                          "cooldown",
+                                          "reset",
+                                          "identifier"
+                                      ]
+                     },
+                     {
+                         "SourceClass":  "net.blay09.mods.waystones.command.WaystoneOwnership",
+                         "Literals":  [
+                                          "OWNED",
+                                          "ACTIVATED"
+                                      ]
+                     }
+                 ],
+    "classCandidates":  [
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.block.PortstoneBlock$1",
+                                "Path":  "net/blay09/mods/waystones/block/PortstoneBlock$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.block.PortstoneBlock",
+                                "Path":  "net/blay09/mods/waystones/block/PortstoneBlock.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.block.SharestoneBlock",
+                                "Path":  "net/blay09/mods/waystones/block/SharestoneBlock.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.block.WarpPlateBlock",
+                                "Path":  "net/blay09/mods/waystones/block/WarpPlateBlock.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.block.WaystoneBlock",
+                                "Path":  "net/blay09/mods/waystones/block/WaystoneBlock.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.block.WaystoneBlockBase",
+                                "Path":  "net/blay09/mods/waystones/block/WaystoneBlockBase.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.block.entity.SharestoneBlockEntity$1",
+                                "Path":  "net/blay09/mods/waystones/block/entity/SharestoneBlockEntity$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.block.entity.WarpPlateBlockEntity",
+                                "Path":  "net/blay09/mods/waystones/block/entity/WarpPlateBlockEntity.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.block.entity.WaystoneBlockEntity$1",
+                                "Path":  "net/blay09/mods/waystones/block/entity/WaystoneBlockEntity$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.block.entity.WaystoneBlockEntityBase$2",
+                                "Path":  "net/blay09/mods/waystones/block/entity/WaystoneBlockEntityBase$2.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.block.entity.WaystoneBlockEntityBase$3",
+                                "Path":  "net/blay09/mods/waystones/block/entity/WaystoneBlockEntityBase$3.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.InventoryButtonGuiHandler",
+                                "Path":  "net/blay09/mods/waystones/client/InventoryButtonGuiHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.ModScreens",
+                                "Path":  "net/blay09/mods/waystones/client/ModScreens.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.WaystonesClient",
+                                "Path":  "net/blay09/mods/waystones/client/WaystonesClient.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.screen.AdminSelectionScreen",
+                                "Path":  "net/blay09/mods/waystones/client/gui/screen/AdminSelectionScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.screen.InventoryButtonReturnConfirmScreen",
+                                "Path":  "net/blay09/mods/waystones/client/gui/screen/InventoryButtonReturnConfirmScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.screen.SharestoneSelectionScreen",
+                                "Path":  "net/blay09/mods/waystones/client/gui/screen/SharestoneSelectionScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.screen.WaystoneEditScreen",
+                                "Path":  "net/blay09/mods/waystones/client/gui/screen/WaystoneEditScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.screen.WaystoneModifierScreen",
+                                "Path":  "net/blay09/mods/waystones/client/gui/screen/WaystoneModifierScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.screen.WaystoneSelectionScreen",
+                                "Path":  "net/blay09/mods/waystones/client/gui/screen/WaystoneSelectionScreen.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.screen.WaystoneSelectionScreenBase",
+                                "Path":  "net/blay09/mods/waystones/client/gui/screen/WaystoneSelectionScreenBase.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.widget.ITooltipProvider",
+                                "Path":  "net/blay09/mods/waystones/client/gui/widget/ITooltipProvider.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.widget.RemoveWaystoneButton",
+                                "Path":  "net/blay09/mods/waystones/client/gui/widget/RemoveWaystoneButton.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.widget.SortWaystoneButton",
+                                "Path":  "net/blay09/mods/waystones/client/gui/widget/SortWaystoneButton.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.widget.WaystoneButton",
+                                "Path":  "net/blay09/mods/waystones/client/gui/widget/WaystoneButton.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.widget.WaystoneInventoryButton",
+                                "Path":  "net/blay09/mods/waystones/client/gui/widget/WaystoneInventoryButton.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.widget.WaystoneVisbilityButton$1",
+                                "Path":  "net/blay09/mods/waystones/client/gui/widget/WaystoneVisbilityButton$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.gui.widget.WaystoneVisbilityButton",
+                                "Path":  "net/blay09/mods/waystones/client/gui/widget/WaystoneVisbilityButton.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.render.PortstoneModel",
+                                "Path":  "net/blay09/mods/waystones/client/render/PortstoneModel.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.render.PortstoneRenderer",
+                                "Path":  "net/blay09/mods/waystones/client/render/PortstoneRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.render.SharestoneModel",
+                                "Path":  "net/blay09/mods/waystones/client/render/SharestoneModel.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.render.SharestoneRenderer",
+                                "Path":  "net/blay09/mods/waystones/client/render/SharestoneRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.render.WaystoneModel",
+                                "Path":  "net/blay09/mods/waystones/client/render/WaystoneModel.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.render.WaystoneRenderer",
+                                "Path":  "net/blay09/mods/waystones/client/render/WaystoneRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.requirement.CombinedRequirementRenderer",
+                                "Path":  "net/blay09/mods/waystones/client/requirement/CombinedRequirementRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.requirement.CooldownRequirementRenderer",
+                                "Path":  "net/blay09/mods/waystones/client/requirement/CooldownRequirementRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.requirement.ExperienceLevelRequirementRenderer",
+                                "Path":  "net/blay09/mods/waystones/client/requirement/ExperienceLevelRequirementRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.requirement.ExperiencePointsRequirementRenderer",
+                                "Path":  "net/blay09/mods/waystones/client/requirement/ExperiencePointsRequirementRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.requirement.ItemRequirementRenderer",
+                                "Path":  "net/blay09/mods/waystones/client/requirement/ItemRequirementRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.requirement.RefuseRequirementRenderer",
+                                "Path":  "net/blay09/mods/waystones/client/requirement/RefuseRequirementRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.requirement.RequirementRenderer",
+                                "Path":  "net/blay09/mods/waystones/client/requirement/RequirementRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.client.requirement.SoftCooldownRequirementRenderer",
+                                "Path":  "net/blay09/mods/waystones/client/requirement/SoftCooldownRequirementRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.command.CountWaystonesCommand",
+                                "Path":  "net/blay09/mods/waystones/command/CountWaystonesCommand.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.command.ModCommands",
+                                "Path":  "net/blay09/mods/waystones/command/ModCommands.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.command.OpenPlayerWaystonesGuiCommand$1",
+                                "Path":  "net/blay09/mods/waystones/command/OpenPlayerWaystonesGuiCommand$1.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.command.OpenPlayerWaystonesGuiCommand",
+                                "Path":  "net/blay09/mods/waystones/command/OpenPlayerWaystonesGuiCommand.class",
+                                "Type":  "Command, Operation",
+                                "Score":  70
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.command.WaystoneOwnership",
+                                "Path":  "net/blay09/mods/waystones/command/WaystoneOwnership.class",
+                                "Type":  "Command",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.compat.JourneyMapIntegration",
+                                "Path":  "net/blay09/mods/waystones/compat/JourneyMapIntegration.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.config.WaystonesConfig",
+                                "Path":  "net/blay09/mods/waystones/config/WaystonesConfig.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.config.WaystonesConfigData$Client",
+                                "Path":  "net/blay09/mods/waystones/config/WaystonesConfigData$Client.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.core.WaystoneSyncManager",
+                                "Path":  "net/blay09/mods/waystones/core/WaystoneSyncManager.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.core.WaystoneTeleportManager",
+                                "Path":  "net/blay09/mods/waystones/core/WaystoneTeleportManager.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.handler.WaystoneDebugHandler",
+                                "Path":  "net/blay09/mods/waystones/handler/WaystoneDebugHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.item.WarpScrollItem$1",
+                                "Path":  "net/blay09/mods/waystones/item/WarpScrollItem$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.item.WarpScrollItem",
+                                "Path":  "net/blay09/mods/waystones/item/WarpScrollItem.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.item.WarpStoneItem$1",
+                                "Path":  "net/blay09/mods/waystones/item/WarpStoneItem$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.item.WarpStoneItem",
+                                "Path":  "net/blay09/mods/waystones/item/WarpStoneItem.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.ModNetworking",
+                                "Path":  "net/blay09/mods/waystones/network/ModNetworking.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.EditWaystoneMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/EditWaystoneMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.InventoryButtonMessage$1",
+                                "Path":  "net/blay09/mods/waystones/network/message/InventoryButtonMessage$1.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.InventoryButtonMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/InventoryButtonMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.KnownWaystonesMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/KnownWaystonesMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.PlayerWaystoneCooldownsMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/PlayerWaystoneCooldownsMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.RemoveWaystoneMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/RemoveWaystoneMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.RequestEditWaystoneMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/RequestEditWaystoneMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.RequestManageWaystoneModifiersMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/RequestManageWaystoneModifiersMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.SelectWaystoneMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/SelectWaystoneMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.SortWaystoneMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/SortWaystoneMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.SortingIndexMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/SortingIndexMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.SyncWaystonesConfigMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/SyncWaystonesConfigMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.TeleportEffectMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/TeleportEffectMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.UpdateWaystoneMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/UpdateWaystoneMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.WarpPlateEjectEffectMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/WarpPlateEjectEffectMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.network.message.WaystoneRemovedMessage",
+                                "Path":  "net/blay09/mods/waystones/network/message/WaystoneRemovedMessage.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.recipe.WaystoneRecipeInput",
+                                "Path":  "net/blay09/mods/waystones/recipe/WaystoneRecipeInput.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.requirement.ExperienceLevelRequirement",
+                                "Path":  "net/blay09/mods/waystones/requirement/ExperienceLevelRequirement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.requirement.ExperiencePointsRequirement",
+                                "Path":  "net/blay09/mods/waystones/requirement/ExperiencePointsRequirement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.requirement.ItemRequirement",
+                                "Path":  "net/blay09/mods/waystones/requirement/ItemRequirement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.requirement.RefuseRequirement",
+                                "Path":  "net/blay09/mods/waystones/requirement/RefuseRequirement.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "net.blay09.mods.waystones.requirement.RequirementRegistry",
+                                "Path":  "net/blay09/mods/waystones/requirement/RequirementRegistry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            }
+                        ],
+    "javapAvailable":  true
+}

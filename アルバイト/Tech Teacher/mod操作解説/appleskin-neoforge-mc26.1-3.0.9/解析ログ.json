@@ -1,0 +1,210 @@
+﻿{
+    "jar":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\appleskin-neoforge-mc26.1-3.0.9\\appleskin-neoforge-mc26.1-3.0.9.jar",
+    "generatedMarkdown":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\appleskin-neoforge-mc26.1-3.0.9\\キー割り当てと操作方法.md",
+    "generatedCodexPrompt":  "C:\\Users\\tomot\\Desktop\\management\\アルバイト\\Tech Teacher\\mod操作解説\\appleskin-neoforge-mc26.1-3.0.9\\Codex追記依頼.md",
+    "generatedAt":  "2026-05-15T13:25:22.5547276+09:00",
+    "metadata":  {
+                     "DisplayName":  "AppleSkin",
+                     "ModId":  "appleskin",
+                     "Version":  "${file.jarVersion}",
+                     "Loader":  "NeoForge/Forge系",
+                     "MinecraftVersion":  "",
+                     "Description":  "Adds various food-related HUD improvements",
+                     "MetadataFile":  "META-INF/neoforge.mods.toml"
+                 },
+    "keyMappings":  [
+
+                    ],
+    "commands":  [
+
+                 ],
+    "classCandidates":  [
+                            {
+                                "ClassName":  "squeek.appleskin.AppleSkin",
+                                "Path":  "squeek/appleskin/AppleSkin.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.ModConfig",
+                                "Path":  "squeek/appleskin/ModConfig.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.ModInfo",
+                                "Path":  "squeek/appleskin/ModInfo.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.api.event.HUDOverlayEvent$Exhaustion",
+                                "Path":  "squeek/appleskin/api/event/HUDOverlayEvent$Exhaustion.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.api.event.HUDOverlayEvent$HealthRestored",
+                                "Path":  "squeek/appleskin/api/event/HUDOverlayEvent$HealthRestored.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.api.event.HUDOverlayEvent$HungerRestored",
+                                "Path":  "squeek/appleskin/api/event/HUDOverlayEvent$HungerRestored.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.api.event.HUDOverlayEvent$Saturation",
+                                "Path":  "squeek/appleskin/api/event/HUDOverlayEvent$Saturation.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.api.event.HUDOverlayEvent",
+                                "Path":  "squeek/appleskin/api/event/HUDOverlayEvent.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.api.event.TooltipOverlayEvent$Pre",
+                                "Path":  "squeek/appleskin/api/event/TooltipOverlayEvent$Pre.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.api.event.TooltipOverlayEvent$Render",
+                                "Path":  "squeek/appleskin/api/event/TooltipOverlayEvent$Render.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.api.event.TooltipOverlayEvent",
+                                "Path":  "squeek/appleskin/api/event/TooltipOverlayEvent.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.DebugInfoHandler$FoodStatsDebugEntry",
+                                "Path":  "squeek/appleskin/client/DebugInfoHandler$FoodStatsDebugEntry.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.DebugInfoHandler",
+                                "Path":  "squeek/appleskin/client/DebugInfoHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.HUDOverlayHandler$ExhaustionOverlay",
+                                "Path":  "squeek/appleskin/client/HUDOverlayHandler$ExhaustionOverlay.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.HUDOverlayHandler$HealthOverlay",
+                                "Path":  "squeek/appleskin/client/HUDOverlayHandler$HealthOverlay.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.HUDOverlayHandler$HeldFoodCache",
+                                "Path":  "squeek/appleskin/client/HUDOverlayHandler$HeldFoodCache.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.HUDOverlayHandler$HungerOverlay",
+                                "Path":  "squeek/appleskin/client/HUDOverlayHandler$HungerOverlay.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.HUDOverlayHandler$OffsetsCache",
+                                "Path":  "squeek/appleskin/client/HUDOverlayHandler$OffsetsCache.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.HUDOverlayHandler$Overlay",
+                                "Path":  "squeek/appleskin/client/HUDOverlayHandler$Overlay.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.HUDOverlayHandler$SaturationOverlay",
+                                "Path":  "squeek/appleskin/client/HUDOverlayHandler$SaturationOverlay.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.HUDOverlayHandler",
+                                "Path":  "squeek/appleskin/client/HUDOverlayHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.TooltipOverlayHandler$FoodOutline",
+                                "Path":  "squeek/appleskin/client/TooltipOverlayHandler$FoodOutline.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.TooltipOverlayHandler$FoodTooltip",
+                                "Path":  "squeek/appleskin/client/TooltipOverlayHandler$FoodTooltip.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.TooltipOverlayHandler$FoodTooltipRenderer",
+                                "Path":  "squeek/appleskin/client/TooltipOverlayHandler$FoodTooltipRenderer.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.client.TooltipOverlayHandler",
+                                "Path":  "squeek/appleskin/client/TooltipOverlayHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.helpers.FoodHelper",
+                                "Path":  "squeek/appleskin/helpers/FoodHelper.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.helpers.KeyHelper",
+                                "Path":  "squeek/appleskin/helpers/KeyHelper.class",
+                                "Type":  "Key",
+                                "Score":  50
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.network.MessageExhaustionSync",
+                                "Path":  "squeek/appleskin/network/MessageExhaustionSync.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.network.MessageNaturalRegenerationSync",
+                                "Path":  "squeek/appleskin/network/MessageNaturalRegenerationSync.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.network.MessageSaturationSync",
+                                "Path":  "squeek/appleskin/network/MessageSaturationSync.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            },
+                            {
+                                "ClassName":  "squeek.appleskin.network.SyncHandler",
+                                "Path":  "squeek/appleskin/network/SyncHandler.class",
+                                "Type":  "Operation",
+                                "Score":  20
+                            }
+                        ],
+    "javapAvailable":  true
+}

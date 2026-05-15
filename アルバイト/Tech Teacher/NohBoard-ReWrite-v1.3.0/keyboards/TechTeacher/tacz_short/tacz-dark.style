@@ -1,0 +1,73 @@
+{
+  "BackgroundColor": {
+    "Blue": 24,
+    "Green": 24,
+    "Red": 24
+  },
+  "DefaultKeyStyle": {
+    "Loose": {
+      "Background": {
+        "Blue": 55,
+        "Green": 55,
+        "Red": 55
+      },
+      "BackgroundImageFileName": null,
+      "Font": {
+        "FontFamily": "Arial",
+        "Size": 11,
+        "Style": 1
+      },
+      "Outline": {
+        "Blue": 135,
+        "Green": 135,
+        "Red": 135
+      },
+      "OutlineWidth": 1,
+      "ShowOutline": true,
+      "Text": {
+        "Blue": 245,
+        "Green": 245,
+        "Red": 245
+      }
+    },
+    "Pressed": {
+      "Background": {
+        "Blue": 95,
+        "Green": 230,
+        "Red": 255
+      },
+      "BackgroundImageFileName": null,
+      "Font": {
+        "FontFamily": "Arial",
+        "Size": 11,
+        "Style": 1
+      },
+      "Outline": {
+        "Blue": 255,
+        "Green": 255,
+        "Red": 255
+      },
+      "OutlineWidth": 2,
+      "ShowOutline": true,
+      "Text": {
+        "Blue": 20,
+        "Green": 20,
+        "Red": 20
+      }
+    }
+  },
+  "DefaultMouseSpeedIndicatorStyle": {
+    "InnerColor": {
+      "Blue": 55,
+      "Green": 55,
+      "Red": 55
+    },
+    "OuterColor": {
+      "Blue": 255,
+      "Green": 255,
+      "Red": 255
+    },
+    "OutlineWidth": 1
+  },
+  "ElementStyles": []
+}
