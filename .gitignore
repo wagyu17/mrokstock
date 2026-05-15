@@ -1,2 +1,11 @@
 .env
-アルバイト/マイクラ開発/
+アルバイト/マイクラ開発/*
+!アルバイト/マイクラ開発/website/
+アルバイト/マイクラ開発/website/ONEHOUDAY/
+東京理科大学/4年/日本の文学/
+
+# Windows/OneDrive metadata
+[Dd]esktop.ini
+$RECYCLE.BIN/
+Thumbs.db
+*.lnk
