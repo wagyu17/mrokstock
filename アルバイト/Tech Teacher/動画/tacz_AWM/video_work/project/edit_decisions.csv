@@ -1,0 +1,8 @@
+order,seg_id,source,start,end,duration,use,caption,zoom,notes
+1,A,raw/tacz_001.mp4,00:00:08.500,00:00:12.500,4.0,hook,"Realistic guns in Minecraft?",1.00,"3人称・武器名 Accuracy International AWM 表示"
+2,F,raw/tacz_001.mp4,00:00:16.500,00:00:20.000,3.5,showcase,"TaCZ - AWM Sniper Rifle",1.00,"1人称ヒップファイア・夜の風景"
+3,B,raw/tacz_001.mp4,00:00:53.000,00:00:56.500,3.5,ads,"Right Click: Aim",1.00,"ADSでスコープを覗く（夜）"
+4,C,raw/tacz_001.mp4,00:00:59.500,00:01:04.000,4.5,fire,"Left Click: Fire",1.00,"砂漠での射撃・残弾007->005"
+5,D,raw/tacz_001.mp4,00:01:04.000,00:01:08.000,4.0,reload,"R: Reload",1.00,"リロードで残弾005->009"
+6,E,raw/tacz_001.mp4,00:00:24.500,00:00:30.000,5.5,customize,"Customize Your Scope",1.00,"カスタム画面 LPVO 1-6x Scope ツールチップ"
+7,G,raw/tacz_001.mp4,00:01:13.000,00:01:17.000,4.0,outro,"Full TaCZ guide on my channel",1.00,"1人称・風景で締め（メニュー直前まで）"

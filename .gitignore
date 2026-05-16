@@ -9,3 +9,18 @@
 $RECYCLE.BIN/
 Thumbs.db
 *.lnk
+
+# 動画ファイルは git に上げない（容量大）
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.wmv
+*.webm
+*.m4v
+*.flv
+
+# 動画編集の中間生成物・作業フォルダ（project/ と scripts/ の記録のみ git 管理）
+**/video_work/input/
+**/video_work/work/
+**/video_work/output/

@@ -1,0 +1,12 @@
+source,start,end,score,category,reason,caption,narration,used
+raw/tacz_001.mp4,00:00:00.000,00:00:08.000,5,menu,"ポーズメニュー表示。見どころなし","","",no
+raw/tacz_001.mp4,00:00:08.500,00:00:14.000,78,reveal,"3人称で武器名 Accuracy International AWM が表示される","Realistic guns in Minecraft?","This is TaCZ, a realistic gun mod for Minecraft.",yes
+raw/tacz_001.mp4,00:00:16.500,00:00:23.000,70,showcase,"1人称ヒップファイアで武器モデルと夜景が見える","TaCZ - AWM Sniper Rifle","The Accuracy International AWM is a powerful sniper rifle.",yes
+raw/tacz_001.mp4,00:00:24.500,00:00:30.500,88,customize,"カスタム画面。LPVO 1-6x Scope のズーム倍率ツールチップが表示","Customize Your Scope","Open the customization screen to attach scopes and parts.",yes
+raw/tacz_001.mp4,00:00:53.000,00:00:56.500,90,ads,"ADSでAWMスコープを覗く（夜）。照準が明確","Right Click: Aim","Right click to aim down the scope.",yes
+raw/tacz_001.mp4,00:00:56.500,00:00:59.500,60,ads,"夜から砂漠への場面転換。やや不安定なためカット","","",no
+raw/tacz_001.mp4,00:00:59.500,00:01:04.000,92,fire,"砂漠で射撃。残弾が007->005に減少し発砲が分かる","Left Click: Fire","Left click to fire.",yes
+raw/tacz_001.mp4,00:01:04.000,00:01:08.000,85,reload,"リロードで残弾が005->009に回復","R: Reload","Press R to reload.",yes
+raw/tacz_001.mp4,00:01:08.000,00:01:13.000,55,move,"移動・視点移動中心。見どころ薄め","","",no
+raw/tacz_001.mp4,00:01:13.000,00:01:17.000,68,outro,"1人称・風景。締めに使用","Full TaCZ guide on my channel","Check my channel for the full beginner guide.",yes
+raw/tacz_001.mp4,00:01:17.000,00:01:23.650,5,menu,"ポーズメニューへ遷移。見どころなし","","",no

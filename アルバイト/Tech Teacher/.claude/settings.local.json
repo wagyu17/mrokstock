@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ffmpeg -version)",
+      "Bash(ffprobe -version)",
+      "PowerShell(winget install *)",
+      "Bash(git add *)"
+    ]
+  }
+}

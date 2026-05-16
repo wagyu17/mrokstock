@@ -1,0 +1,48 @@
+{
+  "project": "tacz_awm_shorts",
+  "mod": "TaCZ",
+  "weapon": "Accuracy International AWM",
+  "created": "2026-05-16",
+  "source": {
+    "file": "input/raw/tacz_001.mp4",
+    "original": "../2026-05-15 23-54-18.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "duration_sec": 83.65,
+    "vcodec": "h264",
+    "acodec": "aac",
+    "readonly": true
+  },
+  "tools": {
+    "ffmpeg": "Gyan.FFmpeg 8.1.1 (winget)",
+    "python": "3.13"
+  },
+  "output": {
+    "shorts": {
+      "file": "output/shorts/tacz_shorts_001.mp4",
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "duration_sec": 29.02,
+      "size_mb": 5.37,
+      "layout": "blurred-bg + 16:9 upper, no-crop, burned-in captions"
+    },
+    "longform": null
+  },
+  "segments": [
+    {"order": 1, "id": "A", "start": 8.5,  "end": 12.5, "use": "hook",      "caption": "Realistic guns in Minecraft?"},
+    {"order": 2, "id": "F", "start": 16.5, "end": 20.0, "use": "showcase",  "caption": "TaCZ - AWM Sniper Rifle"},
+    {"order": 3, "id": "B", "start": 53.0, "end": 56.5, "use": "ads",       "caption": "Right Click: Aim"},
+    {"order": 4, "id": "C", "start": 59.5, "end": 64.0, "use": "fire",      "caption": "Left Click: Fire"},
+    {"order": 5, "id": "D", "start": 64.0, "end": 68.0, "use": "reload",    "caption": "R: Reload"},
+    {"order": 6, "id": "E", "start": 24.5, "end": 30.0, "use": "customize", "caption": "Customize Your Scope"},
+    {"order": 7, "id": "G", "start": 73.0, "end": 77.0, "use": "outro",     "caption": "Full TaCZ guide on my channel"}
+  ],
+  "audio": {
+    "loudnorm": "I=-15:TP=-1.5:LRA=11",
+    "bgm": null,
+    "narration": null
+  },
+  "pending": ["longform", "ai_narration_tts", "bgm", "multi_clip_highlight"]
+}
