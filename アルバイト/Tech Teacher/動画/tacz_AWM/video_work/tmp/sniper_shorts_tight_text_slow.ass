@@ -1,0 +1,27 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,Segoe UI,78,&H0000D7FF,&H000000FF,&H000000D0,&HAA000000,-1,0,0,0,100,100,0,0,1,8,2,5,36,36,0,1
+Style: Caption,Segoe UI,76,&H00FFFFFF,&H000000FF,&H00000000,&HAA000000,-1,0,0,0,100,100,0,0,1,8,2,5,44,44,0,1
+Style: CTA,Segoe UI,78,&H002AC7FF,&H000000FF,&H00000000,&HAA000000,-1,0,0,0,100,100,0,0,1,8,2,5,44,44,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.00,0:00:33.00,Title,,0,0,0,,{\pos(540,590)}EVERY TaCZ SNIPER
+Dialogue: 0,0:00:00.00,0:00:03.45,Caption,,0,0,0,,{\pos(540,1338)}Every sniper tested
+Dialogue: 0,0:00:03.45,0:00:05.85,Caption,,0,0,0,,{\pos(540,1338)}Which would you use?
+Dialogue: 0,0:00:05.85,0:00:08.15,Caption,,0,0,0,,{\pos(540,1338)}AWM feels clean
+Dialogue: 0,0:00:08.15,0:00:10.85,Caption,,0,0,0,,{\pos(540,1338)}M95 hits hard
+Dialogue: 0,0:00:10.85,0:00:13.70,Caption,,0,0,0,,{\pos(540,1338)}M700 is classic
+Dialogue: 0,0:00:13.70,0:00:16.70,Caption,,0,0,0,,{\pos(540,1338)}M107 feels heavy
+Dialogue: 0,0:00:16.70,0:00:19.60,Caption,,0,0,0,,{\pos(540,1338)}Springfield old school
+Dialogue: 0,0:00:19.60,0:00:22.70,Caption,,0,0,0,,{\pos(540,1338)}Kar98k looks amazing
+Dialogue: 0,0:00:22.70,0:00:24.95,Caption,,0,0,0,,{\pos(540,1338)}Which one wins?
+Dialogue: 0,0:00:24.95,0:00:27.60,Caption,,0,0,0,,{\pos(540,1338)}Full attachment table
+Dialogue: 0,0:00:27.60,0:00:30.00,Caption,,0,0,0,,{\pos(540,1338)}In the guide below
+Dialogue: 0,0:00:30.00,0:00:33.00,CTA,,0,0,0,,{\pos(540,1338)}Link in description

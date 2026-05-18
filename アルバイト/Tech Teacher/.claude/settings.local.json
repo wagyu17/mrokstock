@@ -4,7 +4,13 @@
       "Bash(ffmpeg -version)",
       "Bash(ffprobe -version)",
       "PowerShell(winget install *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "WebSearch",
+      "WebFetch(domain:pixabay.com)",
+      "WebFetch(domain:incompetech.com)",
+      "WebFetch(domain:www.fesliyanstudios.com)",
+      "WebFetch(domain:mixkit.co)",
+      "Skill(update-config)"
     ]
   }
 }

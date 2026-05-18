@@ -1,0 +1,24 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,Segoe UI,64,&H0000D7FF,&H000000FF,&H000000D8,&HAA000000,-1,0,0,0,100,100,0,0,1,6,2,8,40,40,70,1
+Style: Caption,Segoe UI,54,&H00FFFFFF,&H000000FF,&H00101010,&HAA000000,-1,0,0,0,100,100,0,0,1,6,2,2,58,58,190,1
+Style: CTA,Segoe UI,56,&H002AC7FF,&H000000FF,&H00101010,&HAA000000,-1,0,0,0,100,100,0,0,1,6,2,2,58,58,190,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.00,0:00:33.00,Title,,0,0,0,,EVERY TaCZ SNIPER RIFLE
+Dialogue: 0,0:00:00.00,0:00:03.20,Caption,,0,0,0,,I tested every sniper rifle in TaCZ.
+Dialogue: 0,0:00:03.20,0:00:06.10,Caption,,0,0,0,,Which one would you use?
+Dialogue: 0,0:00:06.10,0:00:09.80,Caption,,0,0,0,,AWM, M95, M700...
+Dialogue: 0,0:00:09.80,0:00:13.60,Caption,,0,0,0,,M107, Springfield, and Kar98k.
+Dialogue: 0,0:00:13.60,0:00:17.10,Caption,,0,0,0,,Some hit harder.
+Dialogue: 0,0:00:17.10,0:00:20.50,Caption,,0,0,0,,Some just look cooler.
+Dialogue: 0,0:00:20.50,0:00:24.30,Caption,,0,0,0,,The full gun and attachment table
+Dialogue: 0,0:00:24.30,0:00:28.50,Caption,,0,0,0,,is in the guide linked below.
+Dialogue: 0,0:00:28.50,0:00:33.00,CTA,,0,0,0,,Link in description

@@ -1,0 +1,43 @@
+{
+  "default_width": 157,
+  "default_height": 129,
+  "space_h": 0,
+  "space_v": 5,
+  "flags": 0,
+  "overlay_width": 317,
+  "overlay_height": 129,
+  "elements": [
+    {
+      "code": 35,
+      "id": "h",
+      "mapping": [
+        0,
+        0,
+        157,
+        129
+      ],
+      "pos": [
+        0,
+        0
+      ],
+      "type": 1,
+      "z_level": 1
+    },
+    {
+      "code": 24,
+      "id": "o",
+      "mapping": [
+        160,
+        0,
+        157,
+        129
+      ],
+      "pos": [
+        160,
+        0
+      ],
+      "type": 1,
+      "z_level": 1
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+order,source,start,end,duration,use,caption,notes
+1,raw/Video Project 3.mp4,00:00:00.000,00:00:05.800,5.8,intro,"TaCZ: AWM Sniper Rifle","屋上・夕景で武器を構える導入"
+2,raw/Video Project 3.mp4,00:00:05.800,00:00:11.800,6.0,customize,"Customize Your Weapon","アタッチメント画面・Sniper Ammo Extended Mag ツールチップ"
+3,raw/Video Project 3.mp4,00:00:11.800,00:00:17.500,5.7,ads,"Right Click to Aim","ADSでスコープを覗く"
+4,raw/Video Project 3.mp4,00:00:17.500,00:00:23.500,6.0,scope,"Steady Through the Scope","スコープ視点で照準"
+5,raw/Video Project 3.mp4,00:00:23.500,00:00:29.500,6.0,reload,"Press R to Reload","マガジン交換"
+6,raw/Video Project 3.mp4,00:00:29.500,00:00:35.500,6.0,fire,"One Heavy Shot at a Time","ボルトアクションで射撃"
+7,raw/Video Project 3.mp4,00:00:35.500,00:00:41.300,5.8,outro,"Follow for the Full Guide","スコープ視点で締め・誘導"

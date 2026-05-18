@@ -1,0 +1,24 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Big,Segoe UI,78,&H00FFFFFF,&H000000FF,&H00111111,&HAA000000,-1,0,0,0,100,100,0,0,1,6,2,8,80,80,64,1
+Style: Yellow,Segoe UI,72,&H002AC7FF,&H000000FF,&H00111111,&HAA000000,-1,0,0,0,100,100,0,0,1,6,2,8,80,80,64,1
+Style: Bottom,Segoe UI,52,&H00FFFFFF,&H000000FF,&H00111111,&HAA000000,-1,0,0,0,100,100,0,0,1,5,2,2,80,80,80,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.80,Yellow,,0,0,0,,I tested EVERY TaCZ sniper
+Dialogue: 0,0:00:02.80,0:00:05.60,Big,,0,0,0,,Which one hits hardest?
+Dialogue: 0,0:00:05.60,0:00:08.40,Bottom,,0,0,0,,M95 .50 Cal Anti-Materiel
+Dialogue: 0,0:00:08.40,0:00:11.20,Bottom,,0,0,0,,M700 classic sniper feel
+Dialogue: 0,0:00:11.20,0:00:14.10,Bottom,,0,0,0,,M107 heavy hitter
+Dialogue: 0,0:00:14.10,0:00:17.00,Bottom,,0,0,0,,Bolt-action reloads look so good
+Dialogue: 0,0:00:17.00,0:00:20.00,Bottom,,0,0,0,,Springfield 1873 throwback
+Dialogue: 0,0:00:20.00,0:00:23.20,Bottom,,0,0,0,,Mauser Kar98k classic scope
+Dialogue: 0,0:00:23.20,0:00:27.60,Yellow,,0,0,0,,Which sniper is your favorite?
+Dialogue: 0,0:00:27.60,0:00:33.00,Yellow,,0,0,0,,Full gun + attachment table below

@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaCZ Beginner Guide PDF</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 16mm 15mm 18mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: #17202a;
+      background: #f4f6f8;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 0;
+    }
+
+    .cover {
+      min-height: 297mm;
+      color: #ffffff;
+      background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.82)),
+        url("assets/cover-horizontal.png") center / cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 26mm 20mm;
+      page-break-after: always;
+    }
+
+    .eyebrow {
+      margin: 0 0 9mm;
+      color: #f5c242;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 155mm;
+      margin: 0;
+      font-size: 50px;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 142mm;
+      margin: 8mm 0 0;
+      color: #edf2f7;
+      font-size: 18px;
+    }
+
+    .meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12mm;
+    }
+
+    .pill {
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      background: rgba(0, 0, 0, 0.38);
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: #f8fafc;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    main {
+      padding: 0 0 8mm;
+    }
+
+    section {
+      padding: 0 0 8mm;
+      break-inside: avoid;
+    }
+
+    h2 {
+      margin: 0 0 4mm;
+      color: #111827;
+      font-size: 24px;
+      line-height: 1.15;
+      border-bottom: 2px solid #f1b800;
+      padding-bottom: 2mm;
+    }
+
+    h3 {
+      margin: 6mm 0 2mm;
+      color: #111827;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 3.5mm;
+      font-size: 10.5pt;
+    }
+
+    ul, ol {
+      margin: 0 0 4mm 5mm;
+      padding: 0;
+      font-size: 10.5pt;
+    }
+
+    li {
+      margin: 0 0 1.6mm;
+      padding-left: 1mm;
+    }
+
+    .content {
+      padding: 16mm 15mm 0;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8mm;
+      align-items: start;
+    }
+
+    .note {
+      margin: 5mm 0;
+      border-left: 4px solid #f1b800;
+      background: #fff8dd;
+      padding: 4mm 5mm;
+      font-size: 10pt;
+    }
+
+    .warning {
+      margin: 5mm 0;
+      border-left: 4px solid #d9480f;
+      background: #fff4ed;
+      padding: 4mm 5mm;
+      font-size: 10pt;
+    }
+
+    .checklist {
+      background: #f8fafc;
+      border: 1px solid #d9e0e8;
+      padding: 5mm;
+      border-radius: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 5mm;
+      font-size: 9.4pt;
+      page-break-inside: avoid;
+    }
+
+    th {
+      background: #17202a;
+      color: #ffffff;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    th, td {
+      border: 1px solid #cfd8e3;
+      padding: 7px 8px;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 0.95em;
+      background: #edf2f7;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+
+    pre {
+      margin: 3mm 0 5mm;
+      padding: 4mm;
+      background: #111827;
+      color: #f8fafc;
+      border-radius: 6px;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 10pt;
+      line-height: 1.35;
+    }
+
+    .image-block {
+      margin: 5mm 0;
+      text-align: center;
+      break-inside: avoid;
+    }
+
+    .image-block img {
+      width: 100%;
+      max-height: 118mm;
+      object-fit: contain;
+      border: 1px solid #d9e0e8;
+      border-radius: 6px;
+      background: #111827;
+    }
+
+    .caption {
+      margin-top: 2mm;
+      color: #526070;
+      font-size: 9pt;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    .toc {
+      columns: 2;
+      column-gap: 10mm;
+      margin-top: 4mm;
+    }
+
+    .toc a {
+      display: block;
+      color: #17202a;
+      text-decoration: none;
+      margin: 0 0 2.2mm;
+      font-size: 10.5pt;
+      break-inside: avoid;
+    }
+
+    .footer-note {
+      margin-top: 8mm;
+      color: #526070;
+      font-size: 9pt;
+    }
+
+
+    .compat-section {
+      break-inside: auto;
+    }
+
+    .compat-category {
+      margin-top: 8mm;
+      padding: 2mm 3mm;
+      color: #ffffff;
+      background: #243040;
+      border-radius: 4px;
+      font-size: 15px;
+    }
+
+    .compat-card {
+      margin: 0 0 5mm;
+      padding: 4mm;
+      border: 1px solid #d9e0e8;
+      border-radius: 6px;
+      break-inside: avoid;
+      background: #ffffff;
+    }
+
+    .compat-card h4 {
+      margin: 0 0 2.5mm;
+      color: #111827;
+      font-size: 13px;
+    }
+
+    .compat-table {
+      margin-bottom: 0;
+      font-size: 8.2pt;
+    }
+
+    .compat-table th {
+      width: 30mm;
+      color: #17202a;
+      background: #edf2f7;
+      border-color: #cfd8e3;
+    }
+
+    .compat-item {
+      display: inline-block;
+      margin: 0 2px 3px 0;
+      padding: 2px 5px;
+      border: 1px solid #d7dee8;
+      border-radius: 3px;
+      background: #f8fafc;
+    }
+
+    .none {
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+      }
+
+      .content {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="cover">
+      <p class="eyebrow">Unofficial Minecraft Java Edition Guide</p>
+      <h1>TaCZ Beginner Guide PDF</h1>
+      <p class="subtitle">Controls, reloading, aiming, customization, attachments, and common fixes for Timeless and Classics Guns: Zero.</p>
+      <div class="meta">
+        <span class="pill">Version 1.0</span>
+        <span class="pill">Minecraft 1.20.1 TaCZ notes</span>
+        <span class="pill">Beginner friendly</span>
+        <span class="pill">Created for video learners</span>
+      </div>
+    </header>
+
+    <main class="content">
+      <section>
+        <h2>Before You Start</h2>
+        <p>This PDF is an unofficial beginner guide for <strong>TaCZ</strong>, also known as <strong>Timeless and Classics Guns: Zero</strong>. It explains the basic controls and the first gameplay loop so you can quickly start recording or playing with guns in Minecraft Java Edition.</p>
+        <div class="warning">
+          This product does not include the TaCZ mod file. Download the mod only from its official distribution page, such as CurseForge or the project page linked by the author. Do not redistribute mod jar files inside your own paid product.
+        </div>
+        <div class="note">
+          Tested notes are based on <code>tacz-1.20.1-1.1.8-release.jar</code>. Keybinds and menu names may change if you use a different Minecraft, Forge, or TaCZ version.
+        </div>
+      </section>
+
+      <section>
+        <h2>Table of Contents</h2>
+        <div class="toc">
+          <a href="#what-is-tacz">1. What TaCZ Adds</a>
+          <a href="#requirements">2. Requirements and Setup Notes</a>
+          <a href="#controls">3. Default Controls</a>
+          <a href="#first-loop">4. First 10-Minute Gameplay Loop</a>
+          <a href="#gunsmith-table">5. Gunsmith Table</a>
+          <a href="#aiming">6. Aiming, Firing, and Reloading</a>
+          <a href="#attachments">7. Customization and Attachments</a>
+          <a href="#compat-table">8. Gun and Attachment Compatibility Table</a>
+          <a href="#interact">9. Interacting While Holding a Gun</a>
+          <a href="#sniper">10. AWM and Sniper Workflow</a>
+          <a href="#recording">11. Recording Overlay Setup</a>
+          <a href="#troubleshooting">12. Troubleshooting</a>
+          <a href="#cheatsheet">13. One-Page Cheat Sheet</a>
+        </div>
+      </section>
+
+      <section id="what-is-tacz" class="page-break">
+        <h2>1. What TaCZ Adds</h2>
+        <p>TaCZ is a modern gun mod for Minecraft. It adds firearms, ammunition, attachments, gun crafting, and customization systems. The default content pack includes many weapon types, from pistols and rifles to sniper rifles and heavy weapons.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Content Type</th>
+              <th>Beginner Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Guns</td>
+              <td>Weapons such as pistols, assault rifles, shotguns, machine guns, and sniper rifles.</td>
+            </tr>
+            <tr>
+              <td>Ammunition</td>
+              <td>Each gun needs compatible ammo. If the ammo type is wrong, reloading will fail.</td>
+            </tr>
+            <tr>
+              <td>Attachments</td>
+              <td>Scopes, sights, muzzles, grips, stocks, lasers, extended magazines, and ammo mods.</td>
+            </tr>
+            <tr>
+              <td>Gunsmith Table</td>
+              <td>The main workbench used to craft guns, ammo, and attachments.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="requirements">
+        <h2>2. Requirements and Setup Notes</h2>
+        <p>Use the Minecraft version and mod loader version that match the TaCZ release you downloaded. For the local analyzed file, the jar name indicates Minecraft <strong>1.20.1</strong>.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>What to Check</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Minecraft Java Edition</td>
+              <td>TaCZ is for Java Edition modded Minecraft, not Bedrock Edition.</td>
+            </tr>
+            <tr>
+              <td>Mod Loader</td>
+              <td>Install the loader required by the TaCZ download page for your version. Match the loader and Minecraft version carefully.</td>
+            </tr>
+            <tr>
+              <td>TaCZ jar</td>
+              <td>Place the downloaded TaCZ jar in your Minecraft <code>mods</code> folder.</td>
+            </tr>
+            <tr>
+              <td>Cloth Config API</td>
+              <td>Needed for the in-game configuration screen opened with <code>Alt + T</code>. Gameplay may work without the config screen, but the settings menu depends on it.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="note">
+          If Minecraft crashes on startup, re-check the Minecraft version, mod loader version, and dependency list on the official TaCZ page. Version mismatch is the most common modding problem.
+        </div>
+      </section>
+
+      <section id="controls" class="page-break">
+        <h2>3. Default Controls</h2>
+        <p>TaCZ changes how right click behaves while you are holding a gun. In normal Minecraft, right click opens blocks and interacts with entities. In TaCZ, right click is usually used for aiming down sights, so TaCZ adds a separate interaction key.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Input</th>
+              <th>Action</th>
+              <th>How to Use It</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Left Click</td>
+              <td>Fire</td>
+              <td>Hold a loaded gun and left click to shoot.</td>
+            </tr>
+            <tr>
+              <td>Right Click</td>
+              <td>Aim / ADS</td>
+              <td>Hold right click to aim down sights. This is important for sniper rifles and scoped weapons.</td>
+            </tr>
+            <tr>
+              <td><code>R</code></td>
+              <td>Reload</td>
+              <td>Reload the gun if compatible ammo is in your inventory.</td>
+            </tr>
+            <tr>
+              <td><code>G</code></td>
+              <td>Switch Fire Mode</td>
+              <td>Cycle modes such as semi-auto, burst, or full-auto when the weapon supports them.</td>
+            </tr>
+            <tr>
+              <td><code>H</code></td>
+              <td>Inspect Weapon</td>
+              <td>Plays an inspection animation. Useful for videos and for visually checking the weapon.</td>
+            </tr>
+            <tr>
+              <td><code>Z</code></td>
+              <td>Customize</td>
+              <td>Open the attachment/customization screen while holding a gun.</td>
+            </tr>
+            <tr>
+              <td><code>O</code></td>
+              <td>Interact</td>
+              <td>Open chests, doors, workbenches, and entities while still holding a gun.</td>
+            </tr>
+            <tr>
+              <td><code>V</code></td>
+              <td>Melee / Scope Zoom</td>
+              <td>Without ADS, it works as melee. While aiming with a scope, it changes zoom.</td>
+            </tr>
+            <tr>
+              <td><code>C</code></td>
+              <td>Crawl</td>
+              <td>Default setting is hold-to-crawl.</td>
+            </tr>
+            <tr>
+              <td><code>Alt + T</code></td>
+              <td>TaCZ Settings</td>
+              <td>Open the TaCZ client configuration screen when Cloth Config API is installed.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="image-block">
+          <img src="assets/controls-overlay.png" alt="TaCZ control overlay">
+          <p class="caption">Suggested OBS input overlay layout for TaCZ videos. H and O are included because they are important TaCZ-specific keys.</p>
+        </div>
+      </section>
+
+      <section id="first-loop" class="page-break">
+        <h2>4. First 10-Minute Gameplay Loop</h2>
+        <p>If you are completely new, follow this simple loop before trying advanced attachments.</p>
+        <ol>
+          <li>Install TaCZ and launch Minecraft with the correct mod loader.</li>
+          <li>Create or obtain a <strong>Gunsmith Table</strong>.</li>
+          <li>Use the Gunsmith Table to craft one gun and the matching ammunition.</li>
+          <li>Put the gun and ammo in your inventory.</li>
+          <li>Hold the gun and press <code>R</code> to reload.</li>
+          <li>Hold right click to aim.</li>
+          <li>Left click to fire.</li>
+          <li>Press <code>G</code> to test fire mode switching if the weapon supports multiple modes.</li>
+          <li>Press <code>Z</code> to open customization and check attachment slots.</li>
+          <li>Use <code>O</code> when you want to open a chest, door, table, or entity while holding the gun.</li>
+        </ol>
+        <div class="note">
+          For beginner videos, show this loop slowly once. Viewers understand the mod faster when they can see reload, aim, shoot, fire-mode switching, and customization in one short sequence.
+        </div>
+      </section>
+
+      <section id="gunsmith-table">
+        <h2>5. Gunsmith Table</h2>
+        <p>The Gunsmith Table is the core crafting station for TaCZ. It is used for guns, ammo, and attachments.</p>
+        <h3>Crafting Shape</h3>
+        <p>Local analysis notes show this pattern:</p>
+        <pre>LLL
+IBI
+I I</pre>
+        <table>
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Material</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>L</code></td>
+              <td>Log-tag block</td>
+            </tr>
+            <tr>
+              <td><code>I</code></td>
+              <td>Iron ingot</td>
+            </tr>
+            <tr>
+              <td><code>B</code></td>
+              <td>Iron block</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>After placing the table, interact with it to browse available gun, ammo, and attachment recipes from the installed content pack.</p>
+      </section>
+
+      <section id="aiming" class="page-break">
+        <h2>6. Aiming, Firing, and Reloading</h2>
+        <div class="two-col">
+          <div>
+            <h3>Aiming</h3>
+            <p>Right click is the default aim key. The default behavior is hold-to-aim, which means you aim only while right click is held.</p>
+            <p>For scoped weapons, aim first, then use <code>V</code> if the scope supports zoom switching.</p>
+          </div>
+          <div>
+            <h3>Firing</h3>
+            <p>Left click fires the gun. If nothing happens, check ammo, reload state, and whether the weapon is actually selected in your hotbar.</p>
+          </div>
+        </div>
+        <h3>Reloading</h3>
+        <p>Press <code>R</code> to reload. TaCZ does not automatically reload by default. You need compatible ammo in your inventory. Wrong ammo type is the most common reason reloading fails.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Problem</th>
+              <th>Likely Cause</th>
+              <th>Quick Fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gun does not fire</td>
+              <td>Not loaded, no ammo, or wrong ammo</td>
+              <td>Craft compatible ammo and press <code>R</code>.</td>
+            </tr>
+            <tr>
+              <td>Reload does nothing</td>
+              <td>Ammo type does not match the gun</td>
+              <td>Check the gun recipe and ammo category in the Gunsmith Table.</td>
+            </tr>
+            <tr>
+              <td>Fire mode will not change</td>
+              <td>Weapon has only one fire mode</td>
+              <td>Try a rifle or other weapon that supports multiple modes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="attachments">
+        <h2>7. Customization and Attachments</h2>
+        <p>Hold a gun and press <code>Z</code> to open the customization screen. Attachments change weapon behavior and are also useful for making videos visually clearer.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Attachment Type</th>
+              <th>What It Usually Does</th>
+              <th>Beginner Tip</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Scope / Sight</td>
+              <td>Changes aiming view and zoom options.</td>
+              <td>Use scopes for sniper footage and dot sights for quick aiming.</td>
+            </tr>
+            <tr>
+              <td>Muzzle</td>
+              <td>Can change sound, recoil feel, or weapon handling depending on the item.</td>
+              <td>Try suppressors and muzzle brakes in separate comparison clips.</td>
+            </tr>
+            <tr>
+              <td>Grip</td>
+              <td>Usually affects handling and stability.</td>
+              <td>Good for assault rifles and automatic weapons.</td>
+            </tr>
+            <tr>
+              <td>Stock</td>
+              <td>Usually affects stability or handling.</td>
+              <td>Check the customization screen stats before and after changing it.</td>
+            </tr>
+            <tr>
+              <td>Laser</td>
+              <td>Helps with visual aiming or tactical presentation.</td>
+              <td>Useful for short-form videos because viewers immediately understand aiming direction.</td>
+            </tr>
+            <tr>
+              <td>Extended Magazine</td>
+              <td>Increases capacity for supported weapons.</td>
+              <td>Helpful for full-auto demonstrations.</td>
+            </tr>
+            <tr>
+              <td>Ammo Mod</td>
+              <td>Changes ammunition behavior for supported weapons.</td>
+              <td>Use one clear test target when showing differences.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="note">
+          Not every gun accepts every attachment. The compatible slots depend on the gun definition and the installed content pack.
+        </div>
+      </section>
+
+      <section id="compat-table" class="page-break compat-section">
+        <h2>8. Gun and Attachment Compatibility Table</h2>
+        <p>This appendix is generated from the analyzed default TaCZ content pack. It shows which attachment categories are available for each gun. The English labels are paired with internal IDs so you can search and identify items accurately in the Gunsmith Table.</p>
+        <div class="note">If you install another gun pack or edit the default pack, compatibility can change. Use this as a guide for the analyzed default TaCZ pack.</div>
+        <h3 class="compat-category">Other</h3>
+        <div class="compat-card">
+          <h4>M249 Light Machine Gun <code>tacz:m249</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>RPK <code>tacz:rpk</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>M134 Minigun <code>tacz:minigun</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>FN EVOLYS Light Machine Gun <code>tacz:fn_evolys</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <h3 class="compat-category">Other</h3>
+        <div class="compat-card">
+          <h4>Glock 17 <code>tacz:glock_17</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>Deagle 50 <code>tacz:deagle</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>CZ 75 <code>tacz:cz75</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>Golden Deagle .357 <code>tacz:deagle_golden</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>P320 <code>tacz:p320</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>M1911 <code>tacz:m1911</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>B93R <code>tacz:b93r</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>Timeless .50 Z-Type <code>tacz:timeless50</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>.22 Model 943 <code>tacz:taurus943</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>.357 Rhino <code>tacz:rhino357</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>.30-06 Lonetrail <code>tacz:lonetrail</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>MK23 SOCOM <code>tacz:hk_mk23</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>Taurus Raging Hunter <code>tacz:taurus500</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>M9A4 <code>tacz:m9a4</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <h3 class="compat-category">Other</h3>
+        <div class="compat-card">
+          <h4>AK47 <code>tacz:ak47</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>M4A1 Carbine <code>tacz:m4a1</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>HK G3 Battle Rifle <code>tacz:hk_g3</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>SKS Tactical Rifle <code>tacz:sks_tactical</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>SCAR-H Battle Rifle <code>tacz:scar_h</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>SCAR-L Assault Rifle <code>tacz:scar_l</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>M16A1 Service Rifle <code>tacz:m16a1</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>M16A4 Service Rifle <code>tacz:m16a4</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>HK416A5 <code>tacz:hk416d</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>AUG <code>tacz:aug</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>Mk14 EBR <code>tacz:mk14</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>Type 81-1 Automatic Rifle <code>tacz:type_81</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>Type 95 Automatic Rifle - Longbow <code>tacz:qbz_95</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>G36K <code>tacz:g36k</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>SPR-15 HB Sagittarius <code>tacz:spr15hb</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>Type 191 Automatic Rifle <code>tacz:qbz_191</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>FN FAL Battle Rifle <code>tacz:fn_fal</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <h3 class="compat-category">Other</h3>
+        <div class="compat-card">
+          <h4>M320 Grenade Launcher <code>tacz:m320</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>RPG-7 <code>tacz:rpg7</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <h3 class="compat-category">Other</h3>
+        <div class="compat-card">
+          <h4>M870 <code>tacz:m870</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>AA-12 Shotgun <code>tacz:aa12</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>SPAS-12 Special Shotgun <code>tacz:spas_12</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>M1014 Battle Shotgun <code>tacz:m1014</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>DB-4 Ursus <code>tacz:db_long</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>DB-2 Durin <code>tacz:db_short</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <h3 class="compat-category">Other</h3>
+        <div class="compat-card">
+          <h4>HK-MP5A5 <code>tacz:hk_mp5a5</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>UZI <code>tacz:uzi</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>Vector <code>tacz:vector45</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>UMP-45 Submachine Gun <code>tacz:ump45</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>P90 PDW <code>tacz:p90</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <h3 class="compat-category">Other</h3>
+        <div class="compat-card">
+          <h4>Accuracy International AWM <code>tacz:ai_awp</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>M95 .50 Anti-Materiel Rifle <code>tacz:m95</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>M700 Sniper Rifle <code>tacz:m700</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>M107 Sniper Rifle <code>tacz:m107</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>Springfield 1873 Trapdoor Rifle <code>tacz:springfield1873</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+        <div class="compat-card">
+          <h4>Mauser Kar98k <code>tacz:kar98</code></h4>
+          <table class="compat-table"><tbody>
+            <tr><th>Compatible Attachments</th><td><span class="none">None</span></td></tr>
+          </tbody></table>
+        </div>
+      </section>
+<section id="interact" class="page-break">
+        <h2>9. Interacting While Holding a Gun</h2>
+        <p>The <code>O</code> key is easy to miss, but it is one of the most important TaCZ controls. Because right click is used for aiming, normal Minecraft interaction can become difficult while holding a gun.</p>
+        <p>Use <code>O</code> when you want to interact with:</p>
+        <ul>
+          <li>Chests</li>
+          <li>Doors</li>
+          <li>Crafting tables and other workstations</li>
+          <li>The Gunsmith Table</li>
+          <li>Entities such as villagers, boats, or rideable entities</li>
+        </ul>
+        <div class="note">
+          In tutorial videos, show <code>O</code> once with a chest or Gunsmith Table. Many beginners assume their game is broken when right click keeps aiming instead of opening blocks.
+        </div>
+      </section>
+
+      <section id="sniper">
+        <h2>10. AWM and Sniper Workflow</h2>
+        <p>For AWM-style sniper gameplay, the goal is to show a clear sequence: weapon ready, aim, zoom, fire, reload, and inspect. The exact attachments available depend on the weapon and content pack, but the workflow stays similar.</p>
+        <ol>
+          <li>Equip the sniper rifle and compatible ammo.</li>
+          <li>Press <code>R</code> to reload before the action moment.</li>
+          <li>Hold right click to aim down sights.</li>
+          <li>If a scope supports it, press <code>V</code> while aiming to change zoom.</li>
+          <li>Left click to fire.</li>
+          <li>Press <code>H</code> after the shot for a clean inspection moment.</li>
+          <li>Press <code>Z</code> to show the scope or attachment setup if you are making a tutorial.</li>
+        </ol>
+        <div class="checklist">
+          <h3>Shorts Recording Checklist</h3>
+          <ul>
+            <li>Show the keyboard and mouse overlay before the first shot.</li>
+            <li>Keep the crosshair and target visible.</li>
+            <li>Use one clear action per clip: reload, aim, shoot, inspect, customize.</li>
+            <li>Use English on-screen words for global viewers: Reload, Aim, Fire, Inspect, Customize.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="recording" class="page-break">
+        <h2>11. Recording Overlay Setup</h2>
+        <p>For OBS Studio, use an input overlay that shows the keys a viewer needs to copy. For TaCZ, the important keys are not only WASD and mouse buttons. You also want <code>R</code>, <code>G</code>, <code>Z</code>, <code>H</code>, <code>O</code>, <code>V</code>, and <code>C</code>.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Overlay Element</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mouse left button</td>
+              <td>Shows firing clearly.</td>
+            </tr>
+            <tr>
+              <td>Mouse right button</td>
+              <td>Shows aiming / ADS clearly.</td>
+            </tr>
+            <tr>
+              <td><code>R</code>, <code>G</code>, <code>Z</code></td>
+              <td>Reload, fire mode, customization.</td>
+            </tr>
+            <tr>
+              <td><code>H</code>, <code>O</code></td>
+              <td>Inspect and interact. These are TaCZ-specific and helpful for tutorials.</td>
+            </tr>
+            <tr>
+              <td><code>V</code>, <code>C</code></td>
+              <td>Scope zoom / melee and crawl.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="image-block">
+          <img src="assets/controls-overlay.png" alt="OBS control overlay preview">
+          <p class="caption">Recommended simple overlay style for TaCZ tutorial recording.</p>
+        </div>
+      </section>
+
+      <section id="troubleshooting" class="page-break">
+        <h2>12. Troubleshooting</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Symptom</th>
+              <th>Check This First</th>
+              <th>Fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Minecraft crashes on startup</td>
+              <td>Wrong Minecraft version, wrong mod loader, or missing dependency</td>
+              <td>Return to the official TaCZ download page and match every required version.</td>
+            </tr>
+            <tr>
+              <td>Gun does not shoot</td>
+              <td>Reload state and ammo type</td>
+              <td>Put compatible ammo in inventory and press <code>R</code>.</td>
+            </tr>
+            <tr>
+              <td>Reload key does nothing</td>
+              <td>Ammo is missing or incompatible</td>
+              <td>Craft the correct ammo from the Gunsmith Table.</td>
+            </tr>
+            <tr>
+              <td>Cannot open chests while holding a gun</td>
+              <td>Right click is being used for ADS</td>
+              <td>Use <code>O</code> instead of right click.</td>
+            </tr>
+            <tr>
+              <td>Zoom does not change</td>
+              <td>No compatible scope or not aiming</td>
+              <td>Attach a compatible scope, hold right click, then press <code>V</code>.</td>
+            </tr>
+            <tr>
+              <td><code>Alt + T</code> settings do not open</td>
+              <td>Cloth Config API may be missing</td>
+              <td>Install the required config library for your Minecraft version.</td>
+            </tr>
+            <tr>
+              <td>Crawl does not work</td>
+              <td>Gun or server may not support crawl behavior</td>
+              <td>Check TaCZ settings and server configuration.</td>
+            </tr>
+            <tr>
+              <td>Keys conflict with another mod</td>
+              <td>Shared keys such as <code>R</code>, <code>G</code>, <code>Z</code>, <code>V</code>, <code>C</code>, or <code>H</code></td>
+              <td>Open Minecraft controls and move one of the conflicting keybinds.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="cheatsheet" class="page-break">
+        <h2>13. One-Page Cheat Sheet</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Goal</th>
+              <th>Input</th>
+              <th>Remember</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fire</td>
+              <td>Left Click</td>
+              <td>Needs loaded compatible ammo.</td>
+            </tr>
+            <tr>
+              <td>Aim</td>
+              <td>Right Click</td>
+              <td>Hold by default.</td>
+            </tr>
+            <tr>
+              <td>Reload</td>
+              <td><code>R</code></td>
+              <td>Auto reload is off by default.</td>
+            </tr>
+            <tr>
+              <td>Switch fire mode</td>
+              <td><code>G</code></td>
+              <td>Only works when the weapon supports multiple modes.</td>
+            </tr>
+            <tr>
+              <td>Inspect</td>
+              <td><code>H</code></td>
+              <td>Great for video transitions.</td>
+            </tr>
+            <tr>
+              <td>Customize</td>
+              <td><code>Z</code></td>
+              <td>Use it to attach scopes and other parts.</td>
+            </tr>
+            <tr>
+              <td>Interact</td>
+              <td><code>O</code></td>
+              <td>Use this for chests, doors, workbenches, and entities while holding a gun.</td>
+            </tr>
+            <tr>
+              <td>Melee / Zoom</td>
+              <td><code>V</code></td>
+              <td>Zoom only while aiming with a compatible scope.</td>
+            </tr>
+            <tr>
+              <td>Crawl</td>
+              <td><code>C</code></td>
+              <td>Hold by default.</td>
+            </tr>
+            <tr>
+              <td>Settings</td>
+              <td><code>Alt + T</code></td>
+              <td>Requires Cloth Config API for the config screen.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Best Beginner Practice Sequence</h3>
+        <ol>
+          <li>Craft Gunsmith Table.</li>
+          <li>Craft gun and compatible ammo.</li>
+          <li>Press <code>R</code> to reload.</li>
+          <li>Hold right click to aim.</li>
+          <li>Left click to fire.</li>
+          <li>Press <code>Z</code> to customize.</li>
+          <li>Use <code>O</code> for normal Minecraft interaction while holding the gun.</li>
+        </ol>
+        <p class="footer-note">Unofficial guide. Minecraft is a trademark of Mojang Studios. TaCZ / Timeless and Classics Guns: Zero belongs to its respective authors. This PDF is an independent tutorial resource and does not include the mod itself.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
