@@ -1,0 +1,23 @@
+{
+  "Codex": {
+    "use_absolute": true,
+    "absolute_x": 281,
+    "absolute_y": 1324,
+    "taught_template": "C:\\Users\\tomot\\Desktop\\management\\Scripts\\ai_desktop_auto_driver\\assets\\codex_taught.png",
+    "timestamp": "2026-05-25 17:59:43"
+  },
+  "Claude Code": {
+    "use_absolute": true,
+    "absolute_x": 1552,
+    "absolute_y": 663,
+    "taught_template": "C:\\Users\\tomot\\Desktop\\management\\Scripts\\ai_desktop_auto_driver\\assets\\claude_code_taught.png",
+    "timestamp": "2026-05-25 17:59:53"
+  },
+  "Antigravity": {
+    "use_absolute": true,
+    "absolute_x": 1497,
+    "absolute_y": 1378,
+    "taught_template": "C:\\Users\\tomot\\Desktop\\management\\Scripts\\ai_desktop_auto_driver\\assets\\antigravity_taught.png",
+    "timestamp": "2026-05-25 17:59:59"
+  }
+}

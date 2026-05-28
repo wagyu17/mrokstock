@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Athletics Title Generator",
+  "version": "1.1.0",
+  "description": "陸上の練習タイトルを英語表記でステップ入力から素早く生成・コピーする。Garminのアクティビティ数値を自動取り込み。",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Athletics Title Generator"
+  },
+  "permissions": ["storage", "activeTab", "scripting"]
+}

@@ -24,3 +24,73 @@ Thumbs.db
 **/video_work/input/
 **/video_work/work/
 **/video_work/output/
+
+# AI team auto launcher runtime state
+ai_team/AUTO_RUNNER_CONFIG.json
+ai_team/AUTO_RUNNER_STATE.json
+ai_team/AUTO_RUNNER_STATE.json.tmp
+ai_team/AUTO_RUNNER_STOP.md
+
+# Dependency and generated folders
+**/node_modules/
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.gradle/
+**/.vs/
+**/.idea/
+**/build/
+**/dist/
+**/.next/
+**/.turbo/
+*.pyc
+
+# Local runtime/cache output
+**/runtime/
+**/diagnostics/
+**/.claude/settings.local.json
+**/.codex/settings.local.json
+ai_team_*/logs/**/*.png
+ai_team/logs/**/*.png
+ai_team/desktop_orchestrator_state.json
+ai_team_*/desktop_orchestrator_state.json
+ai_team_*/AUTO_RUNNER_CONFIG.json
+ai_team_*/AUTO_RUNNER_STATE.json
+ai_team_*/AUTO_RUNNER_STATE.json.tmp
+ai_team_*/AUTO_RUNNER_STOP.md
+ai_team_*_backup_*/
+money-manager-app/input/
+money-manager-app/取引カテゴリ分類.csv
+money-manager-app/家計簿サマリー.md
+
+# Nested Git worktrees handled as separate repositories
+rikujo2026/
+stock-trade-app-new/
+**/training-app/
+
+# Large research/source data kept outside Git
+ai_team_*/materials/*
+!ai_team_*/materials/README.md
+ai_team_*/inbox/**/*.pdf
+ai_team_*/inbox/**/*.docx
+
+# Large binary artifacts
+*.apk
+*.cag
+*.dll
+*.exe
+*.ilk
+*.jar
+*.mcworld
+*.obj
+*.pdb
+*.pyd
+*.vk4
+*.wdf
+*.zag
+*.zip
+*.7z
+*.rar

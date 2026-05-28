@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Video Analyzer</string>
+
+    <string name="pick_video">動画を選択</string>
+    <string name="play">再生</string>
+    <string name="pause">一時停止</string>
+    <string name="step_back">-0.01s</string>
+    <string name="step_forward">+0.01s</string>
+    <string name="speed_label">速度</string>
+    <string name="zoom_label">ズーム</string>
+    <string name="no_video_loaded">動画が選択されていません</string>
+</resources>

@@ -13,12 +13,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "アルバイト/Tech Teacher/mod操作解説/tacz/TaCZ_mod_使い方まとめ.md",
+                "file": "rikujo2026/アーカイブ/トレーニングログ_全記録.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TaCZ_mod_使い方まとめ"
+              "title": "トレーニングログ_全記録"
+            }
+          },
+          {
+            "id": "674a05b0c3307ed0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "アルバイト/Tech Teacher/mod操作解説/tacz/キー割り当てと操作方法.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "キー割り当てと操作方法"
+            }
+          },
+          {
+            "id": "e8b4338d38a4c030",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "アルバイト/Tech Teacher/mod操作解説/tacz/TaCZ_アタッチメント対応表.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TaCZ_アタッチメント対応表"
             }
           },
           {
@@ -27,15 +55,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notion/ALL/就活/database/マイページ.md",
+                "file": "rikujo2026/アーカイブ/トレーニングログ_全記録.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "マイページ"
+              "title": "トレーニングログ_全記録"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -198,45 +227,53 @@
       "bases:新規ベースを作成": false
     }
   },
-  "active": "d7c0293d241a5827",
+  "active": "3b513b3a2b533452",
   "lastOpenFiles": [
+    "rikujo2026/アーカイブ/トレーニングログ_全記録.md",
+    "rikujo2026/アーカイブ/training_report_2026.md",
+    "rikujo2026/アーカイブ/トレーニングログ記載例.md",
+    "rikujo2026/アーカイブ/training_log_formatted.md",
+    "rikujo2026/アーカイブ/training_chart.png",
+    "アルバイト/Tech Teacher/mod操作解説/tacz/キー割り当てと操作方法.md",
+    "rikujo2026/更新用トレーニングログ/activity_22945881735.csv",
+    "rikujo2026/更新用トレーニングログ/activity_22977259434.csv",
+    "rikujo2026/更新用トレーニングログ/22943761136_ACTIVITY.fit",
+    "rikujo2026/更新用トレーニングログ/activity_22977545109.csv",
+    "rikujo2026/更新用トレーニングログ/activity_22945790042.csv",
+    "rikujo2026/更新用トレーニングログ/activity_22943568448.csv",
+    "rikujo2026/更新用トレーニングログ/activity_22979861066.csv",
+    "rikujo2026/更新用トレーニングログ/activity_22977882051.csv",
+    "rikujo2026/更新用トレーニングログ/activity_22977498242.csv",
+    "rikujo2026/更新用トレーニングログ/activity_22943761136.csv",
+    "アルバイト/Tech Teacher/動画/tacz_AWM/video_work/project/narration_script_vp3_en.md",
+    "アルバイト/Tech Teacher/動画/tacz_AWM/video_work/project/edit_plan_vp3.md",
+    "アルバイト/Tech Teacher/動画/tacz_AWM/video_work/work/frames/vp3/chk_26.png",
+    "アルバイト/Tech Teacher/動画/tacz_AWM/video_work/work/frames/vp3/chk_38.png",
+    "アルバイト/Tech Teacher/動画/tacz_AWM/video_work/work/frames/vp3/chk_14.png",
+    "アルバイト/Tech Teacher/動画/tacz_AWM/video_work/work/frames/vp3/chk_2.png",
+    "アルバイト/Tech Teacher/動画/tacz_AWM/video_work/work/frames/vp3/chk_8.png",
+    "アルバイト/Tech Teacher/動画/tacz_AWM/video_work/work/frames/vp3/fonttest.png",
+    "アルバイト/Tech Teacher/動画/tacz_AWM/video_work/work/frames/vp3/t_40.png",
+    "アルバイト/Tech Teacher/動画/tacz_AWM/video_work/work/frames/vp3/d_26.png",
+    "アルバイト/Tech Teacher/動画/tacz_AWM/video_work/work/frames/vp3/full.png",
+    "アルバイト/Tech Teacher/mod操作解説/tacz/動画の操作手順構成.md",
+    "アルバイト/Tech Teacher/mod操作解説/tacz/TaCZ_mod_使い方まとめ.md",
+    "アルバイト/Tech Teacher/mod操作解説/tacz/TaCZ_アタッチメント対応表.md",
+    "陸上/アーカイブ/トレーニングログ_全記録.md",
+    "アルバイト/Tech Teacher/Gumroad/TaCZ_Beginner_Guide_PDF/README_Gumroad_Upload.md",
+    "アルバイト/Tech Teacher/codex用/input-overlay-5.0.5-presets/tacz-standard/README.md",
+    "陸上/タイトル生成拡張/README.md",
+    "アルバイト/Tech Teacher/codex用/input-overlay-5.0.5-presets/tacz-extra-keys/README.md",
+    "アルバイト/Tech Teacher/収益化計画.md",
+    "money-manager-app/家計簿サマリー.md",
     "陸上/claude_file/6_7_training_plan.md",
-    "ONEHOUDAY_deploy/index.html",
-    "ONEHOUDAY_deploy/robots.txt",
-    "ONEHOUDAY_deploy",
-    "scratch/merge.py",
-    "scratch/merge.ps1",
-    "scratch",
-    "アルバイト/Tech Teacher/mod操作解説/xaeroworldmap-neoforge-26.1.2-1.40.16/解析ログ.json",
     "アルバイト/Tech Teacher/mod操作解説/xaeroworldmap-neoforge-26.1.2-1.40.16/キー割り当てと操作方法.md",
     "アルバイト/Tech Teacher/mod操作解説/xaeroworldmap-neoforge-26.1.2-1.40.16/Codex追記依頼.md",
-    "アルバイト/Tech Teacher/mod操作解説/xaeroworldmap-neoforge-26.1.2-1.40.16/xaeroworldmap-neoforge-26.1.2-1.40.16.jar",
-    "アルバイト/Tech Teacher/mod操作解説/xaeroworldmap-neoforge-26.1.2-1.40.16",
-    "アルバイト/Tech Teacher/mod操作解説/waystones-neoforge-1.21.1-21.1.32/解析ログ.json",
     "アルバイト/Tech Teacher/mod操作解説/waystones-neoforge-1.21.1-21.1.32/Codex追記依頼.md",
     "アルバイト/Tech Teacher/mod操作解説/waystones-neoforge-1.21.1-21.1.32/キー割り当てと操作方法.md",
     "陸上/分析ログ/理学療法士ブリーフィング_2026-05-19.md",
     "アルバイト/Tech Teacher/mod操作解説/sophisticatedbackpacks-1.21.4-3.25.45.1744/キー割り当てと操作方法.md",
     "アルバイト/Tech Teacher/mod操作解説/sophisticatedbackpacks-1.21.4-3.25.45.1744/Codex追記依頼.md",
-    "アルバイト/Tech Teacher/learning-hub-preview.png",
-    "アルバイト/Tech Teacher/learning-hub-mobile-preview.png",
-    "アルバイト/Tech Teacher/mod操作解説/tacz/TaCZ_アタッチメント対応表.md",
-    "アルバイト/Tech Teacher/mod操作解説/tacz/TaCZ_mod_使い方まとめ.md",
-    "アルバイト/Tech Teacher/mod操作解説/TaCZ_mod_使い方まとめ.md",
-    "アルバイト/Tech Teacher/mod操作解説/TaCZ_アタッチメント対応表.md",
-    "アルバイト/Tech Teacher/mod操作解説.md",
-    "アルバイト/Tech Teacher/操作解説.md",
-    "アルバイト/Tech Teacher/各生徒の特徴.md",
-    "アルバイト/Tech Teacher/レビューテンプレ.md",
-    "陸上/claude_file/6_7_daily_schedule.md",
-    "Notion/ALL/Schedule/今日のTo Do/2026_03_28.md",
-    "HOME.md",
-    "Notion/ALL/就活/database/自己分析/database/考え/database/untitled.md",
-    "Notion/ALL/就活/database/自己分析/database/ビジョンぬ/今後など/🐱/untitled.md",
-    "Notion/ALL/アルバイト/その他/バイトスケジュール/database/午前.md",
-    "Notion/ALL/アルバイト/その他/自己PR文.md",
-    "Notion/ALL/アルバイト/その他/Tech Teacher 資料/資料/マインクラフト　コマンド大全.md",
-    "Notion/ALL/アルバイト/その他/Tech Teacher 資料/資料/他の教師の指導内容.md",
-    "Notion/ALL/アルバイト/その他/Tech Teacher 資料/資料/体験授業終了報告.md"
+    "アルバイト/Tech Teacher/mod操作解説/TaCZ_mod_使い方まとめ.md"
   ]
 }

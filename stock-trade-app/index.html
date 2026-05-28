@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>株取引メモ</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Stock trade logger</p>
+        <h1>株取引メモ</h1>
+      </div>
+      <div class="header-summary" aria-label="取引サマリー">
+        <div>
+          <span>確定差益</span>
+          <strong id="headerProfit">0円</strong>
+        </div>
+        <div>
+          <span>入力済み</span>
+          <strong id="headerCount">0件</strong>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="watch-panel" aria-labelledby="watchTitle">
+        <div class="section-title">
+          <div>
+            <h2 id="watchTitle">ポーラ監視</h2>
+            <p id="marketUpdated">4927 / 100株</p>
+          </div>
+          <button class="secondary-button" id="refreshMarketButton" type="button">更新</button>
+        </div>
+
+        <div class="symbol-bar" aria-label="銘柄設定">
+          <label>
+            <span>銘柄コード</span>
+            <input id="symbolInput" type="text" autocomplete="off" placeholder="4927.T">
+          </label>
+          <label class="company-field">
+            <span>会社名</span>
+            <input id="companyNameInput" type="text" autocomplete="off" placeholder="ポーラ・オルビス" aria-controls="companyPresetMenu" aria-expanded="false">
+            <div class="company-menu" id="companyPresetMenu" hidden>
+              <div class="preset-toggle" id="companyPresetList" aria-label="会社クイック選択"></div>
+              <button class="add-preset-button" id="addCompanyPresetButton" type="button">＋ 現在の銘柄を追加</button>
+            </div>
+          </label>
+        </div>
+
+        <div class="watch-grid">
+          <div class="watch-card range-card">
+            <div class="watch-fields">
+              <label>
+                <span>下限目安</span>
+                <input id="rangeLow" type="text" inputmode="numeric" autocomplete="off">
+              </label>
+              <label>
+                <span>上限目安</span>
+                <input id="rangeHigh" type="text" inputmode="numeric" autocomplete="off">
+              </label>
+              <label>
+                <span>現在の100株価格</span>
+                <input id="currentLotPrice" type="text" inputmode="numeric" autocomplete="off" placeholder="例: 125000">
+              </label>
+            </div>
+            <div class="range-meter" aria-label="レンジ内の現在位置">
+              <div class="range-meter-fill" id="rangeMeterFill"></div>
+            </div>
+            <div class="range-labels">
+              <span id="rangeLowLabel">120,000円</span>
+              <strong id="rangePositionLabel">現在値待ち</strong>
+              <span id="rangeHighLabel">140,000円</span>
+            </div>
+            <div class="strategy-signal" id="strategySignal">現在値を入力すると判定します。</div>
+          </div>
+
+          <div class="watch-card rsi-card">
+            <h3>RSI</h3>
+            <strong id="rsiValue">--%</strong>
+            <span id="rsiSignal">取得待ち</span>
+            <div class="rsi-meter">
+              <div class="rsi-zone buy-zone"></div>
+              <div class="rsi-zone middle-zone"></div>
+              <div class="rsi-zone sell-zone"></div>
+              <div class="rsi-pin" id="rsiPin"></div>
+            </div>
+          </div>
+
+          <div class="watch-card">
+            <h3>早買い防止</h3>
+            <div class="mode-group" aria-label="値動き">
+              <button type="button" data-trend="falling">下落中</button>
+              <button type="button" data-trend="rebound">反転確認</button>
+              <button type="button" data-trend="rising">上昇中</button>
+            </div>
+            <label class="check-line">
+              <input id="holdingShares" type="checkbox">
+              <span>現在保有中</span>
+            </label>
+            <label class="check-line">
+              <input id="nearLowerCheck" type="checkbox">
+              <span>12万円付近まで待てた</span>
+            </label>
+            <label class="check-line">
+              <input id="reboundCheck" type="checkbox">
+              <span>反転を確認</span>
+            </label>
+            <label class="check-line">
+              <input id="reportCheck" type="checkbox">
+              <span>直近決算に悪材料なし</span>
+            </label>
+          </div>
+
+          <div class="watch-card">
+            <h3>優待・配当</h3>
+            <div class="watch-fields two">
+              <label>
+                <span>年間配当 / 1株</span>
+                <input id="annualDividendPerShare" type="text" inputmode="decimal" autocomplete="off" placeholder="例: 52">
+              </label>
+              <div class="yield-box">
+                <span>配当利回り</span>
+                <strong id="dividendYield">未計算</strong>
+                <small id="yieldStatus">4%以上を目安</small>
+              </div>
+            </div>
+            <label class="check-line">
+              <input id="benefitUnitCheck" type="checkbox">
+              <span>100株以上・12月末</span>
+            </label>
+            <label class="check-line">
+              <input id="benefitContentCheck" type="checkbox">
+              <span>優待内容を確認</span>
+            </label>
+            <input id="benefitMemo" type="text" autocomplete="off" placeholder="優待メモ">
+          </div>
+        </div>
+      </section>
+
+      <section class="market-layout">
+        <section class="panel chart-panel" aria-labelledby="marketChartTitle">
+          <div class="section-title">
+            <div>
+              <h2 id="marketChartTitle">実値チャート</h2>
+              <p id="chartStatus">取得待ち</p>
+            </div>
+            <div class="chart-controls">
+              <select id="chartRange" aria-label="チャート期間">
+                <option value="1d">1日</option>
+                <option value="5d">5日</option>
+                <option value="1mo">1か月</option>
+                <option value="3mo">3か月</option>
+                <option value="6mo" selected>6か月</option>
+                <option value="1y">1年</option>
+                <option value="2y">2年</option>
+              </select>
+              <div class="chart-interval-toggle" aria-label="チャート粒度">
+                <button type="button" data-chart-interval="1d">日毎</button>
+                <button type="button" data-chart-interval="1m">1分毎</button>
+                <button type="button" data-chart-interval="5m">5分毎</button>
+              </div>
+            </div>
+          </div>
+          <canvas id="marketChart" width="900" height="360" aria-label="実際の値動きチャート"></canvas>
+          <div class="marker-list" id="markerList"></div>
+        </section>
+
+        <aside class="panel news-panel" aria-labelledby="newsTitle">
+          <div class="section-title">
+            <div>
+              <h2 id="newsTitle">ニュース</h2>
+              <p id="newsUpdated">取得待ち</p>
+            </div>
+            <button class="secondary-button" id="refreshNewsButton" type="button">更新</button>
+          </div>
+          <div class="news-list" id="newsList"></div>
+        </aside>
+      </section>
+
+      <section class="action-bar" aria-label="操作">
+        <button class="primary-button" id="addRowButton" type="button">行を追加</button>
+        <button class="secondary-button" id="addTenButton" type="button">10行追加</button>
+        <button class="secondary-button" id="fillTargetButton" type="button">空欄の売値を目標で補完</button>
+        <button class="quiet-button" id="resetButton" type="button">全削除</button>
+      </section>
+
+      <section class="summary-strip" aria-label="目標設定">
+        <div class="target-control">
+          <label for="targetProfit">1行あたり目標差益</label>
+          <div class="target-input-row">
+            <input id="targetProfit" type="text" inputmode="numeric" autocomplete="off">
+            <button class="chip-button" type="button" data-target-value="5000">5,000円</button>
+            <button class="chip-button" type="button" data-target-value="10000">10,000円</button>
+          </div>
+        </div>
+        <div class="summary-cell">
+          <span>10行見込み</span>
+          <strong id="tenRowProjection">50,000円</strong>
+        </div>
+        <div class="summary-cell">
+          <span>5万円まで</span>
+          <strong id="rowsToFifty">10行</strong>
+        </div>
+        <div class="summary-cell">
+          <span>平均差益</span>
+          <strong id="averageProfit">0円</strong>
+        </div>
+      </section>
+
+      <section class="trade-board" aria-labelledby="tradeBoardTitle">
+        <div class="section-title trade-title-row">
+          <div>
+            <h2 id="tradeBoardTitle">取引入力</h2>
+          </div>
+          <div class="trade-tools">
+            <button class="secondary-button" id="openTradesOnlyButton" type="button" aria-pressed="false">未売却のみ</button>
+            <div class="page-controls" aria-label="10行ページ操作">
+              <button class="secondary-button" id="prevPageButton" type="button">前</button>
+              <span id="pageStatus">1-10 / 10</span>
+              <button class="secondary-button" id="nextPageButton" type="button">次</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="trade-header" aria-hidden="true">
+          <div>買ったとき</div>
+          <div>売ったとき</div>
+          <div>差分</div>
+          <div></div>
+        </div>
+        <div class="trade-list" id="tradeList"></div>
+      </section>
+
+      <section class="panel profit-panel" aria-labelledby="profitChartTitle">
+        <div class="section-title compact">
+          <div>
+            <h2 id="profitChartTitle">月別差益</h2>
+          </div>
+        </div>
+        <canvas id="profitChart" width="900" height="260" aria-label="月別差益グラフ"></canvas>
+        <div class="profit-scale" id="profitScale"></div>
+      </section>
+    </main>
+
+    <template id="tradeRowTemplate">
+      <article class="trade-row">
+        <div class="trade-side buy-side">
+          <label class="compact-date">
+            <span>買日</span>
+            <input class="date-code" type="text" inputmode="numeric" maxlength="8" data-field="buyDateCode" aria-label="買った日をYYYYMMDDで入力" placeholder="20240825">
+          </label>
+          <label class="money-cell">
+            <span>買った時の値段</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-field="buyPrice" placeholder="120000">
+          </label>
+        </div>
+
+        <div class="trade-side sell-side">
+          <label class="compact-date">
+            <span>売日</span>
+            <input class="date-code" type="text" inputmode="numeric" maxlength="8" data-field="sellDateCode" aria-label="売った日をYYYYMMDDで入力" placeholder="20240800">
+          </label>
+          <label class="money-cell">
+            <span>売った時の値段</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-field="sellPrice" placeholder="140000">
+          </label>
+        </div>
+
+        <div class="diff-cell">
+          <span>差分</span>
+          <strong data-role="diff">未入力</strong>
+          <small data-role="targetGap">目標差益 5,000円</small>
+        </div>
+
+        <div class="row-actions">
+          <button class="icon-button" type="button" data-action="apply-target" title="売値に目標差益を足す" aria-label="売値に目標差益を足す">+</button>
+          <button class="icon-button danger" type="button" data-action="delete" title="行を削除" aria-label="行を削除">×</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

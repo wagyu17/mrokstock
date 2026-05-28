@@ -1,0 +1,22 @@
+{
+  "targets": [
+    {
+      "name": "Claude Code",
+      "image": "claude_code_input_ready.png",
+      "confidence": 0.8,
+      "enabled": true
+    },
+    {
+      "name": "Codex",
+      "image": "codex_input_ready.png",
+      "confidence": 0.8,
+      "enabled": true
+    },
+    {
+      "name": "Antigravity",
+      "image": "antigravity_input_ready.png",
+      "confidence": 0.8,
+      "enabled": true
+    }
+  ]
+}

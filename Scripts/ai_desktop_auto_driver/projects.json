@@ -1,0 +1,13 @@
+{
+  "active_project": "thesis",
+  "projects": {
+    "minecraft": {
+      "label": "マイクラ案件",
+      "path": "C:\\Users\\tomot\\Desktop\\management\\ai_team"
+    },
+    "thesis": {
+      "label": "卒論案件",
+      "path": "C:\\Users\\tomot\\Desktop\\management\\ai_team_卒論"
+    }
+  }
+}

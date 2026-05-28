@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athletics Title Generator</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+
+    <header class="app-header">
+      <h1>Title Generator</h1>
+    </header>
+
+    <!-- Step indicator -->
+    <nav class="steps" id="steps">
+      <button class="step current" data-step="1"><i>1</i><span id="pill1">種目</span></button>
+      <button class="step" data-step="2"><i>2</i><span id="pill2">場所</span></button>
+      <button class="step" data-step="3"><i>3</i><span id="pill3">内容</span></button>
+      <button class="step" data-step="4"><i>4</i><span id="pill4">タイトル</span></button>
+    </nav>
+
+    <!-- Garmin auto-import banner -->
+    <div class="garmin-banner" id="garminBanner" hidden>
+      <span class="gb-icon">▦</span>
+      <span id="garminText"></span>
+    </div>
+
+    <!-- ===== Step 1: Workout Type ===== -->
+    <section class="step-panel" data-step="1">
+      <div class="panel-title">種目を選択</div>
+      <div id="workoutButtons" class="btn-grid"></div>
+
+      <div class="accordion">
+        <button class="acc-head" data-acc="accTpl">Templates<span class="chev">+</span></button>
+        <div class="acc-body" id="accTpl" hidden>
+          <div class="row">
+            <input type="text" id="templateName" placeholder="テンプレート名" />
+            <button id="saveTemplateBtn">Save</button>
+          </div>
+          <div id="templateList" class="list"></div>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button class="acc-head" data-acc="accHist">History<span class="chev">+</span></button>
+        <div class="acc-body" id="accHist" hidden>
+          <div class="list-head"><button id="clearHistoryBtn" class="text-btn">Clear all</button></div>
+          <div id="historyList" class="list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Step 2: Location ===== -->
+    <section class="step-panel" data-step="2" hidden>
+      <div class="panel-title">場所を選択 <span class="muted">— 任意</span></div>
+      <div id="locationButtons" class="btn-grid"></div>
+      <div class="nav-row">
+        <button class="ghost" data-go="1">← 戻る</button>
+        <button class="ghost" id="skipLocationBtn">場所なしで進む →</button>
+      </div>
+    </section>
+
+    <!-- ===== Step 3: Details ===== -->
+    <section class="step-panel" data-step="3" id="step3" hidden>
+      <div class="panel-title" id="detailTitle">内容を入力</div>
+
+      <!-- 統一された入力フォーム -->
+      <div class="form" id="form-unified">
+        <div class="field">
+          <label for="workoutInput">トレーニング内容</label>
+          <input type="text" id="workoutInput" placeholder="例: 3x5x1000m (3:10) r=200m @Road" style="width: 100%; box-sizing: border-box;" />
+        </div>
+        <p class="input-hint" style="font-size: 0.85rem; color: #666; margin-top: 8px; line-height: 1.4;">
+          <strong>入力書式:</strong> <code>[セット数]x[レップ数]x[距離 or 時間] (強度/ペース/心拍) [レスト] @環境/傾斜/負荷</code><br>
+          <span style="font-size: 0.8rem; color: #888;">※ 各項目は省略可能です。（例: <code>12km (4:50)</code>, <code>5x100m r=walk</code>）</span>
+        </p>
+      </div>
+
+      <!-- custom: 自由入力 -->
+      <div class="form" id="form-custom" hidden>
+        <p class="note">次のステップのタイトル欄に自由入力してください。</p>
+      </div>
+
+      <div class="nav-row">
+        <button class="ghost" data-go="2">← 戻る</button>
+        <button class="primary" id="toTitleBtn">タイトルを作成 →</button>
+      </div>
+    </section>
+
+    <!-- ===== Step 4: Title ===== -->
+    <section class="step-panel" data-step="4" hidden>
+      <div class="panel-title">タイトル</div>
+      <textarea id="titleOutput" rows="2" placeholder="ここに英語タイトルが生成されます"></textarea>
+      <div class="row">
+        <button id="copyBtn" class="primary wide">Copy</button>
+        <span id="copyMsg" class="copy-msg"></span>
+      </div>
+      <div class="nav-row">
+        <button class="ghost" data-go="3">← 戻る</button>
+        <button class="ghost" id="resetBtn">最初から</button>
+      </div>
+    </section>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

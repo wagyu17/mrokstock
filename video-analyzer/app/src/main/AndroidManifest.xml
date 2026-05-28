@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        端末内動画の選択には Storage Access Framework (ActivityResultContracts.OpenDocument) を使用する。
+        SAF はユーザーが選んだファイルに対してのみ URI 経由のアクセス権が付与されるため、
+        READ_MEDIA_VIDEO / READ_EXTERNAL_STORAGE 権限の明示的な宣言は不要。
+        ネットワーク再生をしないので INTERNET 権限も不要。
+    -->
+
+    <application
+        android:label="@string/app_name"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VideoAnalyzer">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode"
+            android:theme="@style/Theme.VideoAnalyzer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

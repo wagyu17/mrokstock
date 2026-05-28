@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ローカル家計簿</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Local money manager</p>
+        <h1>ローカル家計簿</h1>
+      </div>
+      <div class="header-metrics" aria-label="概要">
+        <div>
+          <span>総資産</span>
+          <strong id="headerTotal">¥0</strong>
+        </div>
+        <div>
+          <span>今月収支</span>
+          <strong id="headerNet">¥0</strong>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="画面切り替え">
+      <button class="tab-button active" type="button" data-tab="dashboard">ダッシュボード</button>
+      <button class="tab-button" type="button" data-tab="transactions">取引</button>
+      <button class="tab-button" type="button" data-tab="import">CSV取込</button>
+      <button class="tab-button" type="button" data-tab="settings">設定</button>
+    </nav>
+
+    <main>
+      <section class="view active" id="dashboard">
+        <div class="metric-grid">
+          <article class="metric-card">
+            <span>総資産</span>
+            <strong id="totalAssets">¥0</strong>
+          </article>
+          <article class="metric-card">
+            <span>今月の収入</span>
+            <strong id="monthlyIncome">¥0</strong>
+          </article>
+          <article class="metric-card">
+            <span>今月の支出</span>
+            <strong id="monthlyExpense">¥0</strong>
+          </article>
+          <article class="metric-card">
+            <span>今月の収支</span>
+            <strong id="monthlyNet">¥0</strong>
+          </article>
+        </div>
+
+        <div class="dashboard-layout">
+          <section class="panel">
+            <div class="panel-title">
+              <h2>口座別残高</h2>
+            </div>
+            <div class="account-list" id="accountBalances"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-title">
+              <h2>推移グラフ</h2>
+              <select id="trendRange" aria-label="表示期間">
+                <option value="6">6か月</option>
+                <option value="12">12か月</option>
+              </select>
+            </div>
+            <canvas id="trendCanvas" width="720" height="320"></canvas>
+          </section>
+
+          <section class="panel">
+            <div class="panel-title">
+              <h2>カテゴリ別支出</h2>
+              <select id="categoryMonth" aria-label="カテゴリ集計月"></select>
+            </div>
+            <div class="category-bars" id="categoryBreakdown"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-title">
+              <h2>最近の取引</h2>
+            </div>
+            <div class="compact-list" id="recentTransactions"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="view" id="transactions">
+        <section class="panel">
+          <div class="panel-title">
+            <h2>取引入力</h2>
+          </div>
+          <form class="transaction-form" id="transactionForm">
+            <label>
+              <span>日付</span>
+              <input id="txDate" type="date" required>
+            </label>
+            <label>
+              <span>種別</span>
+              <select id="txType" required>
+                <option value="expense">支出</option>
+                <option value="income">収入</option>
+                <option value="transfer">振替</option>
+              </select>
+            </label>
+            <label>
+              <span>口座</span>
+              <select id="txAccount" required></select>
+            </label>
+            <label id="transferTargetWrap" class="hidden">
+              <span>振替先</span>
+              <select id="txToAccount"></select>
+            </label>
+            <label>
+              <span>金額</span>
+              <input id="txAmount" type="number" min="0" step="1" inputmode="numeric" required>
+            </label>
+            <label>
+              <span>店名・内容</span>
+              <input id="txMerchant" type="text" autocomplete="off">
+            </label>
+            <label>
+              <span>カテゴリ</span>
+              <select id="txCategory"></select>
+            </label>
+            <label class="wide-field">
+              <span>メモ</span>
+              <input id="txMemo" type="text" autocomplete="off">
+            </label>
+            <div class="form-actions">
+              <button class="primary-button" type="submit">追加</button>
+              <button class="ghost-button" type="button" id="sampleButton">サンプル追加</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>取引一覧</h2>
+            <div class="table-filters">
+              <select id="filterMonth" aria-label="月で絞り込み"></select>
+              <select id="filterAccount" aria-label="口座で絞り込み"></select>
+              <input id="filterSearch" type="search" placeholder="検索">
+              <div class="view-toggle" aria-label="取引表示">
+                <button class="active" type="button" data-transaction-view="list">一覧</button>
+                <button type="button" data-transaction-view="calendar">カレンダー</button>
+              </div>
+            </div>
+          </div>
+          <div class="table-wrap" id="transactionListView">
+            <table>
+              <thead>
+                <tr>
+                  <th>日付</th>
+                  <th>種別</th>
+                  <th>口座</th>
+                  <th>店名・内容</th>
+                  <th>カテゴリ</th>
+                  <th class="amount-col">金額</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="transactionTable"></tbody>
+            </table>
+          </div>
+          <div class="calendar-view hidden" id="transactionCalendar"></div>
+        </section>
+      </section>
+
+      <section class="view" id="import">
+        <section class="panel">
+          <div class="panel-title">
+            <h2>銀行ログイン</h2>
+          </div>
+          <div class="bank-link-grid">
+            <a
+              class="bank-link"
+              href="https://directg.s.bk.mufg.jp/APL/LGP_P_01/PU/LG_0001/LG_0001_PC01?link_id=kojin_top_direct_login_kizon&_gl=1*15mzr6g*_gcl_au*MTcxNjYzMjQ2LjE3NzE2NjcyNTc."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>三菱UFJ銀行</span>
+              <strong>ログイン</strong>
+            </a>
+            <a
+              class="bank-link"
+              href="https://direct.smbc.co.jp/aib/aibgsjsw5001.jsp?_ga=2.49705125.2036938828.1778930829-1979651889.1778930829"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>三井住友銀行</span>
+              <strong>ログイン</strong>
+            </a>
+            <a
+              class="bank-link"
+              href="https://www.mobilesuica.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>モバイルSuica</span>
+              <strong>ログイン</strong>
+            </a>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>CSV取込</h2>
+          </div>
+          <div class="import-grid">
+            <label>
+              <span>ファイル</span>
+              <input id="csvFile" type="file" accept=".csv,text/csv">
+            </label>
+            <label>
+              <span>既定口座</span>
+              <select id="importAccount"></select>
+            </label>
+            <label>
+              <span>金額の扱い</span>
+              <select id="importMode">
+                <option value="auto">自動判定</option>
+                <option value="spending">正の金額は支出</option>
+                <option value="income">正の金額は収入</option>
+              </select>
+            </label>
+            <label>
+              <span>文字コード</span>
+              <select id="csvEncoding">
+                <option value="auto">自動判定</option>
+                <option value="utf-8">UTF-8</option>
+                <option value="shift_jis">Shift_JIS</option>
+              </select>
+            </label>
+            <div class="form-actions align-end">
+              <button class="primary-button" type="button" id="importButton" disabled>取り込む</button>
+            </div>
+          </div>
+          <div class="import-status" id="importStatus"></div>
+          <div class="table-wrap preview-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>日付</th>
+                  <th>種別</th>
+                  <th>口座</th>
+                  <th>店名・内容</th>
+                  <th>カテゴリ</th>
+                  <th class="amount-col">金額</th>
+                  <th>状態</th>
+                </tr>
+              </thead>
+              <tbody id="importPreview"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>モバイルSuica PDF取込</h2>
+          </div>
+          <div class="import-grid">
+            <label>
+              <span>PDFファイル</span>
+              <input id="suicaPdfFile" type="file" accept=".pdf,application/pdf">
+            </label>
+            <div class="form-actions align-end">
+              <button class="primary-button" type="button" id="suicaPdfButton" disabled>PDFを読み込む</button>
+            </div>
+          </div>
+          <div class="import-status" id="suicaPdfStatus"></div>
+        </section>
+      </section>
+
+      <section class="view" id="settings">
+        <section class="panel">
+          <div class="panel-title">
+            <h2>口座</h2>
+          </div>
+          <form class="account-form" id="accountForm">
+            <input id="accountName" type="text" placeholder="口座名" required>
+            <select id="accountType">
+              <option value="cash">現金</option>
+              <option value="bank">銀行</option>
+              <option value="wallet">電子マネー</option>
+              <option value="other">その他</option>
+            </select>
+            <input id="accountBalance" type="number" step="1" placeholder="初期残高" required>
+            <button class="primary-button" type="submit">追加</button>
+          </form>
+          <div class="settings-list" id="accountSettings"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>自動分類ルール</h2>
+          </div>
+          <form class="rule-form" id="ruleForm">
+            <input id="ruleKeyword" type="text" placeholder="キーワード" required>
+            <select id="ruleCategory"></select>
+            <button class="primary-button" type="submit">追加</button>
+          </form>
+          <div class="settings-list" id="ruleSettings"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>データ</h2>
+          </div>
+          <div class="data-actions">
+            <button class="ghost-button" type="button" id="exportButton">JSON書き出し</button>
+            <label class="file-button">
+              JSON読み込み
+              <input id="jsonImport" type="file" accept=".json,application/json">
+            </label>
+            <button class="danger-button" type="button" id="resetButton">初期化</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <template id="emptyTemplate">
+      <p class="empty-state">データがありません</p>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

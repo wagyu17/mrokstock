@@ -1,0 +1,15 @@
+{
+  "poll_seconds": 3,
+  "after_focus_wait": 1.0,
+  "window_config": {
+    "claude": {
+      "title_re": ".*(Visual Studio Code|Code|Claude).*"
+    },
+    "codex": {
+      "title_re": ".*(Codex).*"
+    },
+    "antigravity": {
+      "title_re": ".*(Antigravity|Autonomous AI Development Setup).*"
+    }
+  }
+}
